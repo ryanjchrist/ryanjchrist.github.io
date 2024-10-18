@@ -18,7 +18,10 @@ In my off time, you'll find me racing drones, 3D Printing on my Prusa MK3S+, or 
 
 ## My skills
 ### Technical Skills
-{% include technicalskills.md}
+
+{% include technicalskills.md %}
+
 ### Soft Skills
-{% include softskills.md}
+
+{% include softskills.md %}
 
