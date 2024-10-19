@@ -7,17 +7,13 @@ author_profile: true
 author: Ryan Christ
 categories: project
 highlight_home: true
-tagline: "Building an Altimeter & Testing Toroidal Propellers"
 header:
   overlay_image: "/assets/images/SkydioAlt.jpeg"
   teaser: "/assets/images/DroneAlt.jpg"
   
   caption: "Photo credit: [**O3ST: Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
-description: This article showcases a tutorial that teaches learners how to code.
+description: Add Description
 ---
-
-> To see a preview of this project go to [Shuffling Cards on Codespaces](https://leighlawhon-studious-space-guacamole-6v5gj6qwgp43rp4q.github.dev/) and select the `index.html` file and then `go live` on the status bar.
-
 ## Context
 I am apart of Duke University - Bass Connections in the Energy/Environment sector. Bass Connections is a small group research experience where undergraduates, graduates, and faculty members all work together on selected projects. The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions and concerns revolving around the technology side of the project. 
 

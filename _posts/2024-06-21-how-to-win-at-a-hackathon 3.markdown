@@ -1,0 +1,29 @@
+---
+layout: posts
+title:  "3D Printing Projects"
+date:   2024-06-22 19:13:27 -0500
+tags: [CAD, 3D Printing]
+author_profile: true
+author: Ryan Christ
+highlight_home: true
+categories: project
+header:
+    overlay_image: "/assets/images/Prusa.jpg"
+    teaser: "/assets/images/Jer1.gif"
+    caption: "Photo credit: [**Unsplash: Firosnv. Photography**](https://unsplash.com/@firosnv)"
+description: This series of articles explores how to win at a hackathon even if you don't win the hackathon itself. The third post explores how to build on your momentum and push your hackathon ideas out into the world.
+---
+Fun & useful 3D printing projects either printed at at my house using my Prusa MK3S+ or at Duke University on Ultimaker 3s using a wide range of materials for specific for certain applications.
+
+# Jer-Bear
+![jer](/assets/images/Jer1.gif)
+Scanned my cousin's head (Jer-Bear) using the EM3D app that captures depth of objects using infrared flash modules. Meshed his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+.
+
+# Pocket Pinball Game
+![pinball](/assets/images/PinballAssembled.gif)
+Designed a pocket pinball game made to be fun and interactive way to promote sustainable practices for kids in Happy Meal. Key constraints included designing easily injection moldable parts to limit overall costs,
+![pinball](/assets/images/PinballCAD.png)
+
+# Sony WH1000xM3 Part
+![sony](/assets/images/SonyCAD.gif)
+Sony WH1000xM3 ear cup to headband broke. Modeled replacement part off of dimensions I found online and took myself. Ended up creating a plate cut in half when printed that would fit inside the ear cup and around a small notch 

@@ -1,11 +1,11 @@
 ---
 layout: archive
-title: About
 permalink: /about/
+author_profile: true
+author: Ryan Christ
 ---
-
 # Hi I'm Ryan Christ
-Hi, I'm Ryan! I am a third-year undergraduate student at Duke University majoring in Mechanical Engineering and minoring in Electrical & Computer Engineering
+I am a third-year undergraduate student at Duke University majoring in Mechanical Engineering and minoring in Electrical & Computer Engineering
 
 I am originally from Rochester, NY and credit my passion for engineering effective communication and technical problem-solving skill to make autonomously-harvested sustainable agriculture a reality. I address the problems of today both through making tangible things for people and through translating big, seemingly intangible problem statements into technical requirements. Going forward, I’m looking for new ways to apply my systems-level, user-centric thinking, and my design and manufacturing skills to problems at the intersection of societal behavior and natural resources, such as sustainable agriculture and material waste reduction.
 

@@ -1,0 +1,20 @@
+---
+layout: posts
+title:  "Rock Relocation Solution"
+date:   2024-06-21 19:13:27 -0500
+tags: [Prototyping]
+author_profile: true
+author: Ryan Christ
+highlight_home: true
+categories: project
+header:
+    overlay_image: "/assets/images/EGR101Poster.png"
+    teaser: "/assets/images/EGR101Dev.jpg"
+description: add
+---
+First-year engineering project. First dive into protoyping and learning how we can implement solutions that make meaningful impacts on within the community.
+
+# Rock
+![egr101](/assets/images/EGR101Dev.jpg)
+I was assigned to a project team seeking to design and build a solution for a Durham farmer to easily move boulders on his land. His previous solution was a tractor-hitched tool, but it took him too long to set up and use that it was not economical. Our team went through an iterative design process until we presented our final solution to the client. We decided on a 9 foot tall wooden structure, with a pulley system mounted in the middle of a triangular base. Our design was large enough to lift up to 300 lb. rocks, while also remaining operable by a single user. Our client liked our idea and gave us the go-ahead to start building. Over the second half of the semester we constructed and tested our device. We defined test criteria according to project specifications, and succeeded at a passing level in all categories. Due to lack of testing equipment (300 lb. weights) we were not able to fully test the load capacity of our device, but with strong performance at a 200 lb. load we were able to call the project a success. My first foray into engineering design was a very rewarding experience, and has provided me a base from which to further develop as an engineer.
+![egr101](/assets/images/EGR101Poster.png)

@@ -1,8 +1,8 @@
 Ryan Christ:
   name        : "Ryan Christ"
   bio         : "Let's talk about engineering! Reach out via my email below!"
-  avatar      : (/assets/images/IMG_8508.jpeg)
+  avatar      : "assets/images/IMG_8508.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "ryan.christ@duke.edu"
+      url: "mailto:ryan.christ@duke.edu"
