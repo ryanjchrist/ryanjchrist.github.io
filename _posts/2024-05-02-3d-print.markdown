@@ -11,7 +11,7 @@ categories: project
 header:
     overlay_image: "/assets/images/Prusa.jpg"
     teaser: "/assets/images/PinballAssembled.gif"
-description: This series of articles explores how to win at a hackathon even if you don't win the hackathon itself. The third post explores how to build on your momentum and push your hackathon ideas out into the world.
+description: add
 ---
 Fun & useful 3D printing projects either printed at at my house using my Prusa MK3S+ or at Duke University on Ultimaker 3s using a wide range of materials for specific for certain applications.
 
