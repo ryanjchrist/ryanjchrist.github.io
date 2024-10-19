@@ -1,5 +1,7 @@
 ---
 layout: archive
+permalink: /about/
+tagline: ""
 author_profile: true
 author: Ryan Christ
 ---
