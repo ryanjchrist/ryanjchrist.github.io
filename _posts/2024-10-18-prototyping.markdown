@@ -1,6 +1,7 @@
 ---
 layout: posts
 title:  "Prototyping Projects"
+tagline: ""
 date:   2024-06-21 19:13:27 -0500
 tags: [Arduino, Circuitry, Laser Cutting]
 author_profile: true
