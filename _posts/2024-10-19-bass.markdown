@@ -2,7 +2,7 @@
 layout: posts
 title:  "Altimeter & Toroidal Propellers"
 tagline: ""
-date:   2024-10-18 16:45:36 +0000
+date:   2024-10-19 00:00:00 +0000
 tags: [Arduino, Circuitry, Simulations]
 author_profile: true
 author: Ryan Christ
@@ -11,8 +11,7 @@ highlight_home: true
 header:
   overlay_image: "/assets/images/SkydioAlt.jpeg"
   teaser: "/assets/images/DroneAlt.jpg"
-  
-  caption: "Photo credit: [**O3ST: Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
+  caption: "Photo credit: [O3ST: Julian Dale](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
 description: Add Description
 ---
 ## Context

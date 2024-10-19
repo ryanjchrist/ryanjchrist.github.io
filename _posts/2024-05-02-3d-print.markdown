@@ -2,7 +2,7 @@
 layout: posts
 title:  "3D Printing Projects"
 tagline: ""
-date:   2024-06-22 19:13:27 -0500
+date:   2024-05-02 00:00:00 +0000
 tags: [CAD, 3D Printing]
 author_profile: true
 author: Ryan Christ
@@ -11,7 +11,6 @@ categories: project
 header:
     overlay_image: "/assets/images/Prusa.jpg"
     teaser: "/assets/images/PinballAssembled.gif"
-    caption: "Photo credit: [**Unsplash: Firosnv. Photography**](https://unsplash.com/@firosnv)"
 description: This series of articles explores how to win at a hackathon even if you don't win the hackathon itself. The third post explores how to build on your momentum and push your hackathon ideas out into the world.
 ---
 Fun & useful 3D printing projects either printed at at my house using my Prusa MK3S+ or at Duke University on Ultimaker 3s using a wide range of materials for specific for certain applications.

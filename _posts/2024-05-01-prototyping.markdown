@@ -2,7 +2,7 @@
 layout: posts
 title:  "Prototyping Projects"
 tagline: ""
-date:   2024-06-21 19:13:27 -0500
+date:   2024-05-01 00:00:00 +0000
 tags: [Arduino, Circuitry, Laser Cutting]
 author_profile: true
 author: Ryan Christ
@@ -24,5 +24,4 @@ combine two photos together
 
 # Spotify Picture Frame
 ![pinball](/assets/images/Spotify.gif)
-Created a wedding gift for my brother and his wife. Made on adobe illustration and then laser cut on a Trotec laser cutter. This incorporates a spotify bar code anyone can scan and hear the song being played and a two plate design to put a picture between the acrylic plates. 
-
+Created a wedding gift for my brother and his wife. Made on adobe illustration and then laser cut on a Trotec laser cutter. This incorporates a spotify bar code anyone can scan and hear the song being played and a two plate design to put a picture between the acrylic plates.
