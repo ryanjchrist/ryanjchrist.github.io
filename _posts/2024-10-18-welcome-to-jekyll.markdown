@@ -1,33 +1,43 @@
 ---
 layout: posts
-title:  "Welcome to Jekyll!"
+title:  "Altimeter & Toroidal Propellers"
 date:   2024-10-18 16:45:36 +0000
-tags: [tutorial, javascript]
+tags: [Arduino, Circuitry, Simulations]
 author_profile: true
-author: Leigh Stewardson
+author: Ryan Christ
 categories: project
 highlight_home: true
-tagline: "How to build a card game"
+tagline: "Building an Altimeter & Testing Toroidal Propellers"
 header:
-  overlay_image: https://images.unsplash.com/photo-1541278107931-e006523892df
-  teaser: https://images.unsplash.com/photo-1541278107931-e006523892df
+  overlay_image: "/assets/images/SkydioAlt.jpeg"
+  teaser: "/assets/images/DroneAlt.jpg"
   
-  caption: "Photo credit: [**Unsplash: Amanda Jones**](https://unsplash.com/@amandagraphc)"
+  caption: "Photo credit: [**O3ST: Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
 description: This article showcases a tutorial that teaches learners how to code.
 ---
 
 > To see a preview of this project go to [Shuffling Cards on Codespaces](https://leighlawhon-studious-space-guacamole-6v5gj6qwgp43rp4q.github.dev/) and select the `index.html` file and then `go live` on the status bar.
 
-![go live](/assets/images/golive.png)
+## Context
+I am apart of Duke University - Bass Connections in the Energy/Environment sector. Bass Connections is a small group research experience where undergraduates, graduates, and faculty members all work together on selected projects. The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions and concerns revolving around the technology side of the project. 
 
-## Background
-A few years ago, I had the opportunity to build an app for LinkedIn Learning. The project aimed to teach the concepts of binding and propagation in plain JavaScript. Over a span of two months, I meticulously developed the course, and the recording took place at the LinkedIn campus in Carpenteria, CA. This venture marked my first tutorial collaboration with LinkedIn, and it proved to be an incredible experience. I came across this opportunity through a job board dedicated to female developers, and the entire process, from working with the content manager to the producer, was highly professional.
+## Altimeter
+![arduino](/assets/images/ArduinoCodeSnip.png)
+### Concern
+One specific concern my team had was inpercision on DJI drones altimeters. 
+### Context
+I am partnered with Julain Dale, Duke Project Engineer and Director of O3ST, to help delvop altimeter design. Altough O3ST had developed main components, I am helping with the new alimeter desing that includings: 
+* Support for new LW20 altimeter. Existing code will work over i2c.
+* Cheaper IMU module with enable/disable option in code.
+* Cheaper/Smaller GPS module. RTC another option for faster startup. Accuracy not super important just clock required.
+* Every 1sec log or Hot shoe trigger logging options via code switch (only record gps and time data when hot shoe event detected. Up to 15Hz shutter speed sampling required if possible)
+* smaller Arduino or python board.
+* add in a “vertical altitude” result in the log file = cos x tilt angle x laser measurement.
+* Use time/date as log filename. Current sequential numbering is a pain when archiving data of tying to find the relevant file to match images.
 
-## Approach
-In all my courses, I strive to create a narrative that complements the learning objectives. In the case of this particular project, I found that using cards as an analogy was a natural fit. By leveraging this analogy, I was able to elucidate complex JavaScript concepts in a simplified and easily understandable format for learners.
 
-## Results
-Upon publication, the course garnered significant attention, accumulating over 6,500 viewers to date. It remains one of my personal favorite tutorials, as it encapsulates my passion for teaching and the JavaScript language.
-
-## Next Steps
-After witnessing the success of the cooking-inspired coding lesson, I am thrilled to share that I am incorporating the "Piece of Cake" app in my current tutorial,
+## Toroidal Propellers
+### Concern
+One specific concern brought to me included the emitted frequency of a drone with standard propellers frequency resembling a bee-like noise. Specifically, Duke researchers traveled to Wonga Wongue National Park in Gabon and ran a series of tests to compare bee sounds with drone sounds, and were able to show that especially at the high frequency ranges, the similarities are significant. The study concluded that the DJI Phantom, the drone we would be using to capture key body condition photos, caused the most discomfort towards elephants as it was emitting frequencies closest to bees. Our solution was to test toroidal prollers, modeled after MIT Lincoln Lab found that this closed-form structure minimizes the drag effects of swirling air tunnels created at the tips of blades. These features reduce the propeller’s acoustic signature important for minimizing effects on elephants.
+### Context
+CAD design analysis then rig up a thrust test rig with a carriage and load cell. We mounted a DJI Phantom 4 motor and speed controller and did some comparisons on the thrust curves generated with the std DJI prop across the RPM range as baseline. We have a calibrated mic at the MaRRS lab so some initial recordings could be made on the test rig as the designs are tested. I think the printing strength will be one challenge so having this contained on a test rig would be safer until it can be sufficiently load and stress tested to be satisfied it will survive in flight.
