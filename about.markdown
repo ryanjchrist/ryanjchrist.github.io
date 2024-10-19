@@ -5,6 +5,7 @@ tagline: ""
 author_profile: true
 author: Ryan Christ
 ---
+
 # Hi I'm Ryan Christ
 I am a third-year undergraduate student at Duke University majoring in Mechanical Engineering and minoring in Electrical & Computer Engineering
 

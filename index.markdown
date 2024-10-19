@@ -5,6 +5,7 @@
 layout: home
 author: Ryan Christ
 ---
+
 ![ryan christ](/assets/images/IMG_8508.jpeg){: .avatar}
 # Hi there! I'm Ryan Christ.
 I am a third-year undergraduate student at the Duke University Pratt School of Engineering. Please check out [My Portfolio](/myportfolio)!
