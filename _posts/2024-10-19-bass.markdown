@@ -11,7 +11,7 @@ highlight_home: true
 header:
   overlay_image: "/assets/images/SkydioAlt.jpeg"
   teaser: "/assets/images/DroneAlt.jpg"
-  caption: "Photo credit: [O3ST: Julian Dale](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
+  caption: "Photo credit: [O3ST: **Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
 description: Add Description
 ---
 ## Context
@@ -37,3 +37,23 @@ I am partnered with Julain Dale, Duke Project Engineer and Director of O3ST, to 
 One specific concern brought to me included the emitted frequency of a drone with standard propellers frequency resembling a bee-like noise. Specifically, Duke researchers traveled to Wonga Wongue National Park in Gabon and ran a series of tests to compare bee sounds with drone sounds, and were able to show that especially at the high frequency ranges, the similarities are significant. The study concluded that the DJI Phantom, the drone we would be using to capture key body condition photos, caused the most discomfort towards elephants as it was emitting frequencies closest to bees. Our solution was to test toroidal prollers, modeled after MIT Lincoln Lab found that this closed-form structure minimizes the drag effects of swirling air tunnels created at the tips of blades. These features reduce the propeller’s acoustic signature important for minimizing effects on elephants.
 ### Context
 CAD design analysis then rig up a thrust test rig with a carriage and load cell. We mounted a DJI Phantom 4 motor and speed controller and did some comparisons on the thrust curves generated with the std DJI prop across the RPM range as baseline. We have a calibrated mic at the MaRRS lab so some initial recordings could be made on the test rig as the designs are tested. I think the printing strength will be one challenge so having this contained on a test rig would be safer until it can be sufficiently load and stress tested to be satisfied it will survive in flight.
+
+<div id="nanogallery2"></div>
+<script>
+  $("#nanogallery2").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'SkydioAlt.jpeg', srct: 'SkydioAlt.jpeg' },
+      { src: 'gyro.jpeg', srct: 'gyro.jpeg' },
+      { src: 'i.jpeg', srct: 'i.jpeg' },
+      { src: 'magazone_stand.jpeg', srct: 'magazone_stand.jpeg' },
+      { src: 'probe.jpeg', srct: 'probe.jpeg' },
+
+  ]
+});
+</script>

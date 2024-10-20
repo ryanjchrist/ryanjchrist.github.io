@@ -6,3 +6,11 @@
     background-color: rgba(141, 141, 141, 0.418);
     padding: 1em;
 }
+
+img.gallery {
+    max-width: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: thin solid #ccc;
+}

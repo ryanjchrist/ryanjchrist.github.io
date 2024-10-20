@@ -13,9 +13,24 @@ header:
     teaser: "/assets/images/EGR101Dev.jpg"
 description: add
 ---
-First-year engineering project. First dive into protoyping and learning how we can implement solutions that make meaningful impacts on within the community.
 
-# Rock
-![egr101](/assets/images/EGR101Dev.jpg)
-I was assigned to a project team seeking to design and build a solution for a Durham farmer to easily move boulders on his land. His previous solution was a tractor-hitched tool, but it took him too long to set up and use that it was not economical. Our team went through an iterative design process until we presented our final solution to the client. We decided on a 9 foot tall wooden structure, with a pulley system mounted in the middle of a triangular base. Our design was large enough to lift up to 300 lb. rocks, while also remaining operable by a single user. Our client liked our idea and gave us the go-ahead to start building. Over the second half of the semester we constructed and tested our device. We defined test criteria according to project specifications, and succeeded at a passing level in all categories. Due to lack of testing equipment (300 lb. weights) we were not able to fully test the load capacity of our device, but with strong performance at a 200 lb. load we were able to call the project a success. My first foray into engineering design was a very rewarding experience, and has provided me a base from which to further develop as an engineer.
-![egr101](/assets/images/EGR101Poster.png)
+# Context
+As part of Duke's first year engineering curriculum, I was assigned to a project team. My team was seeking to build a device to help relocate rocks on our clients (Ric Telford, a professor at the Duke Pratt School of Engineering and a part-time farmer situated in rural North Carolina) property. The 200-300 lb rocks impede his ability to farm, making crops impossible to cultivate. While his current methods were able to successfully transport the rocks, they disrupted the topsoil and limited his ability to place the rocks precisely. Mr. Telford has tasked our team with two objectives: removing these large rocks without disrupting the topsoil and placing them precisely in a structured wall. Though this is Mr. Telford’s individual problem, the uniformity of the landscape of rural North Carolina means other farmers may face similar strife.
+
+# Content
+To find a solution, our team went through an interative design process. We first defined First-year engineering project. First dive into protoyping and learning how we can implement solutions that make meaningful impacts on within the community.
+<div id="nanogallery2"></div>
+<script>
+  $("#nanogallery2").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'EGR101Dev.jpg', srct: 'EGR101Dev.jpg' },
+      { src: 'EGR101Poster.png', srct: 'EGR101Poster.png' },
+  ]
+});
+</script>

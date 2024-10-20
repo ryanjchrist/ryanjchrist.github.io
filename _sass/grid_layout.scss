@@ -38,7 +38,11 @@ article.archive__item {
 
     img {
         width: 100%;
-        max-width: 100%;
-        height: 100%
+        height: 100%;
     }
+}
+
+#nanogallery2.nGY2 .nGY2GThumbnailImage,
+.nanogallery_gallerytheme_dark_nanogallery2 .nGY2GThumbnail {
+    background-color: white
 }
