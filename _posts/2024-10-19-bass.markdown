@@ -17,21 +17,20 @@ description: Add Description
 
 ## Context
 I am apart of Duke University - Bass Connections in the Energy/Environment sector. Bass Connections is a small group research experience where undergraduates, graduates, and faculty members all work together on selected projects. The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions and concerns revolving around the technology side of the project. 
-
 ## Altimeter
 ### Concern
 One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter precision is critical when flying over elephants to gather data safely and accurately. Small discrepancies in altitude position can greatly affect our ability to collect high-quality aerial imagery for body condition analysis using LiDAR and photogrammetry methods.
 ### Content
-To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system and produce a new one for the DJI Mavic Air 3. I have been working on devloping support for a new LW20 altimeter (compact laser altimeter), known for its high accuracy and fast response time. Our existing codebase for our drone systems will work seamlessly with the LW20 altimeter because the device supports communication over the I²C (Inter-Integrated Circuit) protocol. I²C is a commonly used two-wire communication interface that allows multiple sensors and microcontrollers to exchange data efficiently.
+To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system and produce a new one for the DJI Mavic Air 3. I have devloped support for a new LW20 altimeter (compact laser altimeter), known for its high accuracy and fast response time. This altimeter works right over our I2C protcol and enhance the drone's altitude tracking without disrupting the overall system. 
 
-This compatibility simplifies the integration process, as we do not need to rewrite significant portions of the drone’s control code. Instead, we can reuse existing functions to read data from the LW20, ensuring a smooth transition. By configuring the I²C bus correctly and making minor adjustments to match the LW20’s data format, we will enhance the drone's altitude tracking without disrupting the overall system architecture.
+In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs, which are saved to an SD card. This was achieved by using the gravitational acceleration readings from the IMU. Specifically, I calculated the vertical altitude by compensating for the drone's tilt during flight.
 
- as much of their existing code will only work with the I2C. Incorporating a cheaper IMU module within the design with an enable and disable option in code.
-* Cheaper/Smaller GPS module. RTC another option for faster startup. Accuracy not super important just clock required.
-* Every 1sec log or Hot shoe trigger logging options via code switch (only record gps and time data when hot shoe event detected. Up to 15Hz shutter speed sampling required if possible)
-* smaller Arduino or python board.
-* add in a “vertical altitude” result in the log file = cos x tilt angle x laser measurement.
-* Use time/date as log filename. Current sequential numbering is a pain when archiving data of tying to find the relevant file to match images.
+Additional improvments I am working on include:
+* Incorporating a cheaper IMU module within the design with an enable and disable option in code
+* Cheaper/smaller GPS module or using RTC for faster startup (only used for an internal clock)
+* Every 1 sec log or hot shoe trigger logging options via code switch
+* Incorporating a smaller Arduino in our desgin
+* Updating log filenames with time/date as current sequential numbering is often confusing when archiving data
 
 <div id="nanogallery2"></div>
 <script>
@@ -62,9 +61,9 @@ To address this issue, we are exploring the use of toroidal propellers. We were 
 
 Our approach includes performing FEA and CFD design analysis on various toroidal propeller designs. We will then print the propellers in partnership Duke Bluesmith Lab beginning on a Formlabs Form 3 SLA printer then to a Stratasys J750 Digital Anatomy for a much more refined product. This will be followed by constructing a thrust test including a DJI Phantom 4 motor and speed controller, using standard DJI propellers RPM range as baseline. Lastly, we will be measuring acoustic levels
 
-<div id="nanogallery2"></div>
+<div id="nanogallery1"></div>
 <script>
-  $("#nanogallery2").nanogallery2({
+  $("#nanogallery1").nanogallery2({
   // ### gallery settings ###
   thumbnailHeight:  150,
   thumbnailWidth:   150,
@@ -73,11 +72,6 @@ Our approach includes performing FEA and CFD design analysis on various toroidal
   // ### gallery content ###
   items: [
       { src: 'SkydioAlt.jpeg', srct: 'SkydioAlt.jpeg' },
-      { src: 'gyro.jpeg', srct: 'gyro.jpeg' },
-      { src: 'i.jpeg', srct: 'i.jpeg' },
-      { src: 'magazone_stand.jpeg', srct: 'magazone_stand.jpeg' },
-      { src: 'probe.jpeg', srct: 'probe.jpeg' },
-
   ]
 });
 </script>
