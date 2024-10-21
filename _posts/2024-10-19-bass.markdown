@@ -14,29 +14,53 @@ header:
   caption: "Photo credit: [O3ST: **Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
 description: Add Description
 ---
+
 ## Context
 I am apart of Duke University - Bass Connections in the Energy/Environment sector. Bass Connections is a small group research experience where undergraduates, graduates, and faculty members all work together on selected projects. The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions and concerns revolving around the technology side of the project. 
 
 ## Altimeter
-![arduino](/assets/images/ArduinoCodeSnip.png)
 ### Concern
-One specific concern my team had was inpercision on DJI drones altimeters. 
-### Context
-I am partnered with Julain Dale, Duke Project Engineer and Director of O3ST, to help delvop altimeter design. Altough O3ST had developed main components, I am helping with the new alimeter desing that includings: 
-* Support for new LW20 altimeter. Existing code will work over i2c.
-* Cheaper IMU module with enable/disable option in code.
+One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter precision is critical when flying over elephants to gather data safely and accurately. Small discrepancies in altitude position can greatly affect our ability to collect high-quality aerial imagery for body condition analysis using LiDAR and photogrammetry methods.
+### Content
+To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system and produce a new one for the DJI Mavic Air 3. I have been working on devloping support for a new LW20 altimeter (compact laser altimeter), known for its high accuracy and fast response time. Our existing codebase for our drone systems will work seamlessly with the LW20 altimeter because the device supports communication over the I²C (Inter-Integrated Circuit) protocol. I²C is a commonly used two-wire communication interface that allows multiple sensors and microcontrollers to exchange data efficiently.
+
+This compatibility simplifies the integration process, as we do not need to rewrite significant portions of the drone’s control code. Instead, we can reuse existing functions to read data from the LW20, ensuring a smooth transition. By configuring the I²C bus correctly and making minor adjustments to match the LW20’s data format, we will enhance the drone's altitude tracking without disrupting the overall system architecture.
+
+ as much of their existing code will only work with the I2C. Incorporating a cheaper IMU module within the design with an enable and disable option in code.
 * Cheaper/Smaller GPS module. RTC another option for faster startup. Accuracy not super important just clock required.
 * Every 1sec log or Hot shoe trigger logging options via code switch (only record gps and time data when hot shoe event detected. Up to 15Hz shutter speed sampling required if possible)
 * smaller Arduino or python board.
 * add in a “vertical altitude” result in the log file = cos x tilt angle x laser measurement.
 * Use time/date as log filename. Current sequential numbering is a pain when archiving data of tying to find the relevant file to match images.
 
+<div id="nanogallery2"></div>
+<script>
+  $("#nanogallery2").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'AltWiring.png', srct: 'AltWiring.png' },
+      { src: 'ArduinoCodeSnip.png', srct: 'ArduinoCodeSnip.png' },
+      { src: 'SkydioAlt.jpeg', srct: 'SkydioAlt.jpeg' },
+      { src: 'DroneAlt.jpg', srct: 'DroneAlt.jpg' },
+
+  ]
+});
+</script>
+
 
 ## Toroidal Propellers
 ### Concern
-One specific concern brought to me included the emitted frequency of a drone with standard propellers frequency resembling a bee-like noise. Specifically, Duke researchers traveled to Wonga Wongue National Park in Gabon and ran a series of tests to compare bee sounds with drone sounds, and were able to show that especially at the high frequency ranges, the similarities are significant. The study concluded that the DJI Phantom, the drone we would be using to capture key body condition photos, caused the most discomfort towards elephants as it was emitting frequencies closest to bees. Our solution was to test toroidal prollers, modeled after MIT Lincoln Lab found that this closed-form structure minimizes the drag effects of swirling air tunnels created at the tips of blades. These features reduce the propeller’s acoustic signature important for minimizing effects on elephants.
-### Context
-CAD design analysis then rig up a thrust test rig with a carriage and load cell. We mounted a DJI Phantom 4 motor and speed controller and did some comparisons on the thrust curves generated with the std DJI prop across the RPM range as baseline. We have a calibrated mic at the MaRRS lab so some initial recordings could be made on the test rig as the designs are tested. I think the printing strength will be one challenge so having this contained on a test rig would be safer until it can be sufficiently load and stress tested to be satisfied it will survive in flight.
+A concern that my team and I have identified relates to the acoustic emissions of drones, particularly on the comparison of the sound emmision of UAVs to a known source of annoyance to elephants: honeybees. Research conducted by a Duke University team during their visit to Wonga Wongue National Park in Gabon highlighted significant similarities between drone sounds and bee frequencies, especially at higher frequency ranges of 2-5 kHz. The study concluded that one of the drones we plan on using for capturing critical body condition photos, the DJI Phantom, emitted frequencies that caused discomfort to elephants, primarily due to its similarity to bee sounds.
+
+### Content
+To address this issue, we are exploring the use of toroidal propellers. We were inspired by the findings at MIT Lincoln Labratory that suggest toroidal propellers “closed-form structure minimizes the drag effects created by swirling air tunnels” at the blade tips. This design feature could effectively reduce the propeller's acoustic signature especially in the 2-5 kHz range (one of the most prominent frequency ranges of sound emanated by bees), minimizing the potential negative impact on the elephants.
+
+Our approach includes performing FEA and CFD design analysis on various toroidal propeller designs. We will then print the propellers in partnership Duke Bluesmith Lab beginning on a Formlabs Form 3 SLA printer then to a Stratasys J750 Digital Anatomy for a much more refined product. This will be followed by constructing a thrust test including a DJI Phantom 4 motor and speed controller, using standard DJI propellers RPM range as baseline. Lastly, we will be measuring acoustic levels
 
 <div id="nanogallery2"></div>
 <script>
