@@ -18,7 +18,11 @@ description: add
 As part of Duke's first year engineering curriculum, I was assigned to a project team. My team was seeking to build a device to help relocate rocks on our clients (Ric Telford, a professor at the Duke Pratt School of Engineering and a part-time farmer situated in rural North Carolina) property. The 200-300 lb rocks impede his ability to farm, making crops impossible to cultivate. While his current methods were able to successfully transport the rocks, they disrupted the topsoil and limited his ability to place the rocks precisely. Mr. Telford has tasked our team with two objectives: removing these large rocks without disrupting the topsoil and placing them precisely in a structured wall. Though this is Mr. Telford’s individual problem, the uniformity of the landscape of rural North Carolina means other farmers may face similar strife.
 
 # Content
-To find a solution, our team went through an interative design process. We first defined First-year engineering project. First dive into protoyping and learning how we can implement solutions that make meaningful impacts on within the community.
+Our team followed an iterative design process, brainstorming solutions that would minimize soil disturbance and allow precise placement of rocks to build a structured wall. After testing various ideas, we settled on a four-pulley design with a cam cleat to secure the rope and ratchet straps at the bottom to wrap around the rock. This system was designed to handle up to 300 lbs and be operable by a single person.
+
+Throughout the semester, we built and tested our prototype to meet the client’s needs. While we couldn’t test at full capacity due to weight limitations, the device successfully handled 200 lbs during trials, giving us confidence in the design.
+
+This project provided me a hands-on introduction to prototyping and collaborative design, and taught me how to implement solutions that make meaningful impacts within the community.
 <div id="nanogallery2"></div>
 <script>
   $("#nanogallery2").nanogallery2({

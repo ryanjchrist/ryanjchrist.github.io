@@ -1,12 +1,12 @@
 technical:
- - title: Solidworks, AutoCAD, Fusion 360, Inventor
+ - title: Solidworks, AutoCAD, Fusion 360, Inventor, LabVIEW
    level: Advanced
  - title: Python, MATLAB, Java, Maple, Visual Basic, C++, LaTeX
    level: Intermediate
+ - title: HTML, SCSS, Ruby, Javascript
+   level: Intermediate
  - title: 3D Printing with Prusa i3 MK3S+ & Ultimaker 2/3, Soldering, Laser Cutting
    level: Advanced
- - title: LabVIEW, HTML, SCSS, Ruby, Javascript
-   level: Intermediate
 
 soft:
  - title: Problem-solving, Teamwork, 

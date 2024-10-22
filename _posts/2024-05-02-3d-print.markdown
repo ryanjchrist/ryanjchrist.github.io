@@ -3,7 +3,7 @@ layout: posts
 title:  "3D Printing Projects"
 tagline: ""
 date:   2024-05-02 00:00:00 +0000
-tags: [CAD, 3D Printing]
+tags: [CAD]
 author_profile: true
 author: Ryan Christ
 highlight_home: true
@@ -13,17 +13,71 @@ header:
     teaser: "/assets/images/PinballAssembled.gif"
 description: add
 ---
-Fun & useful 3D printing projects either printed at at my house using my Prusa MK3S+ or at Duke University on Ultimaker 3s using a wide range of materials for specific for certain applications.
+Designed and printed various projects using a Prusa MK3S+ at home and Ultimaker 3s at Duke University, leveraging a variety of materials for specific applications.
 
 # Pocket Pinball Game
-![pinball](/assets/images/PinballAssembled.gif)
-Designed a pocket pinball game made to be fun and interactive way to promote sustainable practices for kids in Happy Meal. Key constraints included designing easily injection moldable parts to limit overall costs,
-![pinball](/assets/images/PinballCAD.png)
+Designed a fun and interactive pocket-sized pinball game to encourage sustainable habits in children through a Happy Meal toy. The toy features multiple plastic components, each optimized for easy assembly and mass production, in accordance with injection molding DFM principles. All components were modeled in Solidworks with tolerance analysis to ensure easy assembly and mass production. Additionally the paper backing on the toy along with the acryllic screen were both laser cut on a Trotec laser cutter to ensure accuracy and a well finished product.
+
+<div id="nanogallery1"></div>
+<script>
+  $("#nanogallery1").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'PinballAssembled.gif', srct: 'PinballAssembled.gif' },
+      { src: 'PinballCAD.png', srct: 'PinballCAD.png' },
+      { src: 'PinballDrawings.png', srct: 'PinballDrawings.png' },
+      { src: 'PinballAI.png', srct: 'PinballAI.png' },
+  ]
+});
+</script>
+<br>
+
 
 # Jer-Bear
-![jer](/assets/images/Jer1.gif)
-Scanned my cousin's head (Jer-Bear) using the EM3D app that captures depth of objects using infrared flash modules. Meshed his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+.
+Scanned my cousin's head (Jarrett) using the EM3D app that captures depth of objects using infrared flash modules. Meshed his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+.
+
+<div id="nanogallery2"></div>
+<script>
+  $("#nanogallery2").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'Jer1.gif', srct: 'Jer1.gif' },
+      { src: 'JerBerCAD.png', srct: 'JerBerCAD.png' },
+  ]
+});
+</script>
+<br>
 
 # Sony WH1000xM3 Part
-![sony](/assets/images/SonyCAD.gif)
-Sony WH1000xM3 ear cup to headband broke. Modeled replacement part off of dimensions I found online and took myself. Ended up creating a plate cut in half when printed that would fit inside the ear cup and around a small notch 
+Designed and 3D-modeled a replacement part for a broken ear cup-to-headband connector on the Sony WH1000X-M3 headphones.
+
+* Modeling: Took measurements from both online sources and manual measurements to ensure precision.
+* Design: Created a two-piece plate that fits inside the ear cup and secures around a small notch for stability.
+* Fit: The design ensures proper function and alignment with the original headphone structure.
+
+<div id="nanogallery3"></div>
+<script>
+  $("#nanogallery3").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'SonyBroken.png', srct: 'SonyBroken.png' },
+      { src: 'SonyCAD.png', srct: 'SonyCAD.png' },
+      { src: 'SonyPrinted.png', srct: 'SonyPrinted.png' },
+  ]
+});
+</script>

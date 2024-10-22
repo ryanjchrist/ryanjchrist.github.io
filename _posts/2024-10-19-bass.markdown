@@ -3,7 +3,7 @@ layout: posts
 title:  "Altimeter & Toroidal Propellers"
 tagline: ""
 date:   2024-10-19 00:00:00 +0000
-tags: [Arduino, Circuitry, Simulations]
+tags: [Arduino & Circuitry, CAD]
 author_profile: true
 author: Ryan Christ
 categories: project
@@ -59,7 +59,7 @@ A concern that my team and I have identified relates to the acoustic emissions o
 ### Content
 To address this issue, we are exploring the use of toroidal propellers. We were inspired by the findings at MIT Lincoln Labratory that suggest toroidal propellers “closed-form structure minimizes the drag effects created by swirling air tunnels” at the blade tips. This design feature could effectively reduce the propeller's acoustic signature especially in the 2-5 kHz range (one of the most prominent frequency ranges of sound emanated by bees), minimizing the potential negative impact on the elephants.
 
-Our approach includes performing FEA and CFD design analysis on various toroidal propeller designs. We will then print the propellers in partnership Duke Bluesmith Lab beginning on a Formlabs Form 3 SLA printer then to a Stratasys J750 Digital Anatomy for a much more refined product. This will be followed by constructing a thrust test including a DJI Phantom 4 motor and speed controller, using standard DJI propellers RPM range as baseline. Lastly, we will be measuring acoustic levels
+Our approach includes performing FEA and CFD design analysis on various toroidal propeller designs. We will then print the propellers in partnership Duke Bluesmith Lab beginning on a Formlabs Form 3 SLA printer then to a Stratasys J750 Digital Anatomy for a much more refined product. This will be followed by constructing a thrust test including a DJI Phantom 4 motor and speed controller, using standard DJI propellers RPM range as baseline. Lastly, we will be measuring acoustic levels to confirm suspected noise reduction and deloying them on our drones when we go back to Zambia in May of 2025. Photos will be updated as progress is made. Currently, we are at the phase of analyzing toroidal propeller designs. Below is a potential design for the DJI Mavic Mini.
 
 <div id="nanogallery1"></div>
 <script>
@@ -71,7 +71,7 @@ Our approach includes performing FEA and CFD design analysis on various toroidal
 
   // ### gallery content ###
   items: [
-      { src: 'SkydioAlt.jpeg', srct: 'SkydioAlt.jpeg' },
+      { src: 'ToroidalPropsMini.png', srct: 'ToroidalPropsMini.png' },
   ]
 });
 </script>
