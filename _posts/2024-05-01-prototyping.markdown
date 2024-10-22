@@ -16,7 +16,7 @@ description: add
 Developed several prototypes using Arduino microcontrollers and laser-cut components to create interactive and functional designs.
 
 # Mini Golf
-Designed a mini golf simulator as part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated “tee” spot. An ultrasonic sensor detects the ball and initiates the sequence.
+The mini golf simulator as part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated “tee” spot. An ultrasonic sensor detects the ball and initiates the sequence.
 
 Automation Sequence: After a 1-second delay, the golf club—powered by a servo motor—retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer begins playing the olymipic theme song as the ball continue on to further assemblies. This project combined sensor automation and some mechanical design to create a successful Rube Goldberg machine.
 
@@ -38,7 +38,7 @@ Automation Sequence: After a 1-second delay, the golf club—powered by a servo 
 </script>
 
 # Spotify Picture Frame
-Designed and created a personalized wedding gift for my brother and his wife using Adobe Illustrator and laser-cut on a Trotec laser cutter.
+I designed and created a personalized wedding gift for my brother and his wife using Adobe Illustrator and laser-cut on a Trotec laser cutter.
 
 * Spotify Code Integration: Embedded a scannable Spotify barcode to play "Fly Me To The Moon" by Frank Sinatra
 * Two-Plate Design: Allows a photo to be displayed between two clear acrylic plates.
