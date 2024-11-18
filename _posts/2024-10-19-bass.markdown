@@ -45,7 +45,7 @@ Additional improvments I am working on include:
   items: [
       { src: 'AltimeterCircuit.jpg', srct: 'AltimeterCircuit.jpg' },
       { src: 'AltWiring.png', srct: 'AltWiring.png' },
-      { src: 'ArduinoCodeSnip.png', srct: 'ArduinoCodeSnip.png' },
+      { src: 'AltimeterCode1.png', srct: 'AltimeterCode1.png' },
       { src: 'SkydioAlt.jpeg', srct: 'SkydioAlt.jpeg' },
       { src: 'DroneAlt.jpg', srct: 'DroneAlt.jpg' },
 
