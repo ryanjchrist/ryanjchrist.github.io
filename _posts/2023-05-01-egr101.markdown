@@ -20,7 +20,7 @@ As part of Duke's first year engineering curriculum, I was assigned to a project
 # Content
 Our team followed an iterative design process, brainstorming solutions that would minimize soil disturbance and allow precise placement of rocks to build a structured wall. After testing various ideas, we settled on a four-pulley design with a cam cleat to secure the rope and ratchet straps at the bottom to wrap around the rock. This system was designed to handle up to 300 lbs and be operable by a single person.
 
-Throughout the semester, we built and tested our prototype to meet the client’s needs. While we couldn’t test at full capacity due to weight limitations, the device successfully handled 200 lbs during trials, giving us confidence in the design.
+Throughout the semester, we built and tested our prototype to meet the client’s needs. While we couldn’t test at full capacity due to lack of testing equipment (300 lb weights), the device successfully handled 200 lbs during trials, giving us confidence in the design.
 
 This project provided me a hands-on introduction to prototyping and collaborative design, and taught me how to implement solutions that make meaningful impacts within the community.
 <div id="nanogallery2"></div>

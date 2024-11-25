@@ -16,22 +16,21 @@ description: Add Description
 ---
 
 ## Context
-I am apart of Duke University - Bass Connections in the Energy/Environment sector. Bass Connections is a small group research experience where undergraduates, graduates, and faculty members all work together on selected projects. The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions and concerns revolving around the technology side of the project. 
+I am apart of Duke University - Bass Connections (a small group research experience for undergraduates, graduates, and faculty members). The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions. 
 ## Altimeter
 ### Concern
-One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter precision is critical when flying over elephants to gather data safely and accurately. Small discrepancies in altitude position can greatly affect our ability to collect high-quality aerial imagery for body condition analysis using LiDAR and photogrammetry methods.
+One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter percision is crutial to identify the height of the elephants. As the drone flys over the elephant we should be able to notice a change in altimeter height, which will later be used to interpret mody 
 ### Content
-To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system and produce a new one for the DJI Mavic Air 3. I have devloped support for a new LW20 altimeter (compact laser altimeter), known for its high accuracy and fast response time. This altimeter works right over our I2C protcol and enhance the drone's altitude tracking without disrupting the overall system. 
+To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system. This includes reducing the overall size and production costs of their current model. So far I have switched the larger Grove GPS with a much more compact GP1818MK. I have also devloped support for a new LW20 rangefinder for higher accuracy at greater altitudes. This altimeter works right over our I2C protcol and enhances the drone's altitude tracking without disrupting the overall system. 
 
-In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs, which are saved to an SD card. This was achieved by using the gravitational acceleration readings from the IMU. Specifically, I calculated the vertical altitude by compensating for the drone's tilt during flight.
+In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs. This was achieved by using the gravitational acceleration readings from the IMU by compensating for the drone's tilt angle. Also, I have updating log filenames with time/date as opposed to the old method of sequential numbering.
 
-Additional improvments I am working on include:
+Additional improvments I am currently working on include:
 * Incorporating a cheaper IMU module within the design with an enable and disable option in code
-* Cheaper/smaller GPS module or using RTC for faster startup (only used for an internal clock)
-* Every 1 sec log or hot shoe trigger logging options via code switch
+* Include a code switch to log data every 1 sec or hot shoe trigger logging at 15Hz shutter speed
 * Incorporating a smaller Arduino in our desgin
-* Updating log filenames with time/date as current sequential numbering is often confusing when archiving data
-* The new GPS module and the Seeed Studio XIAO SAMD21 Arduino board are positioned at the top of the first image. The current setup is shown on a breadboard, where I am experimenting with the configuration and tinkering with the code
+
+The new GPS module and the Seeed Studio XIAO SAMD21 Arduino board are positioned at the top of the first image. The current setup is shown on a breadboard, where I am experimenting with the configuration and tinkering with the code.
 
 <div id="nanogallery2"></div>
 <script>

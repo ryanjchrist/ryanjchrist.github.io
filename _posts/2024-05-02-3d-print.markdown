@@ -39,7 +39,7 @@ This pinball game was a fun and interactive pocket-sized design to encourage sus
 
 
 # Jer-Bear
-I captured of scan my cousin's head (Jarrett) using the EM3D app that analyzes depth of objects using infrared flash modules. I created a mesh of his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Using Fusion 360, I spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+.
+I captured of scan my cousin's head (Jarrett) using the EM3D app that analyzes depth of objects using infrared flash modules. I created a mesh of his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Using Fusion 360, I spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+. I've made many more with other family members as seen below.
 
 <div id="nanogallery2"></div>
 <script>
@@ -53,6 +53,8 @@ I captured of scan my cousin's head (Jarrett) using the EM3D app that analyzes d
   items: [
       { src: 'Jer1.gif', srct: 'Jer1.gif' },
       { src: 'JerBerCAD.png', srct: 'JerBerCAD.png' },
+      { src: 'WillKeyChain.jpg', srct: 'WillKeyChain.jpg' },
+      { src: 'MomPrint.jpg', srct: 'MomPrint.jpg' },
   ]
 });
 </script>
