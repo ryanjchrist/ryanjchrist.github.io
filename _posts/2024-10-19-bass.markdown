@@ -23,7 +23,7 @@ One of the concerns my team and I had identified involved the impercision on dro
 ### Content
 To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system. This includes reducing the overall size and production costs of their current model. So far I have switched the larger Grove GPS with a much more compact GP1818MK. I have also devloped support for a new LW20 rangefinder for higher accuracy at greater altitudes. This altimeter works right over our I2C protcol and enhances the drone's altitude tracking without disrupting the overall system. 
 
-In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs. This was achieved by using the gravitational acceleration readings from the IMU by compensating for the drone's tilt angle. Also, I have updating log filenames with time/date as opposed to the old method of sequential numbering.
+In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs. This was achieved by using the gravitational acceleration readings from the IMU by compensating for the drone's tilt angle. Also, I have updated log filenames with time/date as opposed to the old method of sequential numbering.
 
 Additional improvments I am currently working on include:
 * Incorporating a cheaper IMU module within the design with an enable and disable option in code
