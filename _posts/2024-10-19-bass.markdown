@@ -19,7 +19,7 @@ description: Add Description
 I am apart of Duke University - Bass Connections (a small group research experience for undergraduates, graduates, and faculty members). The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions. 
 ## Altimeter
 ### Concern
-One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter percision is crutial to identify the height of the elephants. As the drone flys over the elephant we should be able to notice a change in altimeter height, which will later be used to interpret mody 
+One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter percision is crutial to identify the height of the elephants. As the drone flys over the elephant we should be able to notice a change in altimeter height, which will later be used for more accurate body conditioning. 
 ### Content
 To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system. This includes reducing the overall size and production costs of their current model. So far I have switched the larger Grove GPS with a much more compact GP1818MK. I have also devloped support for a new LW20 rangefinder for higher accuracy at greater altitudes. This altimeter works right over our I2C protcol and enhances the drone's altitude tracking without disrupting the overall system. 
 

@@ -8,7 +8,7 @@ author: Ryan Christ
 
 ---
 
-I am a third-year undergraduate student at Duke University majoring in Mechanical Engineering and minoring in Electrical & Computer Engineering
+I am a third-year undergraduate student at Duke University majoring in Mechanical Engineering.
 
 I am originally from Rochester, NY and credit my passion for engineering to effective communication and technical problem-solving skills. I address the problems of today both through making tangible things for people and through translating big, seemingly intangible problem statements into technical requirements.
 

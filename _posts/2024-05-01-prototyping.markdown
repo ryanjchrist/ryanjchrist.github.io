@@ -9,16 +9,37 @@ author: Ryan Christ
 highlight_home: true
 categories: project
 header:
-    overlay_image: "/assets/images/GolfCircuitSkem1.png"
-    teaser: "/assets/images/Golf.jpg"
+    overlay_image: "/assets/images/MAGLEV.jpg"
+    teaser: "/assets/images/MAGLEV.jpg"
 description: add
 ---
-Developed several prototypes using Arduino microcontrollers and laser-cut components to create interactive and functional designs.
+Developed several prototypes using PID Controllers, Arduino microcontrollers and laser-cut components to create interactive and functional designs.
+
+# Magnetic Levetation
+My group and I designed a control system for a magnetic levitation device to alter the position of a ball. We controlled movements in sine, square wave, and random modes based on user-defined parameters. We used LabVIEW to create our control system. On our block diagram we used multiple DAQ Assistants and a Case Structure. On our front panel we included PID coefficients, voltage, and height. We modeled our system off a system of linear differential equations to produce an overall tranfer function. We used MATLAB's sisotool to tune our position, derivative, and integral contstants and refined these further in LabVIEW.
+
+
+<div id="nanogallery3"></div>
+<script>
+  $("#nanogallery3").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+
+  // ### gallery content ###
+  items: [
+      { src: 'MAGLEV.jpg', srct: 'MAGLEV.jpg' },
+      { src: 'MAGLEVBlockDiagramSine.png', srct: 'MAGLEVBlockDiagramSine.png' },
+      { src: 'MAGLEVFrontPanel.png', srct: 'MAGLEVFrontPanel.png' },
+  ]
+});
+</script>
 
 # Mini Golf
 The mini golf simulator as part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated “tee” spot. An ultrasonic sensor detects the ball and initiates the sequence.
 
-Automation Sequence: After a 1-second delay, the golf club—powered by a servo motor—retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer begins playing the olymipic theme song as the ball continue on to further assemblies. This project combined sensor automation and some mechanical design to create a successful Rube Goldberg machine.
+The automation sequence began after a 1-second delay, then a golf club powered by a servo motor retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer begins playing the olymipic theme song as the ball continue on to further assemblies. This project combined sensor automation and some mechanical design to successfully contribute to the Rube Goldberg machine.
 
 <div id="nanogallery1"></div>
 <script>
