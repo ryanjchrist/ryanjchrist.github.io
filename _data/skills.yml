@@ -3,9 +3,9 @@ technical:
    level: Advanced
  - title: 3D Printing with Prusa i3 MK3S+ & Ultimaker 2/3, Soldering, Laser Cutting
    level: Advanced
- - title: Python, MATLAB, Java, Maple, Visual Basic, C++, LaTeX
+ - title: Python, MATLAB, Java, Maple, Visual Basic, C++
    level: Intermediate
- - title: HTML, SCSS, Ruby, Javascript
+ - title: C, HTML, SCSS, Javascript, LaTeX
    level: Intermediate
 
 soft:
