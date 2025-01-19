@@ -1,7 +1,7 @@
 Ryan Christ:
   name        : "Ryan Christ"
   bio         : "Let's talk about engineering! Take a look at my resume and reach out via my email!"
-  avatar      : "assets/images/IMG_8508.jpeg"
+  avatar      : "assets/images/Ryan.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
