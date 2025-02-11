@@ -1,10 +1,16 @@
 Ryan Christ:
   name        : "Ryan Christ"
-  bio         : "Let's talk about engineering! Take a look at my resume and reach out via my email!"
+  bio         : "Take a look at my resume and reach out via my email!"
   avatar      : "assets/images/Ryan.jpeg"
   links:
+    - label: "Resume"
+      url: "https://ryanjchrist.github.io/Resume/Ryan-Christ-Resume-2025.pdf"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
+<<<<<<< HEAD
       url: "mailto:ryan.christ@duke.edu"
     - label: "Resume"
       url: "https://ryanjchrist.github.io/Resume/Ryan-Christ-Resume-25.pdf"
+=======
+      url: "mailto:ryan.christ@duke.edu"
+>>>>>>> 522d245 (updates)

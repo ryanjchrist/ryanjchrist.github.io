@@ -2,7 +2,7 @@
 layout: posts
 title:  "3D Printing Projects"
 tagline: ""
-date:   2024-05-02 00:00:00 +0000
+date:   2024-01-02 00:00:00 +0000
 tags: [CAD]
 author_profile: true
 author: Ryan Christ
