@@ -3,7 +3,7 @@ layout: posts
 title:  "Altimeter & Toroidal Propellers"
 tagline: ""
 date:   2024-10-19 00:00:00 +0000
-tags: [Arduino & Circuitry, CAD]
+tags: [Acoustics, Arduino & Circuitry, CAD]
 author_profile: true
 author: Ryan Christ
 categories: project
@@ -14,9 +14,6 @@ header:
   caption: "Photo credit: [O3ST: **Julian Dale**](https://www.o3st.com/wp-content/uploads/2024/08/Skydio2crop-1536x948.jpeg)"
 description: Add Description
 ---
-
-## Context
-I am apart of Duke University - Bass Connections (a small group research experience for undergraduates, graduates, and faculty members). The project team I am a part of is, "Using drones to Monitor the Health of Endangered Elephants in Zambia". As the only engineering student in my team I am tasked with the majority of technical questions. 
 ## Altimeter
 ### Concern
 One of the concerns my team and I had identified involved the impercision on drone altimeters. Altimeter percision is crutial to identify the height of the elephants. As the drone flys over the elephant we should be able to notice a change in altimeter height, which will later be used for more accurate body conditioning. 
