@@ -4,7 +4,7 @@ Ryan Christ:
   avatar      : "assets/images/Ryan.jpeg"
   links:
     - label: "Resume"
-      url: "https://ryanjchrist.github.io/Resume/Ryan-Christ-Resume-2025.pdf"
+      url: "https://ryanjchrist.github.io/Resume/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ryan.christ@duke.edu"
