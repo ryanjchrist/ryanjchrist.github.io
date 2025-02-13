@@ -17,7 +17,6 @@ description: add
 ## Context
 As part of Duke's first-year engineering curriculum, I was assigned to a project team tasked with developing a device to help relocate large rocks on the property of our client, Ric Telford, a professor at the Duke Pratt School of Engineering and part-time farmer in rural North Carolina. The 200-300 lb rocks on his property hinder his ability to cultivate crops. While his current methods of transporting the rocks are effective, they disturb the topsoil and hinder his ability to place the rocks precisely. Our team’s challenge was to find a solution that would address these issues, benefiting not only Mr. Telford but also other farmers in the region who may face similar obstacles due to the uniformity of the landscape.
 
-## Concern
 The main concerns of this project were to ensure that the rock-moving device would not disrupt the topsoil during operation and that it could place the rocks accurately to build a structured wall. Additionally, the device needed to be operable by a single person and capable of handling rocks weighing up to 300 lbs, which required a careful balance of efficiency, safety, and ease of use. The team had to focus on minimizing soil disturbance while achieving precise rock placement in a practical, user-friendly design.
 
 ## Content

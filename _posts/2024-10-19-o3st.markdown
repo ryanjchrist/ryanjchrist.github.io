@@ -15,7 +15,7 @@ header:
 description: Add Description
 ---
 # Altimeter
-## Concern
+## Context
 One of the concerns my team and I identified involved the imprecision of drone altimeters. Altimeter precision is crucial for accurately identifying the height of elephants. As the drone flies over an elephant, we should be able to detect a change in altimeter height, which will later be used for more accurate body conditioning.
 
 ## Content
@@ -52,7 +52,7 @@ Additional improvements I am currently working on include:
 <br>
   
 # Toroidal Propellers
-## Concern
+## Context
 A concern that my team and I have identified relates to the acoustic emissions of drones, particularly in comparing the sound emission of UAVs to a known source of annoyance to elephants: honeybees. Research conducted by a Duke University team during their visit to Wonga Wongué National Park in Gabon highlighted significant similarities between drone sounds and bee frequencies, especially in the higher frequency range of 2-5 kHz. The study concluded that one of the drones we plan to use for capturing critical body condition photos, the DJI Phantom, emitted frequencies that caused discomfort to elephants, primarily due to its similarity to bee sounds.
 
 ## Content
