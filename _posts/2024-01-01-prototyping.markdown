@@ -13,10 +13,16 @@ header:
     teaser: "/assets/images/MAGLEV.jpg"
 description: add
 ---
-Developed several prototypes using PID Controllers, Arduino microcontrollers and laser-cut components to create interactive and functional designs.
+Developed several prototypes using PID controllers, Arduino microcontrollers, and laser-cut components to create interactive and functional designs.
 
-# Magnetic Levetation
-My group and I designed a control system for a magnetic levitation device to alter the position of a ball. We controlled movements in sine, square wave, and random modes based on user-defined parameters. We used LabVIEW to create our control system. On our block diagram we used multiple DAQ Assistants and a Case Structure. On our front panel we included PID coefficients, voltage, and height. We modeled our system off a system of linear differential equations to produce an overall tranfer function. We used MATLAB's sisotool to tune our position, derivative, and integral contstants and refined these further in LabVIEW.
+# Magnetic Levitation
+
+My group and I designed a control system for a magnetic levitation device to precisely manipulate the position of a ball. We implemented control modes for sine, square wave, and random movements based on user-defined parameters.
+
+* Control System: Developed in LabVIEW, utilizing multiple DAQ Assistants and a Case Structure on the block diagram.
+* User Interface: Designed a front panel display with adjustable PID coefficients, voltage, and height monitoring for real-time control.
+* Mathematical Modeling: Modeled the system using a set of linear differential equations to derive an overall transfer function.
+* Tuning & Optimization: Used MATLAB’s sisotool to tune proportional, integral, and derivative (PID) constants, refining the response further in LabVIEW for improved stability and accuracy.
 
 
 <div id="nanogallery3"></div>
@@ -35,11 +41,13 @@ My group and I designed a control system for a magnetic levitation device to alt
   ]
 });
 </script>
+<br>
 
-# Mini Golf
-The mini golf simulator as part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated “tee” spot. An ultrasonic sensor detects the ball and initiates the sequence.
+# Mini Golf Simulator
 
-The automation sequence began after a 1-second delay, then a golf club powered by a servo motor retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer begins playing the olymipic theme song as the ball continue on to further assemblies. This project combined sensor automation and some mechanical design to successfully contribute to the Rube Goldberg machine.
+The mini golf simulator is part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated “tee” spot. An ultrasonic sensor detects the ball and initiates the sequence.
+
+The automation sequence begins after a 1-second delay. Then, a golf club powered by a servo motor retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer plays the Olympic theme song as the ball continues on to further assemblies. This project combined sensor automation and mechanical design to successfully contribute to the Rube Goldberg machine.
 
 <div id="nanogallery1"></div>
 <script>
@@ -57,12 +65,14 @@ The automation sequence began after a 1-second delay, then a golf club powered b
   ]
 });
 </script>
+<br>
 
 # Spotify Picture Frame
-I designed and created a personalized wedding gift for my brother and his wife using Adobe Illustrator and laser-cut on a Trotec laser cutter.
 
-* Spotify Code Integration: Embedded a scannable Spotify barcode to play "Fly Me To The Moon" by Frank Sinatra
-* Two-Plate Design: Allows a photo to be displayed between two clear acrylic plates.
+I designed and created a personalized wedding gift for my brother and his wife using Adobe Illustrator, with the design laser-cut on a Trotec laser cutter.
+
+* Spotify Code Integration: Embedded a scannable Spotify barcode to play "Fly Me To The Moon" by Frank Sinatra.
+* Two-Plate Design: The design allows a photo to be displayed between two clear acrylic plates.
 
 <div id="nanogallery2"></div>
 <script>

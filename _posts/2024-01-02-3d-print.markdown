@@ -13,10 +13,12 @@ header:
     teaser: "/assets/images/PinballAssembled.gif"
 description: add
 ---
-Designed and printed various projects using a Prusa MK3S+ at home and Ultimaker 3s at Duke University, leveraging a variety of materials for specific applications.
+Designed and 3D printed various projects using a Prusa MK3S+ at home and Ultimaker 3s at Duke University, utilizing a range of materials tailored to specific applications.
 
 # Pocket Pinball Game
-This pinball game was a fun and interactive pocket-sized design to encourage sustainable habits in children through a Happy Meal toy. The toy features multiple plastic components, each optimized for easy assembly and mass production, in accordance with injection molding DFM principles. All components were modeled in Solidworks with tolerance analysis to ensure easy assembly and mass production. Additionally, the paper backing on the toy along with the acryllic screen were both laser cut on a Trotec laser cutter to ensure accuracy and a well finished product.
+This pocket-sized pinball game was designed as a fun and interactive way to encourage sustainable habits in children through a Happy Meal toy concept. The toy features multiple plastic components, each optimized for easy assembly and mass production, following injection molding DFM (Design for Manufacturability) principles.
+
+All components were modeled in SolidWorks, with tolerance analysis to ensure proper fit and manufacturability. Additionally, the paper backing and acrylic screen were laser-cut using a Trotec laser cutter for high precision and a polished final product.
 
 <div id="nanogallery1"></div>
 <script>
@@ -39,7 +41,9 @@ This pinball game was a fun and interactive pocket-sized design to encourage sus
 
 
 # Jer-Bear
-I captured of scan my cousin's head (Jarrett) using the EM3D app that analyzes depth of objects using infrared flash modules. I created a mesh of his head to create segments I could individually edit to repair blemishes caused from inaccuracies in the scan. Using Fusion 360, I spliced his head with a meditating bear file and then printed in PLA using Prusa MK3S+. I've made many more with other family members as seen below.
+I scanned my cousin Jarrett’s head using the EM3D app, which captures depth using infrared flash modules. The resulting mesh required manual editing to repair blemishes caused by scanning inaccuracies.
+
+Using Fusion 360, I spliced the cleaned scan of his head with a meditating bear model to create a unique figurine. The final model was printed in PLA on a Prusa MK3S+. Since then, I’ve created several personalized versions for other family members, as shown below.
 
 <div id="nanogallery2"></div>
 <script>
@@ -60,12 +64,12 @@ I captured of scan my cousin's head (Jarrett) using the EM3D app that analyzes d
 </script>
 <br>
 
-# Sony WH1000xM3 Part
-I designed and 3D-modeled a replacement part for a broken ear cup-to-headband connector on the Sony WH1000X-M3 headphones.
+# Sony WH1000X-M3 Replacement Part
+I designed and 3D-modeled a replacement ear cup-to-headband connector for the Sony WH1000X-M3 headphones after the original part broke.
 
-* Modeling: Took measurements from both online sources and manual measurements to ensure precision.
-* Design: Created a two-piece plate that fits inside the ear cup and secures around a small notch for stability.
-* Fit: The design ensures proper function and alignment with the original headphone structure.
+* Modeling: Measured dimensions using both online resources and manual calipers for precision.
+* Design: Created a two-piece plate that fits securely inside the ear cup and locks around a small notch for stability.
+* Fit: Ensured proper alignment and structural integrity, allowing the headphones to function as intended.
 
 <div id="nanogallery3"></div>
 <script>

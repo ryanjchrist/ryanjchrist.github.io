@@ -8,13 +8,13 @@ author: Ryan Christ
 
 ---
 
-I am a third-year undergraduate student at Duke University double majoring in Mechanical Engineering and Computer Science.
+I am a third-year undergraduate student at Duke University, double majoring in Mechanical Engineering and Computer Science.
 
-I am originally from Rochester, NY and credit my passion for engineering to effective communication and technical problem-solving skills. I address the problems of today both through making tangible things for people and through translating big, seemingly intangible problem statements into technical requirements.
+Originally from Rochester, NY, I credit my passion for engineering to the development of effective communication and technical problem-solving skills. I address the problems of today by both creating tangible solutions for people and translating large, seemingly intangible challenges into technical requirements.
 
-I am passionate about additive manufacturing and control systems. With this combination I am able to bring all of my abstract ideas to life. Going forward, I’m looking for new ways to apply my innovative mindset and my design and manufacturing skills to bridge the gap between theoretical knowledge and practical applications.
+I am passionate about computer automation, additive manufacting, and control systems. This combination enables me to bring my abstract ideas to life. Moving forward, I am looking for new opportunities to apply my innovative mindset, design, and manufacturing skills to bridge the gap between theoretical knowledge and practical applications.
 
-In my off time, you'll find me flying drones, printing on my Prusa MK3S+, or running. Take a look at the projects and feel free to contact me if you'd like to know more!
+In my free time, you’ll find me flying drones, printing on my Prusa MK3S+, or running. Take a look at my projects, and feel free to reach out if you'd like to know more!
 
 ## My skills
 
