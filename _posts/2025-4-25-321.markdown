@@ -1,0 +1,42 @@
+---
+layout: posts
+title:  "Centrifugal Pump Support System"
+tagline: ""
+date:   2025-04-25 00:00:00 +0000
+tags: [CAD, Mechanical Design]
+author_profile: true
+author: Ryan Christ
+categories: project
+highlight_home: true
+header:
+  overlay_image:
+  teaser: "/assets/images/CADPump.png"
+description: Structural support platform designed, analyzed, and prototyped for a centrifugal pump under loading and deflection constraints.
+---
+
+## Context
+As part of Duke University’s ME 321: Mechanical Engineering Analysis for Design, our team was tasked with designing a modular, corrosion resistant structural support platform for a centrifugal pump operating under realistic loading and environmental conditions.
+
+## Content
+The design needed to support a belt driven 12.5 lb pump operating at 150 GPM with a 60 ft head and 65% efficiency. We constrained tip deflection to under 1 mm and required a minimum factor of safety of 1.5, all within a $150 material budget.
+
+Our team applied equilibrium and stress analysis using Python to model the system. Critical locations were identified using stress concentration factors, and we used von Mises criteria to calculate safety margins. We ran FEA in SolidWorks to validate results, converging on a final lightweight frame design using 6061/6063 aluminum I-beams and rectangular tubing. All joints were removable and the assembly prioritized manufacturability, only requiring drilling and reaming.
+
+The physical prototype met design specs, with a tip deflection of ~2.5 mm under load and no structural failure. A minor interference issue during testing was resolved through careful material removal.
+
+This project demonstrated the full mechanical design process—from load modeling and simulation to hands on fabrication and testing. To review our final report [click here](https://ryanjchrist.github.io/ME_Third_Year_Design/)
+
+<div id="nanogallery2"></div>
+<script>
+  $("#nanogallery2").nanogallery2({
+  // ### gallery settings ###
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  itemsBaseURL:     '/assets/images/',
+  items: [
+    { src: 'SetUp.png', srct: 'SetUp.png' },
+    { src: 'CADPump.png', srct: 'CADPump.png' },
+    { src: 'FEAplot.png', srct: 'FEAplot.png' },
+  ]
+});
+</script>

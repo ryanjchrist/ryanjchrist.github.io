@@ -36,8 +36,8 @@ Shown below are two preliminary vertical flight graphs. This data was processed 
   items: [
       { src: 'SPLvsFrequencyAtSelectedAltitudes.png', srct: 'SPLvsFrequencyAtSelectedAltitudes.png' },
       { src: 'SPLvsFrequencyAtAllAltitudes.png', srct: 'SPLvsFrequencyAtAllAltitudes.png' },
+      { src: 'BassPosterPres.jpg', srct: 'BassPosterPres.jpg' },
       { src: 'SampleTxtFile.png', srct: 'SampleTxtFile.png' },
-      { src: 'DroneData11-7.png', srct: 'DroneData11-7.png' },
       { src: 'DroneFlights2.JPG', srct: 'DroneFlights2.JPG' },
 
   ]
