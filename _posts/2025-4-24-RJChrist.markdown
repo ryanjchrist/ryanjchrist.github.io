@@ -15,17 +15,17 @@ description: Designed and launched a responsive business website for RJ Christ E
 ---
 
 ## Context
-To support my dad’s local business, I designed and deployed a responsive website for **RJ Christ Excavating & Paving**, a family owned company with over 40 years of experience in driveway paving, stonework, and excavation services in the Rochester, NY area.
+To support my dad’s local business, I designed and deployed a website for his business, RJ Christ Excavating & Paving. This is family owned company with over 40 years of experience in driveway paving, stonework, and excavation services in the Rochester, NY area.
 
 ## Content
-I built the site using HTML and CSS, along with a little JavaScript, optimizing for both desktop and mobile viewing. The layout features service descriptions, a gallery of past projects, and contact options. I registered a custom domain and configured GitHub Pages for hosting, then linked it with Squarespace DNS records to ensure proper routing.
+I built the site using HTML and CSS, along with a little JavaScript. I made sure to optimize for both desktop and mobile viewing. The layout features service descriptions, a gallery of past projects, and contact options. Additionally, I registered a custom domain and configured GitHub Pages for hosting, then linked it with Squarespace DNS records.
 
 Additional features include:
 - A sticky navigation bar for smooth browsing
 - FontAwesome icons and image carousels for a modern look
-- SEO-friendly metadata and custom link previews
+- SEO friendly metadata and custom link previews
 
-The final result is a clean, professional website that highlights the business's reliability, services, and local roots. It’s now live at [rjchristpaving.com](https://www.rjchristpaving.com).
+The final result is a professional website that highlights the business's reliability and services. It’s now live at [rjchristpaving.com](https://www.rjchristpaving.com).
 
 <div id="nanogallery2"></div>
 <script>
