@@ -2,8 +2,8 @@
   title: "Electrical Engineering Intern"
   company: "O₃ST - UAVs in Support of Marine Science"
   location: "Virtual"
-  image: "/assets/images/o3st.jpg"
-  description: |
+  image: "/assets/images/alt_wiring.jpg"
+  description:
     - Created custom PCBs in KiCad to simplify sensor integration and reduce wiring complexity.
     - Added new hardware including a LW20/C laser rangefinder (I²C) and a compact GPS module (UART).
     - Improved altimeter accuracy to ±1 cm and redesigned its housing in SolidWorks for seamless drone integration.
@@ -17,7 +17,7 @@
   images: 
   - "/assets/images/201_ta.jpg"
 
-  description: |
+  description:
     - Guided students through labs on material behavior using Tinius Olsen testing machines.
     - Connected hands-on experiments to core concepts like statics, stress analysis, and mechanical failure.
     - Supported students in analyzing stress–strain data and evaluating properties such as Young’s and shear modulus.
@@ -29,7 +29,7 @@
   images: 
   - "/assets/images/dot_1.jpg"
   - "/assets/images/dot_2.JPG"
-  description: |
+  description:
     - Conducted load analyses on traffic signal structures, considering safety factors for wind, ice, and weight.
     - Helped streamline reporting for inspections of 192 bridges and 344 culverts using SAP and Excel.
     - Reviewed electrical and structural schematics for signals and redesigned parking layouts in AutoCAD.
@@ -41,7 +41,7 @@
   images: 
   - "/assets/images/rjchrist_driveway.jpg"
   - "/assets/images/rjchrist_car.JPG"
-  description: |
+  description:
     - Assisted in excavation and installation of residential and commercial asphalt driveways.
     - Operated and maintained heavy machinery including loaders, pavers, excavators, and trucks.
     - Restored a 1969 Dodge Coronet by rewiring electrical systems, welding panels, and replacing key components.
