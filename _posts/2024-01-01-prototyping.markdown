@@ -3,7 +3,7 @@ layout: posts
 title:  "Prototyping Projects"
 tagline: ""
 date:   2024-01-01 00:00:00 +0000
-tags: [Arduino & Circuitry, Prototyping]
+tags: [Electronics, Prototyping]
 author_profile: true
 author: Ryan Christ
 highlight_home: true

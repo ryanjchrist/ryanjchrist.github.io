@@ -4,5 +4,7 @@ main:
     url: "/"
   - title: "About Me"
     url: "/about"
-  - title: "My Portfolio"
+  - title: "Projects"
     url: "/myportfolio"
+  - title: "Experience"
+    url: "/experiences"

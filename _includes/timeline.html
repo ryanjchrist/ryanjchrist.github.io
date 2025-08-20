@@ -1,0 +1,30 @@
+<div class="timeline">
+  {% for item in site.data.experiences %}
+    <div class="timeline-item">
+      <div class="timeline-date">{{ item.date }}</div>
+      <div class="timeline-content">
+        {% if item.images %}
+          <div class="timeline-images">
+            {% assign imgs = item.images %}
+            {% if imgs contains "," %}
+              {# If accidentally given as a comma-separated string #}
+              {% assign imgs = item.images | split: "," %}
+            {% endif %}
+            {% for img in imgs %}
+              <img src="{{ img | strip }}" alt="{{ item.title }}" class="timeline-img"/>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h3>{{ item.title }}</h3>
+        <p><strong>{{ item.company }}</strong> — {{ item.location }}</p>
+        <ul>
+          {% for line in item.description | split: "\n" %}
+            {% unless line == "" %}
+              <li>{{ line | remove: "-" | strip }}</li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</div>

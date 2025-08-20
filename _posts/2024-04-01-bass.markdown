@@ -3,13 +3,13 @@ layout: posts
 title:  "Drone Noise Analysis"
 tagline: ""
 date:   2024-04-01 00:00:00 +0000
-tags: [Acoustics]
+tags: [Acoustics, Research]
 author_profile: true
 author: Ryan Christ
 categories: project
 highlight_home: true
 header:
-  overlay_image: 
+  overlay_image: "/assets/images/BassPosterPresOverlay.jpg"
   teaser: "/assets/images/DroneFlights2.JPG"
 description: Add Description
 ---

@@ -1,9 +1,9 @@
 ---
 layout: posts
-title:  "Altimeter & Toroidal Propellers"
+title:  "Altimeter"
 tagline: ""
 date:   2024-10-19 00:00:00 +0000
-tags: [Acoustics, Arduino & Circuitry, CAD]
+tags: [Electronics, CAD]
 author_profile: true
 author: Ryan Christ
 categories: project
@@ -51,28 +51,3 @@ Additional improvements I am currently working on include:
 </script>
 <br>
   
-# Toroidal Propellers
-## Context
-A concern that my team and I have identified relates to the acoustic emissions of drones, particularly in comparing the sound emission of UAVs to a known source of annoyance to elephants: honeybees. Research conducted by a Duke University team during their visit to Wonga Wongué National Park in Gabon highlighted significant similarities between drone sounds and bee frequencies, especially in the higher frequency range of 2-5 kHz. The study concluded that one of the drones we plan to use for capturing critical body condition photos, the DJI Phantom, emitted frequencies that caused discomfort to elephants, primarily due to its similarity to bee sounds.
-
-## Content
-To address this issue, we are exploring the use of toroidal propellers. We were inspired by findings from MIT Lincoln Laboratory, which suggest that toroidal propellers’ “closed-form structure minimizes the drag effects created by swirling air tunnels” at the blade tips. This design feature could effectively reduce the propeller's acoustic signature, especially in the 2-5 kHz range (one of the most prominent frequency ranges of sound emitted by bees), minimizing the potential negative impact on elephants.
-
-Our approach includes performing FEA and CFD design analysis on various toroidal propeller designs. We will then print the propellers in partnership with Duke Bluesmith Lab, starting with a Formlabs Form 3 SLA printer and later moving to a Stratasys J750 Digital Anatomy for a more refined product. This will be followed by constructing a thrust test using a DJI Phantom 4 motor and speed controller, with the standard DJI propellers’ RPM range as a baseline. Lastly, we will measure acoustic levels to confirm suspected noise reduction and deploy the propellers on our drones when we return to Zambia in May 2025.
-
-Photos will be updated as progress is made. Currently, we are in the phase of analyzing toroidal propeller designs. Below is a potential design for the DJI Mavic Mini.
-
-<div id="nanogallery1"></div>
-<script>
-  $("#nanogallery1").nanogallery2({
-  // ### gallery settings ###
-  thumbnailHeight:  150,
-  thumbnailWidth:   150,
-  itemsBaseURL:     '/assets/images/',
-
-  // ### gallery content ###
-  items: [
-      { src: 'ToroidalPropsMini.png', srct: 'ToroidalPropsMini.png' },
-  ]
-});
-</script>
