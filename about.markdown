@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: Hi I'm Ryan Christ
+title: Get to Know Me
 permalink: /about/
 tagline: ""
 author_profile: true
@@ -8,14 +8,13 @@ author: Ryan Christ
 
 ---
 
-I am a third-year undergraduate student at Duke University, double majoring in Mechanical Engineering and Computer Science.
+I’m Ryan Christ, a senior at Duke University double majoring in Mechanical Engineering and Computer Science. Originally from Rochester, NY, I first discovered my passion for engineering while spending time in my dad’s shop, where I learned to translate ideas into tangible creations. That early foundation has shaped the way I approach problems today, by breaking down complex, intangible challenges into clear technical requirements and building solutions that make a real impact.
 
-Originally from Rochester, NY, I credit my passion for engineering to the development of effective communication and technical problem-solving skills. I address the problems of today by both creating tangible solutions for people and translating large, seemingly intangible challenges into technical requirements.
+Academically, I am happiest at the intersection of mechanics and software. I especially enjoy interdisciplinary projects that draw on both of my skill sets, and I’ve recently become interested with practical applications of machine learning in mechanical engineering contexts.
 
-I am passionate about computer automation, additive manufacturing, and control systems. This combination enables me to bring my abstract ideas to life. Moving forward, I am looking for new opportunities to apply my innovative mindset, design, and manufacturing skills to bridge the gap between theoretical knowledge and practical applications.
+Outside the classroom, I’m an avid drone pilot, runner, and rock climber. I also love reading sci-fi and fantasy (currently I'm reading the Red Rising series) and playing soccer with friends. In my academics, hobbies, or athletics, I am always drawn to challenges that push me to think creatively and learn continuously.
 
-In my free time, you’ll find me flying drones, printing on my Prusa MK3S+, or running. Take a look at my projects, and feel free to reach out if you'd like to know more!
 
-## My skills
+### Technical Skills
 
 {% include technicalskills.md %}
