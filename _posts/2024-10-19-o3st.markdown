@@ -3,7 +3,7 @@ layout: posts
 title:  "Altimeter"
 tagline: ""
 date:   2024-10-19 00:00:00 +0000
-tags: [Electronics, CAD]
+tags: [Electronics, CAD, Drones]
 author_profile: true
 author: Ryan Christ
 categories: project
