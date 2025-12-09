@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Noise Analysis - Ryan Christ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Ryan Christ</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../skills.html" class="nav-link">Skills</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <h1>Drone Noise Analysis</h1>
+            <p class="project-meta">
+                <span class="project-tag">Acoustics</span>
+                <span class="project-tag">Research</span>
+            </p>
+            <p class="project-date">April 2024</p>
+        </div>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../assets/images/BassPosterPresOverlay.jpg" alt="Bass Connections Poster">
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-main">
+                    <h2>Context</h2>
+                    <p>I am part of the Duke University Bass Connections program, a collaborative research initiative involving undergraduates, graduates, and faculty. My project team, "Using Drones to Monitor the Health of Endangered Elephants in Zambia," focuses on leveraging drones for elephant body condition assessments. As the only engineering student on the team, I handle most of the technical aspects of the project.</p>
+
+                    <h2>Research Objective</h2>
+                    <p>To assess the impact of drone noise on wildlife, my team and I are conducting flight tests to determine the optimal altitude and speed for monitoring elephants while minimizing disturbance. The team is primarily concerned with the DJI Phantom 4 and DJI Mavic 3 Pro, as these drones are currently used in Zambia for elephant body condition monitoring. Preliminary analysis of our recordings in Raven Lite has allowed us to visualize noise levels across different flight parameters.</p>
+
+                    <h2>Flight Test Methodology</h2>
+                    <p>For vertical flight tests, we fly at altitudes ranging from 120m down to 10m, stopping every 5m for 30 seconds before descending at 2m/s. For horizontal flights, we operate at 15m, 30m, and 45m, with speeds of 2, 4, and 6 m/s. A microphone positioned at elephant ear height records drone noise as the UAV approaches.</p>
+
+                    <h2>Data Analysis</h2>
+                    <p>Shown below are two preliminary vertical flight graphs. This data was processed in Python utilizing microphone data. For more information, visit the <a href="https://github.com/ryanjchrist/Drone_Noise_Analysis" target="_blank" rel="noopener">GitHub repository</a>.</p>
+
+                    <h2>Key Findings</h2>
+                    <ul>
+                        <li>Noise levels vary significantly with altitude and speed</li>
+                        <li>Optimal monitoring altitudes identified to minimize wildlife disturbance</li>
+                        <li>Frequency analysis reveals drone noise characteristics</li>
+                        <li>Data processing pipeline developed in Python for analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/SPLvsFrequencyAtSelectedAltitudes.png" alt="SPL vs Frequency" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/SPLvsFrequencyAtAllAltitudes.png" alt="SPL vs Frequency All Altitudes" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/BassPosterPres.jpg" alt="Bass Connections Poster" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/SampleTxtFile.png" alt="Sample Data File" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/DroneFlights2.JPG" alt="Drone Flight Testing" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrifugal Pump Support System - Ryan Christ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Ryan Christ</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../skills.html" class="nav-link">Skills</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <h1>Centrifugal Pump Support System</h1>
+            <p class="project-meta">
+                <span class="project-tag">CAD</span>
+                <span class="project-tag">Mechanical Design</span>
+                <span class="project-tag">FEA</span>
+            </p>
+            <p class="project-date">April 2025</p>
+        </div>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../assets/images/CADPump.png" alt="Centrifugal Pump Support">
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-main">
+                    <h2>Context</h2>
+                    <p>As part of Duke University's ME 321: Mechanical Engineering Analysis for Design, our team was tasked with designing a modular, corrosion resistant structural support platform for a centrifugal pump operating under realistic loading and environmental conditions.</p>
+
+                    <h2>Design Requirements</h2>
+                    <p>The design needed to support a belt driven 12.5 lb pump operating at 150 GPM with a 60 ft head and 65% efficiency, have a constrained tip deflection to under 3 mm and required a minimum factor of safety of 1.5, all within a $150 material budget.</p>
+
+                    <h2>Design Process</h2>
+                    <p>Our team applied equilibrium and stress analysis to find governing equations and used Python to model the system. Critical locations were identified using stress concentration factors, and we used von Mises criteria to calculate safety margins. We ran FEA in SolidWorks to validate and iterate our solution. Ultimately, we decided on a lightweight frame design using 6061/6063 aluminum I-beams and rectangular tubing. All joints were removable and the assembly prioritized manufacturability, only requiring drilling and reaming.</p>
+
+                    <h2>Results</h2>
+                    <p>The physical prototype met design specs, with a tip deflection of ~2.5 mm under load and no structural failure. This project demonstrated the full mechanical design process, from load modeling and simulation to hands on fabrication and testing.</p>
+
+                    <h2>Key Achievements</h2>
+                    <ul>
+                        <li>Tip deflection of ~2.5 mm (under 3 mm requirement)</li>
+                        <li>Factor of safety above 1.5</li>
+                        <li>Within $150 material budget</li>
+                        <li>Modular and corrosion-resistant design</li>
+                        <li>Validated with FEA analysis</li>
+                    </ul>
+
+                    <p>To review our final report, <a href="https://ryanjchrist.github.io/ME_Third_Year_Design/" target="_blank" rel="noopener">click here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/SetUp.png" alt="Setup" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/CADPump.png" alt="CAD Model" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/FEAplot.png" alt="FEA Analysis" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

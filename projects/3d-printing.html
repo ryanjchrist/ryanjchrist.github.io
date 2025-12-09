@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Projects - Ryan Christ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Ryan Christ</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../skills.html" class="nav-link">Skills</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <h1>3D Printing Projects</h1>
+            <p class="project-meta">
+                <span class="project-tag">CAD</span>
+                <span class="project-tag">Manufacturing</span>
+            </p>
+            <p class="project-date">2024</p>
+        </div>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../assets/images/PinballAssembled.gif" alt="Pocket Pinball Game">
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-main">
+                    <p class="project-intro">Designed and 3D printed various projects using a Prusa MK3S+ at home and Ultimaker 3s at Duke University, utilizing a range of materials tailored to specific applications.</p>
+
+                    <div class="project-subsection">
+                        <h2>Pocket Pinball Game</h2>
+                        <p>This pocket-sized pinball game was designed as a fun and interactive way to encourage sustainable habits in children through a Happy Meal toy concept. The toy features multiple plastic components, each optimized for easy assembly and mass production, following injection molding DFM (Design for Manufacturability) principles.</p>
+                        <p>All components were modeled in SolidWorks, with tolerance analysis to ensure proper fit and manufacturability. Additionally, the paper backing and acrylic screen were laser-cut using a Trotec laser cutter for high precision and a polished final product.</p>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/PinballAssembled.gif" alt="Pinball Assembled" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/PinballCAD.png" alt="Pinball CAD" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/PinballDrawings.png" alt="Pinball Drawings" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/PinballAI.png" alt="Pinball AI" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-subsection">
+                        <h2>Jer-Bear</h2>
+                        <p>I scanned my cousin Jarrett's head using the EM3D app, which captures depth using infrared flash modules. The resulting mesh required manual editing to repair blemishes caused by scanning inaccuracies.</p>
+                        <p>Using Fusion 360, I spliced the cleaned scan of his head with a meditating bear model to create a unique figurine. The final model was printed in PLA on a Prusa MK3S+. Since then, I've created several personalized versions for other family members.</p>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/Jer1.gif" alt="Jer-Bear" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/JerBerCAD.png" alt="Jer-Bear CAD" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/WillKeyChain.jpg" alt="Will Keychain" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/MomPrint.jpg" alt="Mom Print" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-subsection">
+                        <h2>Sony WH1000X-M3 Replacement Part</h2>
+                        <p>I designed and 3D-modeled a replacement ear cup-to-headband connector for the Sony WH1000X-M3 headphones after the original part broke.</p>
+                        <ul>
+                            <li><strong>Modeling:</strong> Measured dimensions using both online resources and manual calipers for precision.</li>
+                            <li><strong>Design:</strong> Created a two-piece plate that fits securely inside the ear cup and locks around a small notch for stability.</li>
+                            <li><strong>Fit:</strong> Ensured proper alignment and structural integrity, allowing the headphones to function as intended.</li>
+                        </ul>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/SonyBroken.png" alt="Broken Headphones" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/SonyCAD.png" alt="Sony CAD" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/SonyPrinted.png" alt="Printed Part" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

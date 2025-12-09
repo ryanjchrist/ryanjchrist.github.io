@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototyping Projects - Ryan Christ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Ryan Christ</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../skills.html" class="nav-link">Skills</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <h1>Prototyping Projects</h1>
+            <p class="project-meta">
+                <span class="project-tag">Electronics</span>
+                <span class="project-tag">Prototyping</span>
+            </p>
+            <p class="project-date">2024</p>
+        </div>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../assets/images/MAGLEV.jpg" alt="Magnetic Levitation">
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-main">
+                    <p class="project-intro">Developed several prototypes using PID controllers, Arduino microcontrollers, and laser-cut components to create interactive and functional designs.</p>
+
+                    <div class="project-subsection">
+                        <h2>Magnetic Levitation</h2>
+                        <p>My group and I designed a control system for a magnetic levitation device to precisely manipulate the position of a ball. We implemented control modes for sine, square wave, and random movements based on user-defined parameters.</p>
+                        <ul>
+                            <li><strong>Control System:</strong> Developed in LabVIEW, utilizing multiple DAQ Assistants and a Case Structure on the block diagram.</li>
+                            <li><strong>User Interface:</strong> Designed a front panel display with adjustable PID coefficients, voltage, and height monitoring for real-time control.</li>
+                            <li><strong>Mathematical Modeling:</strong> Modeled the system using a set of linear differential equations to derive an overall transfer function.</li>
+                            <li><strong>Tuning & Optimization:</strong> Used MATLAB's sisotool to tune proportional, integral, and derivative (PID) constants, refining the response further in LabVIEW for improved stability and accuracy.</li>
+                        </ul>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/MAGLEV.jpg" alt="Magnetic Levitation" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/MAGLEVBlockDiagramSine.png" alt="Block Diagram" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/MAGLEVFrontPanel.png" alt="Front Panel" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-subsection">
+                        <h2>Mini Golf Simulator</h2>
+                        <p>The mini golf simulator is part of a larger Rube Goldberg machine. The mechanism positions the golf ball via a pipe into the designated "tee" spot. An ultrasonic sensor detects the ball and initiates the sequence.</p>
+                        <p>The automation sequence begins after a 1-second delay. Then, a golf club powered by a servo motor retracts, and a front gate lifts. The servo swings the club to hit the ball as it rolls into the hole. After the ball lands in the hole, a buzzer plays the Olympic theme song as the ball continues on to further assemblies. This project combined sensor automation and mechanical design to successfully contribute to the Rube Goldberg machine.</p>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/Golf.jpg" alt="Mini Golf Simulator" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/GolfCircuitSkem1.png" alt="Circuit Schematic 1" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/GolfCircuitSkem2.png" alt="Circuit Schematic 2" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-subsection">
+                        <h2>Spotify Picture Frame</h2>
+                        <p>I designed and created a personalized wedding gift for my brother and his wife using Adobe Illustrator, with the design laser-cut on a Trotec laser cutter.</p>
+                        <ul>
+                            <li><strong>Spotify Code Integration:</strong> Embedded a scannable Spotify barcode to play "Fly Me To The Moon" by Frank Sinatra.</li>
+                            <li><strong>Two-Plate Design:</strong> The design allows a photo to be displayed between two clear acrylic plates.</li>
+                        </ul>
+                        
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/images/Spotify.gif" alt="Spotify Frame" onclick="openLightbox(this)">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/SpotifyAI.png" alt="Spotify AI Design" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+

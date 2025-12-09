@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Relocation Solution - Ryan Christ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Ryan Christ</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../skills.html" class="nav-link">Skills</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <a href="../projects.html" class="back-link">← Back to Projects</a>
+            <h1>Rock Relocation Solution</h1>
+            <p class="project-meta">
+                <span class="project-tag">Prototyping</span>
+                <span class="project-tag">Mechanical Design</span>
+            </p>
+            <p class="project-date">May 2023</p>
+        </div>
+    </section>
+
+    <!-- Project Hero Image -->
+    <section class="project-hero-image">
+        <div class="container">
+            <img src="../assets/images/EGR101Poster.png" alt="Rock Relocation Device">
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-main">
+                    <h2>Context</h2>
+                    <p>As part of Duke's first-year engineering curriculum, I was assigned to a project team tasked with developing a device to help relocate large rocks on the property of our client, Ric Telford, a professor at the Duke Pratt School of Engineering and part-time farmer in rural North Carolina. The 200-300 lb rocks on his property hinder his ability to cultivate crops. While his current methods of transporting the rocks are effective, they disturb the topsoil and hinder his ability to place the rocks precisely. Our team's challenge was to find a solution that would address these issues, benefiting not only Mr. Telford but also other farmers in the region who may face similar obstacles due to the uniformity of the landscape.</p>
+
+                    <p>The main concerns of this project were to ensure that the rock-moving device would not disrupt the topsoil during operation and that it could place the rocks accurately to build a structured wall. Additionally, the device needed to be operable by a single person and capable of handling rocks weighing up to 300 lbs, which required a careful balance of efficiency, safety, and ease of use. The team had to focus on minimizing soil disturbance while achieving precise rock placement in a practical, user-friendly design.</p>
+
+                    <h2>Solution</h2>
+                    <p>Our team followed an iterative design process, brainstorming solutions and testing various concepts that would minimize soil disturbance while enabling precise rock placement. After considering several ideas, we settled on a four-pulley system with a cam cleat to secure the rope, and ratchet straps at the bottom to wrap around the rock. This system was designed to handle up to 300 lbs and be operable by a single person.</p>
+
+                    <h2>Testing & Results</h2>
+                    <p>Throughout the semester, we built and tested our prototype. Although we couldn't test the device with full 300 lb weights due to equipment limitations, the prototype successfully handled 200 lbs during trials, which gave us confidence in its functionality. This project not only provided a hands-on introduction to prototyping and collaborative design but also demonstrated the potential for engineering solutions to make meaningful impacts in local communities.</p>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Four-pulley system for mechanical advantage</li>
+                        <li>Cam cleat for secure rope locking</li>
+                        <li>Ratchet straps for rock attachment</li>
+                        <li>Single-person operation</li>
+                        <li>Minimal soil disturbance</li>
+                        <li>Precise rock placement capability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/EGR101Dev.jpg" alt="Device Development" onclick="openLightbox(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/images/EGR101Poster.png" alt="Project Poster" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+
