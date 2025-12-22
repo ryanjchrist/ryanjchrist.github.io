@@ -4,126 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altimeter System - Ryan Christ</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="masthead">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Ryan Christ</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../experience.html" class="nav-link">Experience</a></li>
-                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="../skills.html" class="nav-link">Skills</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Altimeter System</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Electronics</span>
+                    <span class="project-tag">CAD</span>
+                    <span class="project-tag">Drones</span>
+                </div>
+                <p class="project-date">October 2024</p>
             </div>
-        </div>
-    </nav>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="container">
-            <a href="../projects.html" class="back-link">← Back to Projects</a>
-            <h1>Altimeter System</h1>
-            <p class="project-meta">
-                <span class="project-tag">Electronics</span>
-                <span class="project-tag">CAD</span>
-                <span class="project-tag">Drones</span>
-            </p>
-            <p class="project-date">October 2024</p>
-        </div>
-    </section>
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/SkydioAlt.jpeg" alt="Altimeter System on Drone">
+            </div>
 
-    <!-- Project Hero Image -->
-    <section class="project-hero-image">
-        <div class="container">
-            <img src="../assets/images/SkydioAlt.jpeg" alt="Altimeter System">
-        </div>
-    </section>
-
-    <!-- Project Content -->
-    <section class="section">
-        <div class="container">
-            <div class="project-content">
+            <!-- Project Content -->
+            <div class="project-details-grid">
                 <div class="project-main">
-                    <h2>Context</h2>
-                    <p>One of the concerns my team and I identified involved the imprecision of drone altimeters. Altimeter precision is crucial for accurately identifying the height of elephants. As the drone flies over an elephant, we should be able to detect a change in altimeter height, which will later be used for more accurate body conditioning.</p>
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            One of the critical concerns identified in the O₃ST drone system involved the imprecision 
+                            of existing altimeters. Altimeter precision is crucial for accurately identifying the height 
+                            of elephants during wildlife monitoring flights. As the drone flies over an elephant, we need 
+                            to detect precise changes in altimeter height, which are later used for more accurate body 
+                            condition assessments.
+                        </p>
 
-                    <h2>Solution</h2>
-                    <p>To address this issue, I have been working with Julian Dale, a Duke Project Engineer and Director of O3ST, to redesign their existing altimeter system. This includes reducing the overall size and production costs of their current model. I have switched the larger Grove GPS with a much more compact GP1818MK. I have also developed support for a new LW20 rangefinder for higher accuracy at greater altitudes. This altimeter works right over our I2C protocol and enhances the drone's altitude tracking without disrupting the overall system.</p>
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            I worked with Julian Dale, a Duke Project Engineer and Director of O₃ST, to redesign their 
+                            existing altimeter system with a focus on reducing overall size, production costs, and improving 
+                            accuracy. The new design integrates multiple sensors including a compact GPS module and laser 
+                            rangefinder, all communicating over I²C protocol to minimize wiring complexity.
+                        </p>
 
-                    <p>In addition to the altimeter update, I introduced a new feature that logs vertical altitude in the system's data logs. This was achieved by using the gravitational acceleration readings from the IMU while compensating for the drone's tilt angle. However, during testing, we noticed variations in the tilt angle reading. When going through extreme movements while attached to the gimbal, the log file was recording tilt angles of up to 14 degrees. However, the output from the IMU on the gimbal was only fluctuating by ~0.02 degrees, and it was confirmed visually that it was not reaching a 14-degree tilt angle. I observed that acceleration values from the drone were influencing the tilt calculation, likely due to vibrations. To solve this issue, I implemented a 1D Kalman Filter, combining acceleration trigonometry with gyroscope integration to eliminate noise.</p>
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        <p>
+                            The redesigned system replaces the larger Grove GPS with a much more compact GP1818MK module. 
+                            I also developed support for a new LW20/C laser rangefinder (I²C) for higher accuracy at greater 
+                            altitudes. The altimeter enhances the drone's altitude tracking without disrupting the overall 
+                            system architecture.
+                        </p>
 
-                    <p>I also updated log filenames to use time/date stamps instead of the old sequential numbering method.</p>
+                        <h3>Data Logging & Signal Processing</h3>
+                        <p>
+                            I introduced a new feature that logs vertical altitude in the system's data logs using gravitational 
+                            acceleration readings from the IMU while compensating for the drone's tilt angle. During testing, 
+                            we noticed variations in tilt angle readings—the log file was recording tilt angles of up to 14 
+                            degrees during extreme movements, while the IMU on the gimbal showed only ~0.02 degree fluctuations.
+                        </p>
+                        <p>
+                            I identified that acceleration values from the drone were influencing the tilt calculation due to 
+                            vibrations. To solve this, I implemented a 1D Kalman Filter, combining acceleration trigonometry 
+                            with gyroscope integration to eliminate noise and provide accurate tilt compensation.
+                        </p>
 
-                    <h2>Additional Improvements</h2>
-                    <ul>
-                        <li>Adding a code switch to log data every 1 sec or via hot shoe trigger logging at a 15Hz shutter speed</li>
-                        <li>Incorporating a smaller Arduino in our design</li>
-                        <li>Adding a cheaper IMU module with an enable/disable option in the code</li>
-                    </ul>
+                        <h3>PCB Design & Hardware Integration</h3>
+                        <p>
+                            I created custom PCBs in KiCad to simplify sensor integration and reduce wiring complexity. The new 
+                            design incorporates multiple microcontrollers (XIAO SAMD21, ProMicro, Feather M0) programmed with 
+                            PlatformIO and Arduino IDE. I also redesigned the housing in SolidWorks for seamless drone integration.
+                        </p>
 
-                    <h2>Key Achievements</h2>
-                    <ul>
-                        <li>Improved altimeter accuracy to ±1 cm</li>
-                        <li>Redesigned housing in SolidWorks for seamless drone integration</li>
-                        <li>Implemented Kalman filtering for noise reduction</li>
-                        <li>Created custom PCBs in KiCad to simplify sensor integration</li>
-                    </ul>
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The redesigned altimeter system achieved significant improvements in accuracy and integration. The 
+                            system now provides ±1 cm accuracy, a substantial improvement over the previous design. The custom 
+                            PCB reduced wiring complexity and improved reliability, while the Kalman filter implementation 
+                            eliminated noise-related errors in tilt compensation.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Improved altimeter accuracy to ±1 cm through sensor fusion and filtering</li>
+                            <li>Reduced system size and production costs with compact component selection</li>
+                            <li>Implemented Kalman filtering for noise reduction in tilt compensation</li>
+                            <li>Created custom PCBs in KiCad to simplify sensor integration</li>
+                            <li>Redesigned housing in SolidWorks for seamless drone integration</li>
+                            <li>Enhanced data logging with timestamped file organization</li>
+                        </ul>
+
+                        <!-- Future Improvements -->
+                        <h2>Future Improvements</h2>
+                        <p>
+                            Additional improvements currently in development include:
+                        </p>
+                        <ul>
+                            <li>Adding a code switch to log data every 1 sec or via hot shoe trigger logging at 15Hz shutter speed</li>
+                            <li>Incorporating a smaller Arduino in the design for further size reduction</li>
+                            <li>Adding a cheaper IMU module with an enable/disable option in the code</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Image Gallery -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">KiCad</span>
+                            <span class="tech-badge">SolidWorks</span>
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">PlatformIO</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">I²C</span>
+                            <span class="tech-badge">Kalman Filter</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">±1 cm</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">LW20/C</span>
+                                <span class="metric-label">Rangefinder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>September 2024 - Present</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Electrical Engineering Intern at O₃ST</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Organization</h3>
+                        <p>O₃ST - UAVs in Support of Marine Science</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Image Gallery -->
             <div class="project-gallery">
-                <div class="gallery-item">
-                    <img src="../assets/images/O3STAltimeter.jpg" alt="Altimeter System" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/AltWiring.png" alt="Wiring Diagram" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/AltimeterCode1.png" alt="Code" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/SkydioAlt.jpeg" alt="Skydio Drone" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/DroneAlt.jpg" alt="Drone Altimeter" onclick="openLightbox(this)">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/O3STAltimeter.jpg" alt="O3ST Altimeter System" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/AltWiring.png" alt="Altimeter Wiring Diagram" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/AltimeterCode1.png" alt="Altimeter Code" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/DroneAlt.jpg" alt="Drone with Altimeter" onclick="openLightbox(this)">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
-        <div class="lightbox-caption"></div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
     <script>
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
@@ -145,4 +238,3 @@
     </script>
 </body>
 </html>
-

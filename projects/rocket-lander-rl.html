@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Lander Reinforcement Learning - Ryan Christ</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="masthead">
+        <div class="nav-container">
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Rocket Lander Reinforcement Learning</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Machine Learning</span>
+                    <span class="project-tag">Reinforcement Learning</span>
+                    <span class="project-tag">Python</span>
+                </div>
+                <p class="project-date">December 2025</p>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://github.com/Jaiparmar940/CS372-final-project-v2" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image and Video Side by Side -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin: var(--space-6) 0; align-items: start;">
+                <div class="project-hero" style="margin: 0;">
+                    <img src="../assets/images/372_lunar_lander.png" alt="Rocket Lander RL Environment">
+                </div>
+                <div style="background: var(--color-white); border: 1px solid var(--color-neutral-200); border-radius: var(--radius-3); padding: var(--space-4);">
+                    <h3 style="margin: 0 0 var(--space-4) 0; font-size: 1.1rem; color: var(--color-neutral-900);">Video Demonstration</h3>
+                    <video controls style="width: 100%; border-radius: var(--radius-2);">
+                        <source src="../CS372Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-details-grid">
+                <div class="project-main">
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            As part of CS372 at Duke University, I collaborated with Jay Parmar to develop a comprehensive 
+                            reinforcement learning project comparing Deep Q-Network (DQN) and Actor-Critic (A2C) algorithms 
+                            on rocket landing tasks. The project emphasizes safe landings and fuel efficiency while demonstrating 
+                            convergence, good ML practices, and project cohesion using Gymnasium's LunarLander-v3 environment.
+                        </p>
+
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            Rocket landing represents a critical real-world challenge in aerospace engineering and autonomous 
+                            systems. Successfully landing a rocket requires precise control under uncertainty, balancing multiple 
+                            competing objectives: achieving a safe landing within the designated landing pad, minimizing fuel consumption 
+                            for cost efficiency, and maintaining smooth control to avoid structural damage. This problem is particularly 
+                            relevant given recent advances in reusable rocket technology (e.g., SpaceX Falcon 9, Blue Origin New Shepard), 
+                            where autonomous landing systems are essential for economic viability.
+                        </p>
+                        <p>
+                            The LunarLander-v3 environment captures the core challenges of this problem: continuous state space 
+                            (position, velocity, angle, angular velocity), discrete control actions (engine firings), and stochastic 
+                            dynamics. By solving this problem with reinforcement learning, we demonstrate how modern ML techniques 
+                            can address complex control tasks with safety and efficiency constraints.
+                        </p>
+
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Deep Q-Network (DQN) Agent</h3>
+                        <p>
+                            The DQN implementation uses Q-learning with function approximation, learning action values through 
+                            temporal difference learning. Key features include:
+                        </p>
+                        <ul>
+                            <li><strong>Experience Replay Buffer:</strong> Stores and samples past experiences to break correlation 
+                                between consecutive samples, improving sample efficiency</li>
+                            <li><strong>Target Network:</strong> Provides stable Q-value targets by using a separate network that 
+                                updates periodically, reducing training instability</li>
+                            <li><strong>Epsilon-Greedy Exploration:</strong> Balances exploration and exploitation with decaying 
+                                epsilon schedule</li>
+                            <li><strong>Optimizer Comparison:</strong> Evaluated both Adam and RMSprop optimizers to compare 
+                                convergence speed and final performance</li>
+                        </ul>
+
+                        <h3>Actor-Critic (A2C) Agent</h3>
+                        <p>
+                            The A2C implementation uses policy gradients with value function estimation, learning a policy directly 
+                            through advantage-weighted updates. Key components include:
+                        </p>
+                        <ul>
+                            <li><strong>Separate Policy and Value Networks:</strong> Policy network outputs action probabilities, 
+                                while value network estimates state values to reduce variance in policy gradients</li>
+                            <li><strong>Actor-Critic Architecture:</strong> Combines benefits of policy-based and value-based methods</li>
+                            <li><strong>Optimizer Comparison:</strong> Evaluated Adam vs SGD optimizers, demonstrating critical 
+                                importance of optimizer choice (64% vs 28% success rate)</li>
+                        </ul>
+
+                        <h3>Custom Reward Function</h3>
+                        <p>
+                            The standard LunarLander-v3 reward function provides sparse rewards primarily at episode termination. 
+                            Our custom reward function addresses this limitation by providing dense, shaped rewards that guide 
+                            learning toward desired behaviors:
+                        </p>
+                        <ul>
+                            <li><strong>Landing Bonus:</strong> Large positive reward (+100) for successful landings</li>
+                            <li><strong>Fuel Penalty:</strong> Small negative reward per engine firing (-0.1 for main engine, 
+                                -0.05 for side engines) to encourage fuel-efficient trajectories</li>
+                            <li><strong>Crash Penalty:</strong> Large negative reward (-100) for crashes, strongly discouraging 
+                                unsafe landings</li>
+                            <li><strong>Smoothness Penalty:</strong> Small penalty for large action changes, encouraging stable control</li>
+                        </ul>
+                        <p>
+                            These components are parameterized through a reward configuration, enabling hyperparameter tuning to 
+                            balance safety vs. efficiency. The shaped rewards provide more learning signal than sparse rewards, 
+                            leading to faster convergence and better final performance.
+                        </p>
+
+                        <h3>Train/Validation/Test Split Using Seeds</h3>
+                        <p>
+                            Unlike supervised learning where data can be randomly split, RL environments are deterministic given a seed. 
+                            We use seed-based splits to create distinct train/validation/test sets:
+                        </p>
+                        <ul>
+                            <li><strong>Training Seeds (42-51):</strong> Used for agent training, with random seed selection per episode</li>
+                            <li><strong>Validation Seeds (100-109):</strong> Used for model selection and early stopping, evaluated 
+                                periodically during training</li>
+                            <li><strong>Test Seeds (200-209):</strong> Used for final evaluation only, ensuring unbiased performance 
+                                estimates</li>
+                        </ul>
+                        <p>
+                            This approach ensures that validation and test performance reflect true generalization to unseen environment 
+                            configurations, not just memorization of training seeds.
+                        </p>
+
+                        <h3>Regularization Techniques</h3>
+                        <p>
+                            To prevent overfitting and improve generalization, we employ multiple regularization techniques:
+                        </p>
+                        <ul>
+                            <li><strong>L2 Weight Decay:</strong> Applied through optimizer configuration (default 1e-5), penalizing 
+                                large weights</li>
+                            <li><strong>Dropout:</strong> Applied in Q-network and value network (configurable rate), randomly zeroing 
+                                activations during training</li>
+                            <li><strong>Early Stopping:</strong> Monitors validation performance and stops training when validation 
+                                returns plateau</li>
+                            <li><strong>Gradient Clipping:</strong> Clips gradients to a maximum norm (default 0.5-1.0), preventing 
+                                exploding gradients</li>
+                        </ul>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The project achieved excellent results with comprehensive evaluation on held-out test sets. Key performance 
+                            metrics include:
+                        </p>
+                        <ul>
+                            <li><strong>DQN (Adam):</strong> Achieves 100% success rate with mean return of 373.6 ± 21.6 and fuel usage 
+                                of 75.9 units - best overall performance</li>
+                            <li><strong>DQN (RMSprop):</strong> Also achieves 100% success rate with mean return of 366.2 ± 19.6 and 
+                                fuel usage of 92.3 units - slightly less fuel-efficient than Adam</li>
+                            <li><strong>A2C (Adam):</strong> Achieves 64% success rate with mean return of 225.9 ± 202.2 and fuel usage 
+                                of 58.1 units - most fuel-efficient but lower success rate</li>
+                            <li><strong>A2C (SGD):</strong> Achieves only 28% success rate with mean return of -85.0 ± 191.8 and fuel usage 
+                                of 232.4 units - fails to converge effectively</li>
+                        </ul>
+                        <p>
+                            Key insights from the results:
+                        </p>
+                        <ul>
+                            <li>DQN with experience replay and target network achieves perfect success rates (100%) with stable, 
+                                low-variance performance</li>
+                            <li>Actor-Critic (A2C) with Adam optimizer achieves good performance (64% success) but shows higher variance 
+                                than DQN</li>
+                            <li>Optimizer choice is critical: For A2C, Adam is essential (64% vs 28% success); for DQN, both Adam and 
+                                RMSprop work well, but Adam is more fuel-efficient</li>
+                            <li>Custom reward function enables learning by providing dense learning signals at every step</li>
+                            <li>Early stopping based on validation performance prevents overfitting to training seeds</li>
+                        </ul>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Implemented and compared multiple RL algorithms (DQN, A2C) on complex continuous control task</li>
+                            <li>Achieved 100% success rate with DQN agents, demonstrating perfect landing capability</li>
+                            <li>Designed custom reward function balancing safety and fuel efficiency</li>
+                            <li>Implemented proper train/validation/test splits using seed-based evaluation</li>
+                            <li>Comprehensive hyperparameter tuning framework with grid search capabilities</li>
+                            <li>Extensive training (>50k training episodes) with GPU-accelerated training</li>
+                            <li>Rigorous evaluation on separate validation/test seed sets with comprehensive metrics</li>
+                            <li>Implemented advanced deep RL techniques including experience replay, target networks, and regularization</li>
+                            <li>Created ablation studies demonstrating impact of key design choices</li>
+                            <li>Comprehensive error analysis identifying failure modes and improvement opportunities</li>
+                        </ul>
+
+                        <!-- Challenges -->
+                        <h2>Challenges & Solutions</h2>
+                        
+                        <h3>Sample Efficiency and Convergence</h3>
+                        <p>
+                            <strong>Challenge:</strong> Initial implementations struggled with slow convergence and high sample requirements, 
+                            making training computationally expensive.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented experience replay buffer for DQN to reuse past experiences, and 
+                            designed custom reward function to provide dense learning signals. Added target networks for stable Q-value 
+                            targets and early stopping to prevent unnecessary training.
+                        </p>
+
+                        <h3>Generalization to Unseen Environments</h3>
+                        <p>
+                            <strong>Challenge:</strong> Agents that performed well on training seeds often failed on new environment 
+                            configurations, indicating overfitting.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented seed-based train/validation/test splits and comprehensive regularization 
+                            techniques (L2 weight decay, dropout, gradient clipping). Used validation-based early stopping to select 
+                            models that generalize well.
+                        </p>
+
+                        <h3>Optimizer Selection</h3>
+                        <p>
+                            <strong>Challenge:</strong> Different optimizers showed dramatically different performance, with SGD failing 
+                            to converge for A2C while Adam succeeded.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Conducted systematic optimizer comparisons (Adam vs RMSprop for DQN, Adam vs SGD 
+                            for A2C) with identical architectures and hyperparameters. Documented results showing critical importance of 
+                            optimizer choice for policy-based methods.
+                        </p>
+
+                        <!-- Learnings -->
+                        <h2>Key Learnings</h2>
+                        <ul>
+                            <li><strong>Reinforcement Learning:</strong> Deep understanding of value-based (DQN) and policy-based (A2C) 
+                                RL paradigms, their trade-offs, and when to use each</li>
+                            <li><strong>Deep Learning:</strong> Practical experience with neural network architectures, optimization, 
+                                and regularization techniques for RL</li>
+                            <li><strong>Reward Engineering:</strong> Understanding of how reward function design critically impacts 
+                                learning behavior and final performance</li>
+                            <li><strong>Evaluation Methodology:</strong> Importance of proper train/validation/test splits in RL, 
+                                seed-based evaluation, and avoiding overfitting to training configurations</li>
+                            <li><strong>Hyperparameter Tuning:</strong> Systematic approach to exploring hyperparameter space and 
+                                selecting optimal configurations</li>
+                            <li><strong>ML Best Practices:</strong> Early stopping, regularization, gradient clipping, and other 
+                                techniques to improve generalization</li>
+                            <li><strong>Experimental Design:</strong> Designing fair comparisons between algorithms and properly 
+                                evaluating performance</li>
+                            <li><strong>Error Analysis:</strong> Identifying failure modes and understanding agent behavior to guide 
+                                improvements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">Gymnasium</span>
+                            <span class="tech-badge">DQN</span>
+                            <span class="tech-badge">A2C</span>
+                            <span class="tech-badge">RL</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">DQN Success Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">64%</span>
+                                <span class="metric-label">A2C Success Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">50k+</span>
+                                <span class="metric-label">Training Episodes</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2</span>
+                                <span class="metric-label">RL Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>December 2025</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Team Member</p>
+                        <p class="sidebar-note">Team: Ryan Christ, Jay Parmar</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Course</h3>
+                        <p>CS372 at Duke University</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Repository</h3>
+                        <p>
+                            <a href="https://github.com/Jaiparmar940/CS372-final-project-v2" target="_blank" rel="noopener" class="link-inline">
+                                View on GitHub →
+                            </a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

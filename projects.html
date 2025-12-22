@@ -4,150 +4,262 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Ryan Christ</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="masthead">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Ryan Christ</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="projects-shell">
+            <div class="projects-lede">
+                <h1 id="page-title" class="page-title">Projects</h1>
+                <p>Engineering work across analysis, prototyping, and validation. Click on any project to learn more.</p>
+            </div>
+
+            <!-- All Projects Grid -->
+            <div class="project-grid projects-grid-3col">
+                <article class="project-card">
+                    <a href="projects/minigolf-fpga.html" class="project-card__link">
+                        <img src="assets/images/minigolf_full.jpg" alt="Mini-Golf FPGA Game System" class="project-card__image" style="object-position: top;">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Dec 2025</span>
+                            </div>
+                            <h3>Mini-Golf FPGA Game System</h3>
+                            <p class="project-card__desc">
+                                Designed and implemented an automated mini-golf game system with custom 5-stage pipelined processor, servo-controlled obstacles, LED indicators, and interactive scoring on a 6.5×2 foot playing field.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/rocket-lander-rl.html" class="project-card__link">
+                        <img src="assets/images/372_lunar_lander.png" alt="Rocket Lander Reinforcement Learning" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Dec 2025</span>
+                            </div>
+                            <h3>Rocket Lander Reinforcement Learning</h3>
+                            <p class="project-card__desc">
+                                Compared DQN and A2C algorithms on rocket landing tasks, achieving 100% success rate with DQN while balancing safety and fuel efficiency through custom reward functions.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/verilog-cpu.html" class="project-card__link">
+                        <img src="assets/images/verilog_cpu_code.png" alt="32-bit Pipelined CPU Design" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Nov 2025</span>
+                            </div>
+                            <h3>32-bit Pipelined CPU Design</h3>
+                            <p class="project-card__desc">
+                                Designed and implemented a complete 32-bit five-stage pipelined processor in structural Verilog with comprehensive bypassing logic, hazard detection, and full ISA support operating at 25 MHz.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/pressure-vessel.html" class="project-card__link">
+                        <img src="assets/images/pressure_vessel_final.jpg" alt="Pressure Vessel Design" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Oct 2025</span>
+                            </div>
+                            <h3>Pressure Vessel Design</h3>
+                            <p class="project-card__desc">
+                                Designed, machined, and tested an aluminum pressure vessel capable of withstanding 750 psig, successfully validated to 1000 psig with comprehensive stress analysis.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/pinball-state-fair.html" class="project-card__link">
+                        <img src="assets/images/pinball_machine.png" alt="Ball Durham Pinball Machine" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Oct 2025</span>
+                            </div>
+                            <h3>Ball Durham Pinball Machine</h3>
+                            <p class="project-card__desc">
+                                Designed and built a basketball-themed pinball machine with spring-powered launch, flipper controls, defender mechanisms, and hoop target for the ME421 State Fair project.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/cpsl.html" class="project-card__link">
+                        <img src="assets/images/x500_short_arms.jpg" alt="Cyber-Physical Systems Lab" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">May 2025</span>
+                            </div>
+                            <h3>Cyber-Physical Systems Lab</h3>
+                            <p class="project-card__desc">
+                                Research on UAV modifications, ROS2/micro-ROS integration, and motion capture-based drone control for lab experiments and autonomy research.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/centrifugal-pump.html" class="project-card__link">
+                        <img src="assets/images/CADPump.png" alt="Centrifugal Pump Support System" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Apr 2025</span>
+                            </div>
+                            <h3>Centrifugal Pump Support System</h3>
+                            <p class="project-card__desc">
+                                Structural support platform designed, analyzed, and prototyped for a centrifugal pump under strict loading and deflection constraints.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/mips-cpu.html" class="project-card__link">
+                        <img src="assets/images/cpu_logisim.png" alt="16-bit MIPS CPU Design" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Apr 2025</span>
+                            </div>
+                            <h3>16-bit MIPS CPU Design</h3>
+                            <p class="project-card__desc">
+                                Designed and implemented a 16-bit MIPS-like RISC CPU using Logisim, featuring single-cycle execution and comprehensive instruction set support.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/rjchrist-website.html" class="project-card__link">
+                        <img src="assets/images/RJChristWebsite.png" alt="RJ Christ Website" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Apr 2025</span>
+                            </div>
+                            <h3>RJ Christ Excavating &amp; Paving Website</h3>
+                            <p class="project-card__desc">
+                                Designed and launched a responsive business website for RJ Christ Excavating &amp; Paving, integrating branding, contact forms, and SEO optimization.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/altimeter.html" class="project-card__link">
+                        <img src="assets/images/SkydioAlt.jpeg" alt="Altimeter System" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Oct 2024</span>
+                            </div>
+                            <h3>Altimeter System</h3>
+                            <p class="project-card__desc">
+                                Redesigned altimeter system for drone applications, improving accuracy to ±1 cm with custom PCBs, Kalman filtering, and tilt compensation.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/drone-noise-analysis.html" class="project-card__link">
+                        <img src="assets/images/BassPosterPresOverlay.jpg" alt="Drone Noise Analysis" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Apr 2024</span>
+                            </div>
+                            <h3>Drone Noise Analysis</h3>
+                            <p class="project-card__desc">
+                                Conducted flight tests to determine optimal altitude and speed for monitoring elephants while minimizing disturbance through acoustic analysis.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/prototyping.html" class="project-card__link">
+                        <img src="assets/images/MAGLEV.jpg" alt="Prototyping Projects" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Jan 2024</span>
+                            </div>
+                            <h3>Prototyping Projects</h3>
+                            <p class="project-card__desc">
+                                Developed several prototypes using PID controllers, Arduino microcontrollers, and laser-cut components including magnetic levitation and mini golf simulator.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/3d-printing.html" class="project-card__link">
+                        <img src="assets/images/PinballAssembled.gif" alt="3D Printing Projects" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">Jan 2024</span>
+                            </div>
+                            <h3>3D Printing Projects</h3>
+                            <p class="project-card__desc">
+                                Designed and 3D printed various projects including pocket pinball game, personalized figurines, and replacement parts using SolidWorks and Prusa MK3S+.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <a href="projects/rock-relocation.html" class="project-card__link">
+                        <img src="assets/images/EGR101Poster.png" alt="Rock Relocation Solution" class="project-card__image">
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="pill">May 2023</span>
+                            </div>
+                            <h3>Rock Relocation Solution</h3>
+                            <p class="project-card__desc">
+                                First-year engineering project designing a pulley-based device to relocate 200–300 lb rocks with minimal soil disturbance and precise placement.
+                            </p>
+                        </div>
+                    </a>
+                </article>
             </div>
         </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Projects</h1>
-            <p class="page-subtitle">Engineering projects and technical work</p>
-        </div>
-    </section>
-
-    <!-- Projects Grid -->
-    <section class="section">
-        <div class="container">
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/O3STAltimeter.jpg" alt="Altimeter System">
-                    </div>
-                    <div class="project-content">
-                        <h3>Altimeter System</h3>
-                        <p class="project-tags">Electronics • CAD • Drones</p>
-                        <p>Redesigned altimeter system for drone applications, improving accuracy to ±1 cm with custom PCBs and Kalman filtering.</p>
-                        <a href="projects/altimeter.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/x500_short_arms.jpg" alt="Cyber-Physical Systems Lab">
-                    </div>
-                    <div class="project-content">
-                        <h3>Cyber-Physical Systems Lab</h3>
-                        <p class="project-tags">Research • ROS2 • Drones</p>
-                        <p>UAV development combining mechanical design, embedded systems, and ROS2 integration for lab experiments and autonomy research.</p>
-                        <a href="projects/cpsl.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/BassPosterPresOverlay.jpg" alt="Drone Noise Analysis">
-                    </div>
-                    <div class="project-content">
-                        <h3>Drone Noise Analysis</h3>
-                        <p class="project-tags">Acoustics • Research</p>
-                        <p>Bass Connections research project analyzing drone noise impact on wildlife to optimize monitoring altitudes and speeds.</p>
-                        <a href="projects/drone-noise-analysis.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/PinballAssembled.gif" alt="3D Printing Projects">
-                    </div>
-                    <div class="project-content">
-                        <h3>3D Printing Projects</h3>
-                        <p class="project-tags">CAD • Manufacturing</p>
-                        <p>Various 3D printed projects including pocket pinball game, personalized figurines, and replacement parts using Prusa and Ultimaker printers.</p>
-                        <a href="projects/3d-printing.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/MAGLEV.jpg" alt="Prototyping Projects">
-                    </div>
-                    <div class="project-content">
-                        <h3>Prototyping Projects</h3>
-                        <p class="project-tags">Electronics • Prototyping</p>
-                        <p>Interactive prototypes including magnetic levitation system, mini golf simulator, and personalized laser-cut gifts using PID controllers and Arduino.</p>
-                        <a href="projects/prototyping.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/CADPump.png" alt="Centrifugal Pump Support">
-                    </div>
-                    <div class="project-content">
-                        <h3>Centrifugal Pump Support System</h3>
-                        <p class="project-tags">CAD • Mechanical Design • FEA</p>
-                        <p>Structural support platform designed and analyzed for a centrifugal pump with tip deflection under 3mm and factor of safety above 1.5.</p>
-                        <a href="projects/centrifugal-pump.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/RJChristWebsite.png" alt="RJ Christ Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>RJ Christ Website</h3>
-                        <p class="project-tags">Web Design • Frontend</p>
-                        <p>Designed and deployed a responsive business website for RJ Christ Excavating & Paving with custom domain and SEO optimization.</p>
-                        <a href="projects/rjchrist-website.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/EGR101Poster.png" alt="Rock Relocation Solution">
-                    </div>
-                    <div class="project-content">
-                        <h3>Rock Relocation Solution</h3>
-                        <p class="project-tags">Prototyping • Mechanical Design</p>
-                        <p>First-year engineering project: designed a four-pulley system device to relocate 200-300 lb rocks with minimal soil disturbance.</p>
-                        <a href="projects/rock-relocation.html" class="project-link">Learn More →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

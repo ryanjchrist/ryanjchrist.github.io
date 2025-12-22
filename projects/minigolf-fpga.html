@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Golf FPGA Game System - Ryan Christ</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="masthead">
+        <div class="nav-container">
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Mini-Golf FPGA Game System</h1>
+                <div class="project-meta">
+                    <span class="project-tag">FPGA</span>
+                    <span class="project-tag">Verilog</span>
+                    <span class="project-tag">Digital Systems</span>
+                </div>
+                <p class="project-date">December 2025</p>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://github.com/ryanjchrist/ece350_project_report" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image and Video Side by Side -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin: var(--space-6) 0; align-items: start;">
+                <div class="project-hero" style="margin: 0;">
+                    <img src="../assets/images/minigolf_full.jpg" alt="Complete Mini-Golf Board Setup">
+                </div>
+                <div style="background: var(--color-white); border: 1px solid var(--color-neutral-200); border-radius: var(--radius-3); padding: var(--space-4);">
+                    <h3 style="margin: 0 0 var(--space-4) 0; font-size: 1.1rem; color: var(--color-neutral-900);">Video Demonstration</h3>
+                    <video controls style="width: 100%; border-radius: var(--radius-2);">
+                        <source src="../08 - Ryan Christ, Zeqi Sun - Mini Golf - 2025-12-05 11.00.46.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p style="text-align: center; margin-top: var(--space-3); color: var(--color-neutral-700); font-size: 0.85rem;">
+                        <a href="https://drive.google.com/file/d/1LMo6Jtbzp59HLDRzxkdysWMU1H_Tncdd/view?usp=share_link" target="_blank" rel="noopener" class="link-inline">
+                            Also on Google Drive →
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-details-grid">
+                <div class="project-main">
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            As part of ECE/CS 350 at Duke University, I collaborated with Zeqi Sun to design and implement 
+                            an automated mini-golf game system featuring a physical 6.5×2 foot wooden playing field with 
+                            artificial turf, servo-controlled obstacles, LED indicators, and an interactive scoring system. 
+                            The project integrated a custom 5-stage pipelined processor running game logic in assembly language, 
+                            interfacing with physical hardware components through custom I/O interfaces.
+                        </p>
+
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            The system architecture follows a layered approach with a processor layer executing game logic from 
+                            ROM, a wrapper layer handling hardware abstraction and signal routing, and a peripheral layer 
+                            connecting physical components (push buttons, LEDs, servo motor, displays) via FPGA pins. The design 
+                            enables two-player gameplay with randomized target selection, real-time score tracking, and dynamic 
+                            obstacle control.
+                        </p>
+
+                        <p>
+                            The physical structure consists of a substantial 6.5 foot by 2 foot wooden board with artificial turf 
+                            covering, housing all electronic components including the FPGA, sensors, displays, and servo motor. 
+                            Three target holes with different point values (Hole 1: +1, Hole 2: +2, Hole 3: +3) provide varied 
+                            gameplay, with a penalty system (-1 point) for incorrect holes.
+                        </p>
+
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Custom Processor Architecture</h3>
+                        <p>
+                            The system uses a custom 5-stage pipelined processor executing game logic from ROM. The processor 
+                            was extended with a wrapper module that provides transparent hardware access through an instruction 
+                            injection system. When the processor executes specific <code>addi</code> instructions targeting 
+                            certain registers, the wrapper intercepts and modifies the immediate field, allowing hardware inputs 
+                            to be read transparently without modifying the processor core.
+                        </p>
+
+                        <h3>Instruction Injection System</h3>
+                        <p>
+                            The wrapper module implements an innovative instruction injection system that enables hardware 
+                            interaction without processor modifications. When the processor executes <code>addi</code> instructions 
+                            targeting specific registers (r2-r5, r15, r18), the wrapper transparently replaces the immediate value 
+                            with the current hardware state:
+                        </p>
+                        <ul>
+                            <li><strong>Register r2-r4:</strong> Button states for holes 1-3</li>
+                            <li><strong>Register r5:</strong> Player selection toggle switch</li>
+                            <li><strong>Register r15:</strong> Reset button state</li>
+                            <li><strong>Register r18:</strong> Random number from LFSR</li>
+                        </ul>
+                        <p>
+                            This approach allows the assembly code to read hardware inputs using standard load-immediate 
+                            instructions, enabling I/O without processor modifications.
+                        </p>
+
+                        <h3>Random Number Generation</h3>
+                        <p>
+                            A 3-bit Linear Feedback Shift Register (LFSR) generates pseudo-random numbers for target hole 
+                            selection. The LFSR uses maximal-length taps (bits 2 and 0) and continuously generates random values 
+                            that are mapped uniformly to holes 1-3. The random value is injected into register 18 when the 
+                            processor executes <code>addi $18, $0, 0</code>, providing pseudo-random target hole selection 
+                            for each turn.
+                        </p>
+
+                        <h3>7-Segment Display Control</h3>
+                        <p>
+                            The wrapper implements time-multiplexed display control for an 8-digit 7-segment display, showing 
+                            Player 1 score (digits 0-1), Player 2 score (digits 3-4), and high score (digits 6-7) simultaneously. 
+                            The display module includes:
+                        </p>
+                        <ul>
+                            <li>Refresh counter dividing 100 MHz clock for digit multiplexing at ~1.5 kHz per digit</li>
+                            <li>Binary-to-BCD conversion using combinational logic</li>
+                            <li>Segment pattern lookup table mapping digits (0-9) to 7-segment patterns</li>
+                            <li>Anode control activating appropriate digit anodes in sequence</li>
+                        </ul>
+                        <p>
+                            The display reads score values from registers r6 (Player 1), r7 (Player 2), and r8 (High Score), 
+                            automatically updating as scores change.
+                        </p>
+
+                        <h3>Servo Motor Control</h3>
+                        <p>
+                            Servo position is controlled via PWM signals generated by a custom module hierarchy. The servo 
+                            controls a spinning bridge obstacle on the playing field, creating unpredictable ball behavior. 
+                            The PWM signal has a 20ms period with pulse widths set to 1000µs, causing constant 360° servo 
+                            rotation. Position is written to register 20 (r20[11:0]) by the assembly program, with the PWM 
+                            signal output to JB[1] connecting to the servo control input. The servo is powered by a dedicated 
+                            7.6V power supply isolated from the FPGA power to prevent electrical noise.
+                        </p>
+
+                        <h3>Button Debouncing and Field Clearing</h3>
+                        <p>
+                            One of the most significant challenges was handling button press signals over 6+ foot wire runs, 
+                            which caused transmission line effects and mechanical button bounce. The solution implemented edge 
+                            detection in software combined with field clearing logic:
+                        </p>
+                        <ul>
+                            <li>Maintained previous button state registers (r10, r16, r17) for each button</li>
+                            <li>Detected rising edge transitions (0→1) rather than level detection</li>
+                            <li>Added field clearing sequence after score processing that waits for all buttons to return 
+                                to low state before allowing new presses</li>
+                        </ul>
+                        <p>
+                            This prevents double-counting even with extended wire lengths and signal reflections, ensuring 
+                            reliable operation with the large physical structure.
+                        </p>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The system successfully met all MVP requirements and implemented multiple bells-and-whistles features. 
+                            All test cases passed successfully, including button input detection, scoring accuracy, player switching, 
+                            display functionality, servo control, random generation, and field clearing. The system demonstrated 
+                            reliable operation during extended gameplay sessions with proper handling of button debouncing and 
+                            signal integrity issues.
+                        </p>
+
+                        <p>
+                            Key achievements include:
+                        </p>
+                        <ul>
+                            <li>Complete game loop with two-player support</li>
+                            <li>Randomized target selection using LFSR</li>
+                            <li>Real-time score tracking with 7-segment displays</li>
+                            <li>Servo-controlled spinning bridge obstacle</li>
+                            <li>High score tracking across both players</li>
+                            <li>Robust field clearing mechanism handling transmission line effects</li>
+                        </ul>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and implemented complete automated mini-golf game system with custom processor</li>
+                            <li>Developed innovative instruction injection system for transparent hardware access</li>
+                            <li>Implemented LFSR-based pseudo-random number generation for target selection</li>
+                            <li>Created time-multiplexed 7-segment display control showing three simultaneous scores</li>
+                            <li>Designed servo motor control system with PWM signal generation</li>
+                            <li>Solved signal integrity challenges with software-based debouncing and field clearing</li>
+                            <li>Built substantial 6.5×2 foot physical playing field with integrated electronics</li>
+                            <li>Wrote complete assembly program (~266 instructions) implementing full game logic</li>
+                        </ul>
+
+                        <!-- Challenges -->
+                        <h2>Challenges & Solutions</h2>
+                        
+                        <h3>Transmission Line Effects</h3>
+                        <p>
+                            <strong>Challenge:</strong> Initial implementation suffered from button press signals triggering 
+                            multiple score updates due to transmission line effects and mechanical button bounce. With sensors 
+                            located at the far end of the 6.5-foot board connected via long wire runs, a single physical press 
+                            would register as multiple presses due to signal reflections.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented edge detection in software combined with field clearing logic. 
+                            The system maintains previous button state registers and detects rising edge transitions (0→1) rather 
+                            than level detection. After score processing, a field clearing sequence waits for all buttons to 
+                            return to low state before allowing new presses, preventing double-counting even with extended wire 
+                            lengths.
+                        </p>
+
+                        <h3>7-Segment Display Timing</h3>
+                        <p>
+                            <strong>Challenge:</strong> Multiplexing 8 digits without visible flicker while maintaining smooth 
+                            score updates and properly displaying three separate scores simultaneously.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Refresh counter operating at approximately 1.5 kHz per digit (100 MHz / 
+                            65536), with each digit refreshed approximately 190 times per second. Binary-to-BCD conversion uses 
+                            combinational logic for immediate display updates, with blank digits (positions 2 and 5) used for 
+                            visual separation between scores.
+                        </p>
+
+                        <h3>Servo Motor Control and Power</h3>
+                        <p>
+                            <strong>Challenge:</strong> Controlling the spinning bridge obstacle smoothly while ensuring adequate 
+                            power delivery and preventing electrical noise from affecting digital logic.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented dedicated 7.6V power supply for the servo motor, isolated 
+                            from the FPGA power to prevent current spikes from disrupting digital signals. The PWM control signal 
+                            from the FPGA provides precise angular control while the power supply handles the motor's current 
+                            requirements.
+                        </p>
+
+                        <!-- Learnings -->
+                        <h2>Key Learnings</h2>
+                        <ul>
+                            <li><strong>FPGA Design:</strong> Deep understanding of Verilog HDL, processor architecture, and 
+                                hardware-software co-design</li>
+                            <li><strong>Digital Systems:</strong> Comprehensive knowledge of pipelined processors, instruction 
+                                sets, and memory systems</li>
+                            <li><strong>I/O Interface Design:</strong> Experience designing custom hardware interfaces and 
+                                instruction injection systems</li>
+                            <li><strong>Signal Integrity:</strong> Understanding of transmission line effects, debouncing, and 
+                                field clearing techniques</li>
+                            <li><strong>Embedded Systems:</strong> Practical experience with assembly programming, real-time 
+                                systems, and hardware control</li>
+                            <li><strong>System Integration:</strong> Integration of multiple subsystems (processor, displays, 
+                                sensors, actuators) into a cohesive system</li>
+                            <li><strong>Testing & Validation:</strong> Comprehensive testing strategies for hardware-software 
+                                systems</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">Verilog</span>
+                            <span class="tech-badge">FPGA</span>
+                            <span class="tech-badge">Assembly</span>
+                            <span class="tech-badge">Digital Logic</span>
+                            <span class="tech-badge">PWM Control</span>
+                            <span class="tech-badge">LFSR</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">5-Stage</span>
+                                <span class="metric-label">Pipeline</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">6.5×2 ft</span>
+                                <span class="metric-label">Playing Field</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">266</span>
+                                <span class="metric-label">Instructions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">3 Holes</span>
+                                <span class="metric-label">Target Points</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>December 2025</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Team Member</p>
+                        <p class="sidebar-note">Team: Ryan Christ, Zeqi Sun</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Course</h3>
+                        <p>ECE/CS 350 at Duke University</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Report</h3>
+                        <p>
+                            <a href="https://github.com/ryanjchrist/ece350_project_report" target="_blank" rel="noopener" class="link-inline">
+                                View Full Report on GitHub →
+                            </a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Gallery -->
+            <div class="project-gallery">
+                <h2>System Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_fpga.jpg" alt="FPGA Board" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_player_select.jpg" alt="Player Select Interface" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_bridge.jpg" alt="Spinning Bridge Obstacle" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_fpga_cover.jpg" alt="FPGA Cover" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_protoboard.jpg" alt="Protoboard" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_wiring.jpg" alt="Internal Wiring" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_hole1.jpg" alt="Hole 1" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_hole2.jpg" alt="Hole 2" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/minigolf_hole3.jpg" alt="Hole 3" onclick="openLightbox(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

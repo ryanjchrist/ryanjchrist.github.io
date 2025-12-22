@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-bit MIPS CPU Design - Ryan Christ</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="masthead">
+        <div class="nav-container">
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>16-bit MIPS CPU Design</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Computer Architecture</span>
+                    <span class="project-tag">Digital Logic</span>
+                    <span class="project-tag">Logisim</span>
+                </div>
+                <p class="project-date">April 2025</p>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/cpu_logisim.png" alt="MIPS CPU Design">
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-details-grid">
+                <div class="project-main">
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            As part of Duke University's Computer Architecture course, I designed and implemented a 16-bit 
+                            MIPS-like RISC CPU using Logisim. This project provided hands-on experience in CPU design principles, 
+                            instruction set architecture, and digital logic implementation. The design focuses on a word-addressed 
+                            architecture that incorporates basic CPU components and a single-cycle execution model.
+                        </p>
+
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            The project involved creating a functional 16-bit RISC architecture based on the MIPS instruction set. 
+                            Built entirely in Logisim, this design offers a visual approach to understanding how processors execute 
+                            instructions, manage data, and handle operations. The implementation focuses on educational clarity while 
+                            maintaining architectural correctness.
+                        </p>
+
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Architecture Overview</h3>
+                        <p>
+                            The CPU follows a 16-bit RISC (Reduced Instruction Set Computing) architecture, designed for simplicity 
+                            and educational clarity. The design is word-addressed, meaning each memory location corresponds to a 
+                            16-bit word, which simplifies instruction handling and data management.
+                        </p>
+
+                        <h3>Key Components</h3>
+                        <p>
+                            The implementation includes all fundamental CPU components:
+                        </p>
+                        <ul>
+                            <li><strong>Instruction Decoder:</strong> Efficiently decodes different instruction types and generates control signals</li>
+                            <li><strong>Arithmetic Logic Unit (ALU):</strong> Performs arithmetic and logical operations</li>
+                            <li><strong>Register File:</strong> Manages CPU registers for data storage and retrieval</li>
+                            <li><strong>Program Counter:</strong> Tracks instruction execution flow</li>
+                            <li><strong>Memory Management:</strong> Handles instruction fetching and data memory operations</li>
+                        </ul>
+
+                        <h3>Instruction Set</h3>
+                        <p>
+                            The CPU supports a subset of MIPS instructions, including arithmetic operations (ADD, SUB), logical 
+                            operations (AND, OR), memory operations (LOAD, STORE), and control flow instructions (BRANCH, JUMP). 
+                            All instructions execute in a single clock cycle, simplifying the design and making it easier to 
+                            understand the execution pipeline.
+                        </p>
+
+                        <h3>Single-Cycle Design</h3>
+                        <p>
+                            The project focuses on implementing a single-cycle CPU, meaning every instruction completes in one clock 
+                            cycle. This design choice eliminates the complexity of pipelining while still demonstrating core CPU 
+                            concepts like instruction fetching, decoding, execution, and memory access.
+                        </p>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The completed design successfully executes MIPS instructions and demonstrates the fundamental principles 
+                            of CPU architecture. Through Logisim's visual simulation capabilities, I was able to trace instruction 
+                            execution, observe data flow through components, and validate the correctness of the design. This project 
+                            provided deep insights into how processors work at the hardware level.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and implemented a functional 16-bit MIPS-like RISC CPU</li>
+                            <li>Created efficient instruction decoding unit for multiple instruction types</li>
+                            <li>Implemented complete data path with ALU, registers, and memory management</li>
+                            <li>Validated design through Logisim simulation and testing</li>
+                            <li>Gained comprehensive understanding of CPU architecture and digital logic</li>
+                        </ul>
+
+                        <!-- Challenges -->
+                        <h2>Challenges & Solutions</h2>
+                        <p>
+                            One of the main challenges was designing an efficient instruction decoder that could handle different 
+                            instruction formats while generating appropriate control signals. I solved this by creating a modular 
+                            decoding unit that extracts instruction fields and uses them to generate control logic. Another 
+                            challenge was ensuring proper data flow through the CPU components, which required careful attention 
+                            to signal timing and component interconnections.
+                        </p>
+
+                        <!-- Learnings -->
+                        <h2>Key Learnings</h2>
+                        <ul>
+                            <li><strong>CPU Design Principles:</strong> Deep understanding of instruction sets, data handling, and control logic</li>
+                            <li><strong>Digital Logic:</strong> Practical experience with how ALUs, registers, and memory work together in a CPU</li>
+                            <li><strong>Logisim Proficiency:</strong> Mastered using Logisim for visualizing and simulating complex digital circuits</li>
+                            <li><strong>RISC Architecture:</strong> Comprehensive knowledge of RISC architectures and their design principles</li>
+                            <li><strong>System Integration:</strong> Understanding how individual components integrate to form a complete CPU</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">Logisim</span>
+                            <span class="tech-badge">MIPS</span>
+                            <span class="tech-badge">RISC</span>
+                            <span class="tech-badge">Digital Logic</span>
+                            <span class="tech-badge">CPU Design</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">16-bit</span>
+                                <span class="metric-label">Architecture</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">Single</span>
+                                <span class="metric-label">Cycle Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>April 2025</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Individual Project</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Course</h3>
+                        <p>Computer Architecture at Duke University</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

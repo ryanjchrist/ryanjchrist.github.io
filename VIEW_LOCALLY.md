@@ -1,8 +1,8 @@
 # Viewing Your Portfolio Locally
 
-## Quick Start
+## Quick Start (No Jekyll Required)
 
-### Option 1: Python HTTP Server (Recommended)
+### Using Python HTTP Server
 
 1. Open Terminal and navigate to your project directory:
    ```bash
@@ -19,7 +19,7 @@
    http://localhost:8000
    ```
 
-### Option 2: Using Node.js (if you have it installed)
+### Using Node.js (if you have it installed)
 
 1. Install a simple HTTP server globally:
    ```bash
@@ -36,16 +36,20 @@
    http://localhost:8000
    ```
 
-## Making Changes
-
-- Edit `index.html` for content and structure
-- Edit `styles.css` for styling and design
-- Edit `script.js` for interactivity
-- Refresh your browser to see changes
-
 ## Notes
 
-- The server will automatically reload when you refresh the page
-- Images are loaded from the `assets/images/` directory
-- Make sure all file paths are correct relative to the root directory
+- **CSS is compiled**: The SCSS has been compiled to `assets/css/main.css` - no build step needed!
+- **Static HTML**: View HTML files directly (index.html, about.html, projects.html, etc.)
+- **Images**: Loaded from the `assets/images/` directory
+- **Refresh**: Just refresh your browser to see changes after editing files
+
+## Making Changes
+
+- Edit HTML files directly for content and structure
+- Edit `assets/css/main.css` for styling (or edit SCSS files in `_sass/` and recompile if you have a Sass compiler)
+- Refresh your browser to see changes
+
+## Important
+
+Since this is a Jekyll site, some pages may use Liquid templating that won't work with a static server. For full functionality including dynamic content, you'd need Jekyll, but for viewing the styling and basic structure, the static server works fine.
 

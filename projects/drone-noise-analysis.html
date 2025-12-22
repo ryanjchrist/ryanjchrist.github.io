@@ -4,120 +4,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drone Noise Analysis - Ryan Christ</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="masthead">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Ryan Christ</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../experience.html" class="nav-link">Experience</a></li>
-                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="../skills.html" class="nav-link">Skills</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Drone Noise Analysis</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Acoustics</span>
+                    <span class="project-tag">Research</span>
+                </div>
+                <p class="project-date">April 2024</p>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://github.com/ryanjchrist/Drone_Noise_Analysis" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository on GitHub
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="container">
-            <a href="../projects.html" class="back-link">← Back to Projects</a>
-            <h1>Drone Noise Analysis</h1>
-            <p class="project-meta">
-                <span class="project-tag">Acoustics</span>
-                <span class="project-tag">Research</span>
-            </p>
-            <p class="project-date">April 2024</p>
-        </div>
-    </section>
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/BassPosterPresOverlay.jpg" alt="Bass Connections Research Poster">
+            </div>
 
-    <!-- Project Hero Image -->
-    <section class="project-hero-image">
-        <div class="container">
-            <img src="../assets/images/BassPosterPresOverlay.jpg" alt="Bass Connections Poster">
-        </div>
-    </section>
-
-    <!-- Project Content -->
-    <section class="section">
-        <div class="container">
-            <div class="project-content">
+            <!-- Project Content -->
+            <div class="project-details-grid">
                 <div class="project-main">
-                    <h2>Context</h2>
-                    <p>I am part of the Duke University Bass Connections program, a collaborative research initiative involving undergraduates, graduates, and faculty. My project team, "Using Drones to Monitor the Health of Endangered Elephants in Zambia," focuses on leveraging drones for elephant body condition assessments. As the only engineering student on the team, I handle most of the technical aspects of the project.</p>
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            I am part of the Duke University Bass Connections program, a collaborative research initiative 
+                            involving undergraduates, graduates, and faculty. My project team, "Using Drones to Monitor the 
+                            Health of Endangered Elephants in Zambia," focuses on leveraging drones for elephant body condition 
+                            assessments. As the only engineering student on the team, I handle most of the technical aspects 
+                            of the project.
+                        </p>
 
-                    <h2>Research Objective</h2>
-                    <p>To assess the impact of drone noise on wildlife, my team and I are conducting flight tests to determine the optimal altitude and speed for monitoring elephants while minimizing disturbance. The team is primarily concerned with the DJI Phantom 4 and DJI Mavic 3 Pro, as these drones are currently used in Zambia for elephant body condition monitoring. Preliminary analysis of our recordings in Raven Lite has allowed us to visualize noise levels across different flight parameters.</p>
+                        <!-- Design & Approach -->
+                        <h2>Research Objective</h2>
+                        <p>
+                            To assess the impact of drone noise on wildlife, my team and I are conducting flight tests to 
+                            determine the optimal altitude and speed for monitoring elephants while minimizing disturbance. 
+                            The team is primarily concerned with the DJI Phantom 4 and DJI Mavic 3 Pro, as these drones are 
+                            currently used in Zambia for elephant body condition monitoring.
+                        </p>
 
-                    <h2>Flight Test Methodology</h2>
-                    <p>For vertical flight tests, we fly at altitudes ranging from 120m down to 10m, stopping every 5m for 30 seconds before descending at 2m/s. For horizontal flights, we operate at 15m, 30m, and 45m, with speeds of 2, 4, and 6 m/s. A microphone positioned at elephant ear height records drone noise as the UAV approaches.</p>
+                        <!-- Technical Implementation -->
+                        <h2>Methodology</h2>
+                        
+                        <h3>Flight Test Procedures</h3>
+                        <p>
+                            For vertical flight tests, we fly at altitudes ranging from 120m down to 10m, stopping every 5m 
+                            for 30 seconds before descending at 2m/s. For horizontal flights, we operate at 15m, 30m, and 45m, 
+                            with speeds of 2, 4, and 6 m/s. A microphone positioned at elephant ear height records drone noise 
+                            as the UAV approaches.
+                        </p>
 
-                    <h2>Data Analysis</h2>
-                    <p>Shown below are two preliminary vertical flight graphs. This data was processed in Python utilizing microphone data. For more information, visit the <a href="https://github.com/ryanjchrist/Drone_Noise_Analysis" target="_blank" rel="noopener">GitHub repository</a>.</p>
+                        <h3>Data Collection & Analysis</h3>
+                        <p>
+                            Preliminary analysis of our recordings in Raven Lite has allowed us to visualize noise levels across 
+                            different flight parameters. The data was processed in Python utilizing microphone data to generate 
+                            sound pressure level (SPL) vs frequency plots at various altitudes. This analysis helps identify the 
+                            frequency characteristics of drone noise and how they vary with flight parameters.
+                        </p>
 
-                    <h2>Key Findings</h2>
-                    <ul>
-                        <li>Noise levels vary significantly with altitude and speed</li>
-                        <li>Optimal monitoring altitudes identified to minimize wildlife disturbance</li>
-                        <li>Frequency analysis reveals drone noise characteristics</li>
-                        <li>Data processing pipeline developed in Python for analysis</li>
-                    </ul>
+                        <h3>Python Data Processing Pipeline</h3>
+                        <p>
+                            I developed a Python-based data processing pipeline to analyze the acoustic data. The pipeline 
+                            processes raw microphone recordings, applies frequency domain analysis, and generates visualizations 
+                            showing SPL vs frequency relationships at different altitudes. This allows for systematic comparison 
+                            of noise characteristics across flight profiles.
+                        </p>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The analysis revealed significant variations in noise levels with altitude and speed. The frequency 
+                            analysis identified key noise characteristics that can inform optimal flight parameters for wildlife 
+                            monitoring. The data processing pipeline enables systematic evaluation of different flight profiles 
+                            to minimize disturbance while maintaining effective monitoring capabilities.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and executed systematic flight test procedures for acoustic data collection</li>
+                            <li>Developed Python data processing pipeline for acoustic analysis</li>
+                            <li>Generated frequency domain visualizations showing noise characteristics at different altitudes</li>
+                            <li>Identified optimal flight parameters to minimize wildlife disturbance</li>
+                            <li>Contributed technical expertise to interdisciplinary research team</li>
+                            <li>Presented findings at Bass Connections research symposium</li>
+                        </ul>
+
+                        <!-- Future Work -->
+                        <h2>Future Work</h2>
+                        <p>
+                            Future analysis will focus on correlating noise levels with observed elephant behavior responses, 
+                            developing predictive models for noise impact, and refining flight protocols for field deployment 
+                            in Zambia.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Image Gallery -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Raven Lite</span>
+                            <span class="tech-badge">Signal Processing</span>
+                            <span class="tech-badge">Data Analysis</span>
+                            <span class="tech-badge">Acoustics</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">10-120m</span>
+                                <span class="metric-label">Altitude Range</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2-6 m/s</span>
+                                <span class="metric-label">Speed Range</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>April 2024 - Present</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Engineering Lead, Research Team Member</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Organization</h3>
+                        <p>Duke University Bass Connections</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="https://github.com/ryanjchrist/Drone_Noise_Analysis" target="_blank" rel="noopener">GitHub Repository</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Image Gallery -->
             <div class="project-gallery">
-                <div class="gallery-item">
-                    <img src="../assets/images/SPLvsFrequencyAtSelectedAltitudes.png" alt="SPL vs Frequency" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/SPLvsFrequencyAtAllAltitudes.png" alt="SPL vs Frequency All Altitudes" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/BassPosterPres.jpg" alt="Bass Connections Poster" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/SampleTxtFile.png" alt="Sample Data File" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/DroneFlights2.JPG" alt="Drone Flight Testing" onclick="openLightbox(this)">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/SPLvsFrequencyAtSelectedAltitudes.png" alt="SPL vs Frequency at Selected Altitudes" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/SPLvsFrequencyAtAllAltitudes.png" alt="SPL vs Frequency at All Altitudes" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/BassPosterPres.jpg" alt="Bass Connections Poster Presentation" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/SampleTxtFile.png" alt="Sample Data File" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/DroneFlights2.JPG" alt="Drone Flight Testing" onclick="openLightbox(this)">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
-        <div class="lightbox-caption"></div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
     <script>
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
@@ -139,4 +248,3 @@
     </script>
 </body>
 </html>
-

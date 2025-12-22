@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\setlength{\parindent}{0pt}
+\usepackage[T1]{fontenc}
+\DeclareSIUnit[number-unit-product = {}]{\inchQ}{\textquotedbl}
+
+\DeclareSIUnit[number-unit-product = {\thinspace}]{\inch}{in}
+
+\begin{document}
+
+\begin{center}
+\rule{6.5in}{0.5mm}\\[6pt]
+\textbf{\Large ME421L – Final Report}\\[4pt]
+\textbf{\large Pressure Vessel Project}\\[6pt]
+Team Members: \textit{Ryan Christ, Mason Kelsey, Dani Levine}\\
+Date: \textit{October 16, 2025}\\[6pt]
+Instructor: \textit{Dr. Santillan, Dr. Hotz}\\
+\rule{6.5in}{0.5mm}
+\end{center}
+
+\tableofcontents
+\pagebreak
+
+\section{Introduction}
+
+The goal of this project was to design a pressure vessel that could withstand an internal pressure of 750 psig while containing a total fluid volume between 50 and 60 cc. The team worked to design, machine, and test a pressure vessel that met these specifications. 
+
+\section{Design Description}
+
+The pressure vessel design consists of a cylindrical aluminum body, a lid, and a single O-ring seal seated between the two halves. The main body is machined from a 6061 3-inch diameter aluminum rod to minimize weight while providing sufficient strength for internal pressures up to 750 psig. The pressure vessel has a cylindrical body with a 3.0-inch outer diameter and a body height of 6 inches. A central hole, measuring 1 inch in  diameter and 4.25 inches deep, was designed to hold the pressurized fluid. This inner cavity of the vessel has an approximate internal volume of 55 cc. On the top of the body, an O-ring groove was designed with an inner diameter of 1.517 inches and an outer diameter of 1.767 inches to hold a oil and abrasion resistant polyurethane O-ring. The lid, measuring 3 inch diameter 0.750 inch thick is fastened to the main body using four equally spaced steel bolts that compress the O-ring to create a pressure-tight seal. These bolts were located 1.125 inches away from the center of the lid. \\
+
+Additionally, a 0.25 in. NPT threaded port is centered on the lid to accommodate the provided Swagelok plug fitting, enabling fluid entry and exit during testing.  \\
+
+
+The exploded view below illustrates the assembly sequence, showing the housing, O-ring, lid, and bolt fasteners, along with the threaded fluid port used for pressurization.
+
+
+
+% A complete description of the design.%
+
+
+\section{Analysis of Design}
+
+%Complete analysis of the final design (including any FEA work, see above), along with a description and justification of each change made during the design process that resulted in your final design.%
+
+\subsection{Assumptions and Simplifications}
+
+The analysis assumes uniform internal pressure acting on all inner surfaces of the vessel and cover plate. The aluminum components were modeled as perfectly rigid and flat, with no surface imperfections or misalignment. O-ring compression was treated as uniform along the groove, and bolt preload was assumed equal among all four fasteners. Effects such as temperature changes, machining tolerances, and localized stresses near the port and bolt holes were ignored to simplify the preliminary analysis.
+
+\subsection{External Separating Force}
+The axial or separating force on the cover due to internal pressure is
+\[
+F_{\text{axial}} = p \cdot A = p \cdot \pi \left(\frac{D_i}{2}\right)^2
+= 750 \cdot \pi\left(\frac{1.00}{2}\right)^2 = \SI{589.05}{lbf}
+\]
+Each of the four bolts must resist 1/4 of this axial load: \(P_b = F_{\text{axial}}/4 = \SI{147.26}{lbf}.\)
+
+\subsection{Screw and Member Stiffness, Joint Constant}
+The screws pass unthreaded through the \SI{0.75}{in} thick cap and thread \SI{0.75}{in} into the main body. Using the equations for screw joints:
+\[
+k_b = \frac{A_d A_t E_b}{A_d \ell_t + A_t \ell_d}, 
+\qquad
+k_m = \frac{0.5774 \pi E_m d}{\ln \left[\dfrac{(1.155t + D - d)(D + d)}{(1.155t + D + d)(D - d)}\right]}
+\]
+
+Given:
+\[
+d=\SI{0.25}{in}, \quad A_t=\SI{0.0318}{in^2}, \quad A_d=\frac{\pi d^2}{4}=\SI{0.04909}{in^2},\\
+E_b=\SI{30e6}{psi}, \quad E_m=\SI{10.3e6}{psi}, \quad t=\SI{1.50}{in}, \quad D=\SI{3.00}{in}
+\]
+
+Bolt stiffness:
+\[
+k_b=\frac{(0.04909)(0.0318)(30\times10^6)}{(0.04909)(0.75)+(0.0318)(0.75)} 
+=\frac{4.68\times10^4}{0.06067} 
+= \SI{7.72e5}{\dfrac{lbf}{in}}
+\]
+
+Member stiffness:
+\[
+k_m=\frac{0.5774\pi(10.3\times10^6)(0.25)}{\ln\!\left[\dfrac{(1.155(1.5)+3.0-0.25)(3.0+0.25)}{(1.155(1.5)+3.0+0.25)(3.0-0.25)}\right]}
+=\frac{4.68\times10^6}{0.2383}
+= \SI{1.96e7}{\dfrac{lbf}{in}}
+\]
+
+Because the joint includes both the cap and the body under compression, two member stiffnesses act in series:
+\[
+\frac{1}{k_{m,\text{total}}}=\frac{1}{k_{m,1}}+\frac{1}{k_{m,2}} \Rightarrow
+k_{m,\text{total}}=\frac{k_m}{2}= \SI{9.8e6}{\dfrac{lbf}{in}}
+\]
+
+Joint constant:
+\[
+C=\frac{k_b}{k_b+k_{m,\text{total}}}
+=\frac{7.72\times10^5}{7.72\times10^5+9.8\times10^6}
+= 0.073
+\]
+
+
+\subsection{Fastener Analysis}
+Using the axial load \(F_{\text{axial}}=\SI{589.05}{lbf}\) and four screws:
+\[
+P_b=\frac{F_{\text{axial}}}{4}=\SI{147.26}{lbf}
+\]
+Design clamp FoS \(=5\) gives:
+\[
+F_{\text{clamp,req}}=5F_{\text{axial}}=\SI{2945.24}{lbf},\qquad
+F_i=\frac{F_{\text{clamp,req}}}{4}=\SI{736.31}{lbf}
+\]
+
+With the joint constant \(C=0.073\) and \(A_t=\SI{0.0318}{in^2}\) the bolt tensile stress is:
+\[
+\sigma_{\text{bolt}}=\frac{F_i + C P_b}{A_t}
+=\frac{736.31 + 0.073(147.26)}{0.0318}
+= \SI{2.35e4}{psi}
+\]
+
+Estimated installation torque with \(K=0.20\), \(d=\SI{0.25}{in}\):
+\[
+T = K F_i d = 0.20\cdot736.31\cdot0.25 = \SI{36.8}{in\cdot lbf}\ =\SI{3.07}{ft\cdot lbf}
+\]
+
+Using proof strength \(S_p=\SI{120e3}{psi}\) for a Grade 8 bolt, the proof load is:
+\[
+F_p = A_t S_p = (0.0318)(120000) = \SI{3816}{lbf}
+\]
+The relevant safety factors are:
+\[
+n_p = \frac{S_p A_t}{C P + F_i}, \qquad
+n_L = \frac{S_p A_t - F_i}{C P}, \qquad
+n_0 = \frac{F_i}{P(1-C)}
+\]
+
+Substituting the known values:
+\[
+n_p = \frac{3816}{0.073(147.26) + 736.31} = 5.10, \qquad
+n_L = \frac{3816 - 736.31}{0.073(147.26)} = 36.8, \qquad
+n_0 = \frac{736.31}{147.26(1-0.073)} = 5.40
+\]
+
+
+
+\subsection{O-Ring Analysis}
+
+\subsubsection{Material Selection}
+The chosen O-ring was a High-Pressure Oil- and Abrasion-Resistant Polyurethane O-Ring. The team chose this O-ring due to its rated maximum pressure of 5,000 psi while also being cheap, standard sized, and resistant to temperatures between -65° to 275°. The O-ring meets SAE AS568 
+specifications and has a Durometer 90A hardness. The specific O-ring chosen was the Oil -and Abrasion-Resistant Polyurethane O-Ring, High-Pressure, 3/32 Fractional Width, Dash No. 128.
+
+\subsubsection{Size and Fit}
+Given our inner vessel diameter of 1.25", the team wanted to ensure adequate space between the inner vessel wall and the screw holes located at a diameter of 2.5". The team chose to use a $1\frac{1}{2}$" to satisfy this constraint. The team also decided to use a standard SAE AS568 width of 0.103" to allow for simple machining. Additionally, a face sealing configuration was chosen to ensure a reliable seal while maintaining simple machining. With these choices made, the team followed the requirements in the next section to ensure that a proper seal was made. 
+
+\subsubsection{O-Ring Groove Analysis}
+
+\begin{itemize}
+\item ID of Groove:
+
+\[
+0.01 \leq \textit{O-ring Stretch} \leq 0.05= \frac{\textit{Gland ID}-\textit{O-ring ID}}{\textit{O-ring ID}}
+\]
+
+\item Groove Depth: 
+\[
+0.2 \leq \textit{Compression Ratio} \leq 0.3 = \frac{\textit{CS}-\textit{Groove Depth}}{\textit{CS}}
+\]
+
+\item Gland Width:
+
+\[
+0.65 \leq \textit{Gland Factor} \leq 0.75 = \frac{A_{c, o-ring}}{A_{c,gland}}
+\]
+
+\end{itemize}
+
+With the o-ring size being actual ID = 1.487" and the actual OD = 1.693", along with using a $\textit{O-ring Stretch} = 0.02$, $\textit{Compression Ratio} = 0.25$, and $\textit{Gland Factor} = 0.65$ the team calculated the following values:
+
+\[
+0.02= \frac{\textit{Gland ID}-1.487}{1.487} \Rightarrow \textit{Gland ID} = \SI{1.517}{in}
+\]
+
+\[
+0.25 = \frac{0.103 - \textit{Groove Depth}}{0.103} \Rightarrow \textit{Groove Depth} = \SI{0.07725}{in}
+\]
+
+\[
+0.65 = \frac{\pi(\frac{0.103}{2})^2}{\textit{Gland Width} \cdot 0.07725} \Rightarrow \textit{Gland Width} = \SI{0.1659}{in}
+\] \\
+
+Please note that the team used the Parker O-Ring Standards as opposed to the calculated dimensions above. The ID, Groove Depth, and Gland Width were relatively similar (please see Section 6.1 Drawings for Parker O-Ring dimensions), however, the team went with the Parker standards since they were advised to by the Machine Shop staff. 
+
+\subsection{Pressure Vessel Wall Stress}
+The vessel wall thickness is 
+\[
+t = \frac{D_o - D_i}{2} = \frac{3.00 - 1.00}{2} = \SI{1.00}{in}.
+\]
+Using internal pressure \(p=\SI{750}{psi}\),
+\[
+\sigma_h = \frac{pD_i}{2t} = \frac{750(1.00)}{2(1.00)} = \SI{375}{psi}, \qquad
+\sigma_L = \frac{pD_i}{4t} = \SI{187.5}{psi}
+\]
+Assuming 6061-T6 aluminum with yield strength \(\sigma_y=\SI{35e3}{psi}\):
+\[
+\text{FoS}_{\text{hoop}} = \frac{\sigma_y}{\sigma_h} = \frac{35000}{375} = 93.3, \qquad
+\text{FoS}_{\text{long}} = \frac{35000}{187.5} = 186.7
+\]
+Both safety factors are far above unity, indicating that the aluminum vessel easily withstands the internal test pressure.
+
+\subsection{Factor of Safety Summary}
+
+% ---- Updated FoS table ----
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{Failure Mode} & \textbf{Factor of Safety} \\
+\midrule
+Screw yield ( \(n_p\) ) & 5.10 \\
+Yield margin at loss of preload ( \(n_L\) ) & 36.8 \\
+Joint separation ( \(n_0\) ) & 5.40 \\
+Vessel hoop stress & 93.3 \\
+Vessel longitudinal stress & 186.7 \\
+\bottomrule
+\end{tabular}
+\caption{Summary of calculated factors of safety for the pressure vessel and joint}
+\end{table}
+
+
+
+\subsection{Design Process Changes}
+
+There were a few changes made from the original design to the final iteration of the pressure vessel design. \\
+
+Originally, the lid of the pressure vessel was designed with a thickness of 1 inch, and the bolts selected were 2 inches long which was significantly longer than necessary to properly secure the lid to the vessel body. During the machining process, issues arose while threading the bolt holes. Specifically, the threading tool was only able to cut threads to a depth of about 1 inch, rather than the full 2 inches required for the original design. Due to this issue, the team decided to reduce the lid thickness to $3/4"$ allowing the remaining $1/4"$ of the thread engagement to be cut directly into the body of the pressure vessel. In addition to this, the team also cut the screws down to $1.5"$ to reduce the amount of threading needed while also keeping them long enough to properly secure the lid. \\
+
+To improve machining efficiency, the team reduced the inner bore diameter from \SI{1.25}{in} to \SI{1.00}{in}. To preserve internal volume, the bore depth was increased from \SI{3.00}{in} to \SI{4.25}{in}, resulting in an internal volume of approximately \SI{54.7}{cm^3}, which remains within the project’s required range of 50–60~cc. The overall vessel length was maintained at \SI{6.00}{in} instead of the original height of 3.375 inches to avoid unnecessary facing or cutoff operations. This modification shortened machining time and did not affect the pressure capability of the vessel. \\
+
+\begin{figure}[h!]
+  \centering
+  % Left: Exploded view image
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{poriginal.png}
+    \caption{Original Design}
+    \label{fig:exploded_view}
+  \end{subfigure}
+  \hfill
+  % Right: Engineering drawing PDF
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{PVAssemH.png}
+    \caption{Machined Design}
+    \label{fig:final_design}
+  \end{subfigure}
+  \caption{CAD Model Assemblies of Original Design vs. Final Machined Design}
+  \label{fig:current_design}
+\end{figure}
+
+
+
+\subsection{Future Design Improvements}
+
+While the current design was successful, the team the team identified opportunities for improvement in future iterations. Most notably, the 4 evenly spaced bolts on the lid were positioned very close to the outer edge, with only 0.15 inches of material remaining. Although the calculated stresses and material strength indicated that edge shearing was not a concern, increasing the distance of the bolt from the outer edge would provide an additional factor of safety and improve overall confidence in the design. 
+
+\section{Testing and Validation}
+
+To verify that the machined pressure vessel met the project requirements, the team performed a  pressure test using the laboratory pressure rig in Hudson lab. The vessel was filled with 55~mL of water and connected to the test stand through the 1/4~in.\ NPT port using the provided Swagelok fittings. The test setup allowed for controlled pressurization while visually monitoring the vessel and seal interfaces for any signs of leakage.
+
+The pressure was increased gradually while observing the pressure gauge and inspecting the O-ring interface and NPT connection. The vessel first underwent testing at 700~psig, where no leakage or deformation was observed. The pressure was then increased to 1000~psig, exceeding the design requirement of 750~psig. Even at this elevated pressure level, the vessel maintained a complete seal, confirming adequate O-ring compression, sufficient bolt preload, and proper machining tolerances. \\
+
+Figures~\ref{fig:gauge} and \ref{fig:setup} show the pressure gauge during testing and the complete test setup with the pressure vessel connected.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{gauge1000.jpg}
+    \caption{Pressure gauge during testing showing the vessel pressurized near 1000~psig.}
+    \label{fig:gauge}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{setup.jpg}
+    \caption{Test setup with the machined pressure vessel connected to the pressurization system.}
+    \label{fig:setup}
+\end{figure}
+
+
+\section{Bill of Materials}
+
+%A bill of materials (BoM) containing a description of each part (including the part number), the cost per purchasable unit, and a McMaster-Carr item number if applicable. Include all materials, even those that were sourced from existing department supplies. Do not provide links here. All components and materials should be specified explicitly in your document.%
+\subsection{Final Bill of Materials}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|p{8cm}|p{2.5cm}|c|c|}
+\hline
+\textbf{Part \#} & \textbf{Description} & \textbf{Supplier} & \textbf{Count} &\textbf{Cost (\$)} \\ \hline
+92620A550 & Zinc Yellow-Chromate Plated Hex Head Screw, Grade 8 Steel, 1/4"-20 Thread Size, 2" Long, Fully Threaded & McMaster Carr &1 & 6.94 \\ \hline
+ 9558K563 & Oil- and Abrasion-Resistant Polyurethane O-Ring High-Pressure, 3/32 Fractional Width & McMaster Carr & 1 & 4.66 \\ \hline
+8974K82 & Multipurpose 6061 Aluminum Rod 3" Diameter 1/2 ft length & McMaster Carr& 1 & 47.24 \\ \hline
+
+B-400-1-4 &  Swagelok
+fitting, 1/4 in plug NPT & McMaster Carr& 1 & -- \\ \hline
+
+\multicolumn{4}{|r|}{\textbf{Total}} & 58.84 \textbf{} \\ \hline
+\end{tabular}
+\caption{Final Bill of Materials}
+\end{table}
+
+
+\subsection{Justification of Materials}
+
+\subsection*{Item Justification}
+
+\begin{itemize}
+    \item \textbf{1/4"-20 Grade 8 Screws:} The screws were used to fasten lid of pressure vessel to the body. Grade 8 screws were selected because of there high tensile strength. 
+    
+    \item \textbf{O-Ring:} The O-Ring provides the primary pressure seal between the pressure vessel body and lid. The particular O-rings were selected due to its ability to withstand high pressures
+    
+    \item \textbf{Aluminum Rod:} The aluminum rod was used as the main material to machine the body and the lid of the pressure vessel. Aluminum was chosen because of its ability to easily be machined while still providing enough strength to withstand the expected internal pressures. 
+    
+    \item \textbf{NPT:} The NPT was used as the primary threaded port for connecting instrumentation or applying internal pressure.
+
+    
+\end{itemize}
+
+\section{CAD Drawings}
+%Complete CAD drawing package with dimensions/tolerances as needed. The drawingpackage should include: assembly drawing(s), design drawing(s), and as-built draw-ing(s). Include no more than one drawing per page.%
+
+\subsection{Designed Parts}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{BodyPV.png}
+    \caption{Pressure Vessel CAD Drawing}
+    \label{fig:body}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{CapPV.png}
+    \caption{Pressure Vessel Lid CAD Drawings}
+    \label{fig:lid}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{AssemblyPV.png}
+    \caption{Entire Assembly CAD Drawing}
+    \label{fig:assembly}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{ExplodedPV.png}
+    \caption{Pressure Vessel Exploded View}
+    \label{fig:exploded}
+\end{figure}
+
+\subsection{McMaster-Carr Parts}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{92620A550_Zinc Yellow-Chromate Plated Hex Head Screw.png}
+    \caption{McMaster-Carr 1/4-20 Grade 8 Screw Drawing}
+    \label{fig:screws}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{9558K563_Oil- and Abrasion-Resistant Polyurethane O-Ring-2.png}
+    \caption{McMaster-Carr O-Ring Drawing}
+    \label{fig:oring}
+\end{figure}
+
+
+\section{References}
+
+\begin{enumerate}
+    \item Parker Hannifin, \textit{O-Ring Handbook}, ORD 5700, 2023.
+    \item J.~E.~Shigley, C.~R.~Mischke, and R.~G.~Budynas, \textit{Mechanical Engineering Design}, 10th ed., McGraw-Hill, 2020.
+    \item McMaster-Carr Supply Co., Product Data Sheets for O-Ring 9558K563 and Screws 92620A550, 2025.
+    \item ASTM D1418, \textit{Standard Classification System for Rubber Products}, ASTM International.
+    \item SAE AS568, \textit{Standard O-Ring Sizes}, SAE International.
+\end{enumerate}
+
+
+\section{Appendix}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{final.jpg}
+    \caption{Final assembled pressure vessel after machining and preparation for testing.}
+    \label{fig:final_vessel}
+\end{figure}
+
+
+
+\end{document}

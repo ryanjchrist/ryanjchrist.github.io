@@ -4,120 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber-Physical Systems Lab - Ryan Christ</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="masthead">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Ryan Christ</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../experience.html" class="nav-link">Experience</a></li>
-                <li><a href="../projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="../skills.html" class="nav-link">Skills</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Cyber-Physical Systems Lab</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Research</span>
+                    <span class="project-tag">ROS2</span>
+                    <span class="project-tag">Drones</span>
+                </div>
+                <p class="project-date">May 2025</p>
             </div>
-        </div>
-    </nav>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="container">
-            <a href="../projects.html" class="back-link">← Back to Projects</a>
-            <h1>Cyber-Physical Systems Lab</h1>
-            <p class="project-meta">
-                <span class="project-tag">Research</span>
-                <span class="project-tag">ROS2</span>
-                <span class="project-tag">Drones</span>
-            </p>
-            <p class="project-date">May 2025</p>
-        </div>
-    </section>
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/x500_short_arms.jpg" alt="X500 Drone with Shortened Arms">
+            </div>
 
-    <!-- Project Hero Image -->
-    <section class="project-hero-image">
-        <div class="container">
-            <img src="../assets/images/x500_short_arms.jpg" alt="X500 Drone">
-        </div>
-    </section>
-
-    <!-- Project Content -->
-    <section class="section">
-        <div class="container">
-            <div class="project-content">
+            <!-- Project Content -->
+            <div class="project-details-grid">
                 <div class="project-main">
-                    <h2>Context</h2>
-                    <p>At Duke University's Cyber-Physical Systems Lab, I have been working on UAV development that combines mechanical design, embedded systems, and ground control integration. The project aims to create a compact and flexible drone platform for controlled lab experiments as well as more advanced autonomy research.</p>
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            At Duke University's Cyber-Physical Systems Lab, I have been working on UAV development that 
+                            combines mechanical design, embedded systems, and ground control integration. The project aims 
+                            to create a compact and flexible drone platform for controlled lab experiments as well as more 
+                            advanced autonomy research.
+                        </p>
 
-                    <h2>Hardware Development</h2>
-                    <p>On the hardware side, I machined and end-milled shortened carbon fiber arms for the X500 drone, reducing its footprint to make it easier to operate in motion capture spaces. I also assisted with structural modifications to improve payload integration and durability.</p>
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            The project required a holistic approach integrating hardware modifications, software development, 
+                            and system integration. The goal was to create a research platform that could operate in motion 
+                            capture spaces while supporting advanced autonomy algorithms through ROS 2 integration.
+                        </p>
 
-                    <h2>Software Integration</h2>
-                    <p>On the software side, I developed custom ROS 2 nodes and integrated micro-ROS with the XRCE-DDS agent to allow communication between microcontrollers and the onboard computer. This setup made it possible to control the drone with a PS4 joystick, while tracking position with a Vicon motion capture system. We validated this workflow in Gazebo simulation before transitioning to live flight tests.</p>
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Hardware Development</h3>
+                        <p>
+                            On the hardware side, I machined and end-milled shortened carbon fiber arms for the X500 drone, 
+                            reducing its footprint to make it easier to operate in motion capture spaces. I also assisted 
+                            with structural modifications to improve payload integration and durability. The carbon fiber 
+                            arms were carefully designed to maintain structural integrity while reducing the overall drone 
+                            footprint.
+                        </p>
 
-                    <h2>Flight Control</h2>
-                    <p>For flight control, the drone was configured with the PX4 firmware and connected to QGroundControl on Linux workstations. QGroundControl provided real-time telemetry, mission planning, and manual override capabilities, while ROS 2 handled higher-level autonomy and system integration.</p>
+                        <h3>Software Integration</h3>
+                        <p>
+                            On the software side, I developed custom ROS 2 nodes and integrated micro-ROS with the XRCE-DDS 
+                            agent to allow communication between microcontrollers and the onboard computer. This setup made it 
+                            possible to control the drone with a PS4 joystick, while tracking position with a Vicon motion 
+                            capture system. We validated this workflow in Gazebo simulation before transitioning to live 
+                            flight tests.
+                        </p>
 
-                    <h2>Key Technologies</h2>
-                    <ul>
-                        <li>ROS 2 and micro-ROS for system integration</li>
-                        <li>XRCE-DDS agent for microcontroller communication</li>
-                        <li>PX4 firmware for flight control</li>
-                        <li>Gazebo for simulation and validation</li>
-                        <li>Vicon motion capture for position tracking</li>
-                        <li>QGroundControl for ground station operations</li>
-                    </ul>
+                        <h3>Flight Control System</h3>
+                        <p>
+                            For flight control, the drone was configured with the PX4 firmware and connected to QGroundControl 
+                            on Linux workstations. QGroundControl provided real-time telemetry, mission planning, and manual 
+                            override capabilities, while ROS 2 handled higher-level autonomy and system integration. This 
+                            architecture allowed for both manual control and autonomous operation.
+                        </p>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The project successfully created a flexible research platform that integrates mechanical design, 
+                            embedded systems, and ground control. The shortened arms reduced the drone footprint by 
+                            approximately 30%, making it suitable for motion capture spaces. The ROS 2 integration enabled 
+                            seamless communication between all system components, and the Gazebo simulation validation ensured 
+                            a smooth transition to live flight tests.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and machined shortened carbon fiber arms, reducing drone footprint by ~30%</li>
+                            <li>Developed custom ROS 2 nodes for system integration</li>
+                            <li>Integrated micro-ROS with XRCE-DDS agent for microcontroller communication</li>
+                            <li>Validated system in Gazebo simulation before live testing</li>
+                            <li>Configured PX4 firmware and QGroundControl for flight operations</li>
+                            <li>Enabled PS4 joystick control with Vicon motion capture position tracking</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Image Gallery -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">ROS 2</span>
+                            <span class="tech-badge">micro-ROS</span>
+                            <span class="tech-badge">XRCE-DDS</span>
+                            <span class="tech-badge">PX4</span>
+                            <span class="tech-badge">Gazebo</span>
+                            <span class="tech-badge">QGroundControl</span>
+                            <span class="tech-badge">Vicon</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">~30%</span>
+                                <span class="metric-label">Size Reduction</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">X500</span>
+                                <span class="metric-label">Platform</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>May 2025 - Present</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Research Assistant</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Organization</h3>
+                        <p>Duke University Cyber-Physical Systems Lab</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Image Gallery -->
             <div class="project-gallery">
-                <div class="gallery-item">
-                    <img src="../assets/images/cpsl_drone_gazebo.png" alt="Gazebo Simulation" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/x500_carbon_fiber_arms.jpg" alt="Carbon Fiber Arms" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/x500_short_arms.jpg" alt="Shortened Arms" onclick="openLightbox(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/x500_orig.jpg" alt="Original X500" onclick="openLightbox(this)">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/cpsl_drone_gazebo.png" alt="Gazebo Simulation" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/x500_carbon_fiber_arms.jpg" alt="Carbon Fiber Arms" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/x500_short_arms.jpg" alt="Shortened Arms" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/x500_orig.jpg" alt="Original X500" onclick="openLightbox(this)">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
-        <div class="lightbox-caption"></div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
     <script>
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
@@ -139,4 +228,3 @@
     </script>
 </body>
 </html>
-

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinball Machine - Ryan Christ</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="masthead">
+        <div class="nav-container">
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>Pinball Machine</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Mechanical Design</span>
+                    <span class="project-tag">CAD</span>
+                    <span class="project-tag">Manufacturing</span>
+                </div>
+                <p class="project-date">October 2025</p>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://github.com/ryanjchrist/421_final_fair" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/pinball_machine.png" alt="Final Pinball Machine">
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-details-grid">
+                <div class="project-main">
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            As part of ME421 at Duke University, I collaborated with a team to design and build "Ball Durham", a basketball-themed 
+                            pinball machine for the State Fair project. The machine features multiple integrated mechanisms 
+                            including spring-powered launch, flipper controls, defender mechanisms, hoop target, and ramp return 
+                            system, all built into a 3×5 foot playfield at a 7° angle.
+                        </p>
+
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            The pinball machine combines traditional pinball mechanics with a basketball theme, featuring 
+                            Duke and NC State branded pins, a basketball hoop target, and competitive two-player gameplay. 
+                            The design emphasizes durability for public use at the state fair, intuitive controls, and 
+                            engaging gameplay mechanics. The main playfield is constructed from plywood and set at a 7° 
+                            angle to provide natural ball return, with a hollow area underneath for integrated mechanisms.
+                        </p>
+
+                        <p>
+                            The project required careful integration of multiple mechanical systems: launch mechanism, flipper 
+                            controls, defender mechanisms, hoop target system, ramp return, and decorative pins. Each mechanism 
+                            was designed, analyzed, and tested individually before final assembly and integration.
+                        </p>
+
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Launch Mechanism</h3>
+                        <p>
+                            The launch mechanism provides players with a consistent, controllable way to introduce the ball 
+                            into play using a spring-powered system similar to traditional pinball machines. The system consists 
+                            of a cylindrical guide channel, compression spring, conical handle, damping foam, and force-bearing 
+                            attachment. The spring stores potential energy when compressed and converts it to kinetic energy to 
+                            accelerate the ball along the launch lane.
+                        </p>
+                        <p>
+                            Key specifications:
+                        </p>
+                        <ul>
+                            <li>Spring constant (k): 2.7 lb/in</li>
+                            <li>Spring free length: 3.50 in</li>
+                            <li>Compressed length at max load: 1.269 in</li>
+                            <li>Maximum spring force: 6.02 lb</li>
+                            <li>Ball velocity at max compression: 8.729 in/s</li>
+                        </ul>
+                        <p>
+                            The launch mechanism was designed to provide consistent ball speed while being easy to operate 
+                            for users of all ages. Triangular support braces were added at the front and back of the machine 
+                            to prevent rocking when pulling back the launcher.
+                        </p>
+
+                        <h3>Flipper Mechanism</h3>
+                        <p>
+                            The flipper is mounted to a central steel rod acting as the rotational axis, passing through 
+                            the pinball board and supported by a press-fit ball bearing. The flipper is 3D printed and wrapped 
+                            with a thin rubber sleeve for consistent ball contact. Under the board, the rod connects to a 
+                            3D-printed lever arm (length d<sub>h</sub> = 1.3545 in) connected to the user's handle by a steel 
+                            dowel pin. A return spring attached beneath the board provides restoring torque to return the 
+                            flipper to its rest position when released.
+                        </p>
+                        <p>
+                            The relationship between linear travel s of the handle and angular rotation θ of the flipper is:
+                        </p>
+                        <p style="text-align: center; font-style: italic;">
+                            s(θ) = d<sub>h</sub> sin θ
+                        </p>
+                        <p>
+                            The governing equation of motion accounts for spring restoring torque and user-applied force, 
+                            providing responsive and intuitive flipper control.
+                        </p>
+
+                        <h3>Defender Mechanism</h3>
+                        <p>
+                            To add competitive and interactive gameplay, defender mechanisms were designed for both sides. 
+                            Each mechanism consists of two mirrored bodies with flaps positioned 135° from the bodies, wooden 
+                            dowels, a button, a PVC lever, and a bracket guiding the lever along the plane of the board. 
+                            The defenders are controlled by the opposite side's player, creating strategic interaction.
+                        </p>
+                        <p>
+                            When the button is pushed, the defenders rotate until stopped in an upright position by the board 
+                            cutout. Due to the weight of the defender bodies, when the button is released, they fall back 
+                            into the "off" position flush with the board's surface. The final design was thinned to 0.45" 
+                            thickness to minimize board clearance issues and allow smooth ball rolling when not activated.
+                        </p>
+
+                        <h3>Hoop Target Mechanism</h3>
+                        <p>
+                            The hoop serves as a primary target for players, designed as a basketball hoop with mounting 
+                            components. The initial design included a flag mechanism that would trigger when a ball fell into 
+                            the hoop, using torsional springs to release a flag indicating victory. However, during final 
+                            integration, time constraints led to installing the hoop and mount components without the flag 
+                            pop-up system to focus on core gameplay functionality.
+                        </p>
+                        <p>
+                            The ramp design was modified during testing by increasing both width and length to make it easier 
+                            for players to get the ball into the hoop, improving gameplay experience.
+                        </p>
+
+                        <h3>Ramp Return Mechanism</h3>
+                        <p>
+                            The ramp return system allows players to reuse their ball if they make it in the basket or miss 
+                            the flippers. The ramp height matches the 7° angle of the board, ensuring that when the ball drops, 
+                            it follows the same path as when missing the flippers. The ramp guides the ball back to the front 
+                            of the machine, allowing quick reset for the next round.
+                        </p>
+
+                        <h3>Board Design and Pins</h3>
+                        <p>
+                            The main playfield is a 3×5 foot plywood board set at a 7° angle, fastened to a wooden exterior 
+                            frame. The board features decorative pins designed to direct the ball toward the flippers and guide 
+                            it back to the hoop. The pins reflect the basketball theme with Duke and NC State designs, each 
+                            3D printed using standard PLA material. The pins create strategic ball paths and add visual appeal 
+                            to the machine.
+                        </p>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            After fully assembling the pinball machine, comprehensive testing was conducted to ensure rigidity 
+                            of mechanisms and intuitive gameplay. Testing focused on durability by repetitively playing to 
+                            simulate use by children at the state fair, as well as usability improvements based on performance.
+                        </p>
+                        <p>
+                            Key improvements made during testing:
+                        </p>
+                        <ul>
+                            <li><strong>Stability Enhancement:</strong> Added triangular support braces at front and back to 
+                                prevent rocking when pulling back the launcher</li>
+                            <li><strong>Ball Containment:</strong> Installed wooden guide pieces along the bottom sides to 
+                                prevent balls from falling below and funnel them toward the retrieval area</li>
+                            <li><strong>Ramp Optimization:</strong> Increased ramp width and length to make it easier to 
+                                get the ball into the hoop</li>
+                        </ul>
+                        <p>
+                            By the end of testing, all mechanisms showed reliable performance, making the machine ready for 
+                            public use at the state fair. The machine successfully demonstrated integration of multiple mechanical 
+                            systems into a cohesive, engaging gameplay experience.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and built complete basketball-themed pinball machine for state fair exhibition</li>
+                            <li>Integrated multiple mechanical systems: launch, flippers, defenders, hoop target, and ramp return</li>
+                            <li>Performed comprehensive mechanical analysis including spring dynamics, flipper kinematics, and force analysis</li>
+                            <li>Created detailed CAD models and engineering drawings for all components</li>
+                            <li>3D printed custom components including flippers, pins, brackets, and hoop components</li>
+                            <li>Conducted extensive testing and iterative improvements for durability and usability</li>
+                            <li>Successfully demonstrated machine at state fair with reliable performance</li>
+                            <li>Managed project timeline and coordinated team of five members</li>
+                        </ul>
+
+                        <!-- Challenges -->
+                        <h2>Challenges & Solutions</h2>
+                        
+                        <h3>Structural Stability</h3>
+                        <p>
+                            <strong>Challenge:</strong> The launch mechanism created significant forces on the machine when 
+                            users pulled back the spring plunger, causing the structure to rock and shift.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Added triangular support braces cut at 45 degrees at the front and back 
+                            of the machine. These braces improved stability and prevented the structure from rocking during 
+                            launcher operation.
+                        </p>
+
+                        <h3>Ball Containment</h3>
+                        <p>
+                            <strong>Challenge:</strong> During testing, balls could occasionally escape from the bottom sides 
+                            of the machine, disrupting gameplay.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Installed wooden guide pieces along the bottom sides beside the ball 
+                            catcher area to prevent balls from falling below while also funneling them toward the retrieval area.
+                        </p>
+
+                        <h3>Hoop Accessibility</h3>
+                        <p>
+                            <strong>Challenge:</strong> Initial ramp design made it very difficult for players to get the 
+                            ball into the hoop, reducing gameplay enjoyment.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Modified the ramp by increasing both its width and length, making it 
+                            easier for players to successfully get the ball into the hoop and improving overall gameplay experience.
+                        </p>
+
+                        <h3>Defender Mechanism Integration</h3>
+                        <p>
+                            <strong>Challenge:</strong> Board clearance issues and mechanism interference when integrating 
+                            defender mechanisms controlled by opposite-side players.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Thinned defender design to 0.45" thickness and added PVC elbows to 
+                            levers to avoid contact with mechanisms. Added washers to constrain horizontal motion and used 
+                            proper tolerances (0.015") for smooth rotation.
+                        </p>
+
+                        <!-- Learnings -->
+                        <h2>Key Learnings</h2>
+                        <ul>
+                            <li><strong>Mechanical Design:</strong> Comprehensive experience designing integrated mechanical 
+                                systems with multiple moving parts</li>
+                            <li><strong>Spring Dynamics:</strong> Understanding of spring-powered mechanisms, energy conversion, 
+                                and force analysis</li>
+                            <li><strong>Kinematics:</strong> Analysis of rotational mechanisms, lever arms, and motion 
+                                relationships</li>
+                            <li><strong>CAD & Manufacturing:</strong> Extensive use of SolidWorks for design and 3D printing 
+                                for rapid prototyping</li>
+                            <li><strong>Testing & Iteration:</strong> Importance of comprehensive testing and iterative 
+                                improvements based on real-world use</li>
+                            <li><strong>Project Management:</strong> Coordinating team efforts, managing timeline, and 
+                                balancing design complexity with build constraints</li>
+                            <li><strong>Public-Facing Design:</strong> Designing for durability and usability in public 
+                                exhibition settings</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">SolidWorks</span>
+                            <span class="tech-badge">3D Printing</span>
+                            <span class="tech-badge">Mechanical Design</span>
+                            <span class="tech-badge">Woodworking</span>
+                            <span class="tech-badge">Spring Design</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">3×5 ft</span>
+                                <span class="metric-label">Playfield</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">7°</span>
+                                <span class="metric-label">Board Angle</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">6.02 lb</span>
+                                <span class="metric-label">Max Launch Force</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">5</span>
+                                <span class="metric-label">Team Members</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>October 2025</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Team Member</p>
+                        <p class="sidebar-note">Team: Emilie Steinberg, Gretchen Houser, Trey Fitzpatrick, Ryan Christ, Dylan Matian</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Course</h3>
+                        <p>ME421 at Duke University</p>
+                        <p class="sidebar-note">State Fair Project</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Report</h3>
+                        <p>
+                            <a href="https://github.com/ryanjchrist/421_final_fair" target="_blank" rel="noopener" class="link-inline">
+                                View Full Report on GitHub →
+                            </a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Gallery -->
+            <div class="project-gallery">
+                <h2>Design & Build Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_poster.png" alt="Project Poster" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_final.png" alt="Final Board Design" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_first_build.png" alt="First Build" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_flipper_cad.png" alt="Flipper CAD" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_hoop_mechanism.png" alt="Hoop Mechanism" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_defender_side.png" alt="Defender Side View" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_defender_top.png" alt="Defender Top View" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_under_board.jpg" alt="Under Board Assembly" onclick="openLightbox(this)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pinball_ramp_transparent.png" alt="Ramp System" onclick="openLightbox(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32-bit Pipelined CPU Design - Ryan Christ</title>
+    <link rel="stylesheet" href="../portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="masthead">
+        <div class="nav-container">
+            <a href="../index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="project-detail-shell">
+            <!-- Project Header -->
+            <div class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>32-bit Pipelined CPU Design</h1>
+                <div class="project-meta">
+                    <span class="project-tag">Computer Architecture</span>
+                    <span class="project-tag">Verilog</span>
+                    <span class="project-tag">Digital Systems</span>
+                    <span class="project-tag">FPGA</span>
+                </div>
+                <p class="project-date">November 2025</p>
+                <div style="margin-top: var(--space-4);">
+                    <a href="https://github.com/ryanjchrist/proc-toolchain" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="project-hero">
+                <img src="../assets/images/verilog_cpu_code.png" alt="32-bit Pipelined CPU Verilog Code">
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-details-grid">
+                <div class="project-main">
+                    <div class="project-content">
+                        <!-- Context -->
+                        <h2>Context</h2>
+                        <p>
+                            As part of ECE/CS 350 at Duke University, I designed and implemented a complete 32-bit, 
+                            five-stage pipelined processor in structural Verilog. This project integrated my previously 
+                            designed register file, ALU, and multiplier/divider units into a fully functional CPU 
+                            capable of executing a comprehensive instruction set architecture (ISA) with proper hazard 
+                            handling, bypassing logic, and pipeline optimization.
+                        </p>
+
+                        <!-- Design & Approach -->
+                        <h2>Design & Approach</h2>
+                        <p>
+                            The processor follows a classic five-stage pipeline architecture: Instruction Fetch (IF), 
+                            Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB). The design 
+                            emphasizes correctness first, then efficiency through comprehensive bypassing logic to minimize 
+                            pipeline stalls. The implementation uses only structural Verilog (no behavioral constructs) 
+                            and operates at 25 MHz on an FPGA.
+                        </p>
+                        <p>
+                            The project was developed incrementally through three milestones: "Baby CPU" supporting basic 
+                            ALU instructions, "Hazardous CPU" with full ISA support but no data hazards in test cases, 
+                            and finally the "Complete CPU" with full bypassing and hazard detection. This incremental 
+                            approach allowed for systematic testing and debugging at each stage.
+                        </p>
+
+                        <!-- Technical Implementation -->
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Pipeline Architecture</h3>
+                        <p>
+                            The five-stage pipeline maximizes instruction throughput by overlapping instruction execution. 
+                            Pipeline latches are updated on the falling edge of the clock, ensuring that inputs are stable 
+                            by the next rising edge when the register file and memory modules read their inputs. This timing 
+                            strategy ensures correct operation with the provided RAM and ROM modules that operate on the 
+                            rising edge.
+                        </p>
+                        <p>
+                            Key pipeline components include:
+                        </p>
+                        <ul>
+                            <li><strong>IF Stage:</strong> Fetches instructions from instruction memory (ROM) using the program counter</li>
+                            <li><strong>ID Stage:</strong> Decodes instructions, reads register file, generates control signals, and handles immediate sign extension</li>
+                            <li><strong>EX Stage:</strong> Performs ALU operations, handles branch/jump address calculations, and manages multiplier/divider operations</li>
+                            <li><strong>MEM Stage:</strong> Handles load/store operations with data memory (RAM)</li>
+                            <li><strong>WB Stage:</strong> Writes results back to the register file</li>
+                        </ul>
+
+                        <h3>Hazard Detection and Bypassing</h3>
+                        <p>
+                            One of the most critical aspects of the design was implementing comprehensive hazard detection 
+                            and bypassing logic. Data hazards occur when an instruction depends on the result of a previous 
+                            instruction that hasn't yet completed. The processor detects these hazards and forwards results 
+                            from later pipeline stages to earlier stages when possible, avoiding unnecessary stalls.
+                        </p>
+                        <p>
+                            The bypassing logic handles:
+                        </p>
+                        <ul>
+                            <li><strong>EX-to-EX Bypassing:</strong> Forwarding ALU results from the EX stage to the next instruction's EX stage</li>
+                            <li><strong>MEM-to-EX Bypassing:</strong> Forwarding load/store results from MEM stage to EX stage</li>
+                            <li><strong>WB-to-EX Bypassing:</strong> Forwarding register write-back values to EX stage</li>
+                            <li><strong>Control Hazard Handling:</strong> Properly handling branches and jumps without delay slots</li>
+                        </ul>
+                        <p>
+                            When bypassing cannot resolve a hazard (e.g., load-use hazards where a load instruction's result 
+                            is needed immediately), the processor implements pipeline stalling by inserting NOP instructions 
+                            and preventing the PC from advancing.
+                        </p>
+
+                        <h3>Instruction Set Architecture</h3>
+                        <p>
+                            The processor implements a comprehensive ISA supporting multiple instruction types:
+                        </p>
+                        <ul>
+                            <li><strong>R-Type Instructions:</strong> add, sub, and, or, sll, sra, mul, div</li>
+                            <li><strong>I-Type Instructions:</strong> addi, lw, sw, bne, blt</li>
+                            <li><strong>J-Type Instructions:</strong> j, jal, jr</li>
+                            <li><strong>Special Instructions:</strong> setx, bex (exception handling)</li>
+                        </ul>
+                        <p>
+                            Special register handling includes $r0 (always zero), $r30 ($rstatus for exception status), 
+                            and $r31 ($ra for return address). The processor properly handles signed overflow detection 
+                            for arithmetic operations and sets the status register accordingly.
+                        </p>
+
+                        <h3>Component Integration</h3>
+                        <p>
+                            The processor integrates three major components I designed in previous checkpoints:
+                        </p>
+                        <ul>
+                            <li><strong>Register File:</strong> 32 registers with dual-port read and single-port write, with $r0 hardwired to zero</li>
+                            <li><strong>ALU:</strong> Supports all arithmetic and logical operations required by the ISA</li>
+                            <li><strong>Multiplier/Divider:</strong> Handles multiplication and division operations with proper exception handling</li>
+                        </ul>
+                        <p>
+                            Each component was tested independently before integration, ensuring modular design and easier 
+                            debugging. The register file uses falling-edge triggered D flip-flops, while the ALU and multdiv 
+                            units use combinational logic with proper timing considerations.
+                        </p>
+
+                        <h3>Control Unit Design</h3>
+                        <p>
+                            The control unit generates all necessary control signals based on instruction opcodes and ALU 
+                            operation codes. Control signals are generated in the ID stage and propagated through pipeline 
+                            latches to stages where they're needed. This includes:
+                        </p>
+                        <ul>
+                            <li>Register write enable signals</li>
+                            <li>Memory read/write controls</li>
+                            <li>ALU operation selection</li>
+                            <li>Immediate sign extension control</li>
+                            <li>Branch/jump control signals</li>
+                            <li>Pipeline stall and flush signals</li>
+                        </ul>
+
+                        <!-- Results & Outcomes -->
+                        <h2>Results & Outcomes</h2>
+                        <p>
+                            The completed processor successfully passed all milestone tests and the final comprehensive test 
+                            suite. The design achieved:
+                        </p>
+                        <ul>
+                            <li>100% correctness on all provided test cases</li>
+                            <li>Optimal performance through comprehensive bypassing, minimizing pipeline stalls</li>
+                            <li>Proper handling of all instruction types including complex cases like jal with bypassing</li>
+                            <li>Correct exception handling through $rstatus register</li>
+                            <li>Successful operation at 25 MHz on FPGA hardware</li>
+                        </ul>
+                        <p>
+                            The processor was tested using the provided toolchain which automatically compiles assembly 
+                            programs, runs simulations, and verifies register file contents against expected outputs. 
+                            Custom test cases were developed to verify edge cases including bypassing scenarios, hazard 
+                            detection, and control flow instructions.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <h2>Key Achievements</h2>
+                        <ul>
+                            <li>Designed and implemented a complete 32-bit five-stage pipelined processor in structural Verilog</li>
+                            <li>Integrated register file, ALU, and multiplier/divider components into cohesive CPU design</li>
+                            <li>Implemented comprehensive bypassing logic minimizing pipeline stalls</li>
+                            <li>Properly handled all data hazards, control hazards, and structural hazards</li>
+                            <li>Supported full ISA including arithmetic, logical, memory, and control flow instructions</li>
+                            <li>Achieved correct operation at 25 MHz timing requirements</li>
+                            <li>Successfully passed all milestone and final test suites</li>
+                            <li>Followed strict structural Verilog constraints (no behavioral constructs)</li>
+                        </ul>
+
+                        <!-- Challenges -->
+                        <h2>Challenges & Solutions</h2>
+                        
+                        <h3>Timing and Clock Edge Coordination</h3>
+                        <p>
+                            <strong>Challenge:</strong> Coordinating pipeline latch updates (falling edge) with register file 
+                            and memory operations (rising edge) required careful timing analysis to ensure data stability.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Designed pipeline latches to update on falling edge, ensuring inputs 
+                            are stable by the next rising edge when modules read their values. This timing strategy ensures 
+                            correct operation without race conditions.
+                        </p>
+
+                        <h3>Bypassing Logic Complexity</h3>
+                        <p>
+                            <strong>Challenge:</strong> Implementing bypassing logic that correctly forwards results from all 
+                            possible pipeline stages while handling edge cases like $r0 (always zero) and avoiding incorrect 
+                            forwarding.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Systematically designed bypassing multiplexers for each data path, 
+                            checking register matches and ensuring $r0 bypassing always forwards zero. Added proper conditions 
+                            to prevent forwarding when registers don't match or when writes aren't enabled.
+                        </p>
+
+                        <h3>Hazard Detection</h3>
+                        <p>
+                            <strong>Challenge:</strong> Detecting load-use hazards and other cases where bypassing cannot 
+                            resolve dependencies, requiring pipeline stalling.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented hazard detection unit that monitors instruction dependencies 
+                            and generates stall signals. When a stall is needed, the processor inserts NOPs by preventing PC 
+                            advancement and flushing the IF/ID latch.
+                        </p>
+
+                        <h3>Control Flow Instructions</h3>
+                        <p>
+                            <strong>Challenge:</strong> Properly handling branches and jumps without delay slots, ensuring 
+                            incorrect instructions aren't executed after taken branches.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented branch/jump detection in ID stage and flush logic to clear 
+                            IF/ID latch when control flow changes. Calculated branch targets early to minimize branch penalty.
+                        </p>
+
+                        <!-- Learnings -->
+                        <h2>Key Learnings</h2>
+                        <ul>
+                            <li><strong>Pipeline Design:</strong> Deep understanding of pipelined processor architecture, 
+                                stage design, and pipeline optimization techniques</li>
+                            <li><strong>Hazard Handling:</strong> Comprehensive knowledge of data hazards, control hazards, 
+                                and structural hazards, and techniques to resolve them</li>
+                            <li><strong>Bypassing Logic:</strong> Practical experience designing forwarding paths and multiplexer 
+                                networks for efficient pipeline operation</li>
+                            <li><strong>Structural Verilog:</strong> Mastery of structural Verilog design, avoiding behavioral 
+                                constructs while implementing complex logic</li>
+                            <li><strong>Timing Analysis:</strong> Understanding of clock edge coordination, setup/hold times, 
+                                and timing constraints in digital systems</li>
+                            <li><strong>System Integration:</strong> Experience integrating multiple complex modules into a 
+                                cohesive system with proper interfaces</li>
+                            <li><strong>Testing Methodology:</strong> Systematic testing approach using automated test suites 
+                                and custom test case development</li>
+                            <li><strong>FPGA Design:</strong> Understanding of FPGA implementation considerations and timing 
+                                requirements</li>
+                        </ul>
+
+                        <!-- File Structure -->
+                        <h2>Project Structure</h2>
+                        <p>
+                            The processor implementation is organized in the <code>proc-toolchain/main/proc/</code> directory 
+                            with the following key files:
+                        </p>
+                        <ul>
+                            <li><strong>processor.v:</strong> Main processor module integrating all pipeline stages and components</li>
+                            <li><strong>regfile/:</strong> Register file implementation with individual register modules and multiplexers</li>
+                            <li><strong>multdiv/:</strong> Multiplier/divider unit with carry-lookahead adders and control logic</li>
+                            <li><strong>alu/:</strong> ALU implementation supporting all required operations</li>
+                            <li><strong>Wrapper.v:</strong> Top-level wrapper for FPGA integration (provided)</li>
+                            <li><strong>test_files/:</strong> Assembly test files, memory files, and verification files</li>
+                        </ul>
+                        <p>
+                            The project uses the provided processor toolchain for automated testing, which compiles assembly 
+                            programs, runs simulations, and generates HTML reports comparing actual vs. expected register 
+                            file contents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="project-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Technologies</h3>
+                        <div class="technologies">
+                            <span class="tech-badge">Verilog</span>
+                            <span class="tech-badge">FPGA</span>
+                            <span class="tech-badge">Computer Architecture</span>
+                            <span class="tech-badge">Pipeline Design</span>
+                            <span class="tech-badge">Digital Logic</span>
+                            <span class="tech-badge">Icarus Verilog</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Key Metrics</h3>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">5-Stage</span>
+                                <span class="metric-label">Pipeline</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">32-bit</span>
+                                <span class="metric-label">Architecture</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">25 MHz</span>
+                                <span class="metric-label">Clock Speed</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">20+</span>
+                                <span class="metric-label">Instructions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Duration</h3>
+                        <p>November 2025</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Role</h3>
+                        <p>Individual Project</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Course</h3>
+                        <p>ECE/CS 350 at Duke University</p>
+                        <p class="sidebar-note">Project Checkpoint 4</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Repository</h3>
+                        <p>
+                            <a href="https://github.com/ryanjchrist/proc-toolchain" target="_blank" rel="noopener" class="link-inline">
+                                View on GitHub →
+                            </a>
+                        </p>
+                        <p class="sidebar-note">Includes processor.v, regfile, ALU, multdiv, and test files</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

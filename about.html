@@ -4,70 +4,485 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Ryan Christ</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="skills.js"></script>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="masthead">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Ryan Christ</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <a href="index.html" class="site-title">Ryan Christ</a>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>About Me</h1>
-            <p class="page-subtitle">Get to know my background, interests, and what drives me</p>
-        </div>
-    </section>
-
-    <!-- About Content -->
-    <section class="section">
-        <div class="container">
+    <!-- Main Content -->
+    <main>
+        <div class="about-shell">
             <div class="about-content">
-                <div class="about-image-section">
-                    <img src="assets/images/Ryan.jpeg" alt="Ryan Christ" class="about-image">
+                <div class="about-header">
+                    <div class="about-image-container">
+                        <img src="assets/images/Ryan.jpeg" alt="Ryan Christ" class="about-image">
+                    </div>
+                    <div class="about-header-text">
+                        <h1>About</h1>
+                        <div style="margin-top: var(--space-3);">
+                            <a href="https://ryanjchrist.github.io/Resume/Ryan-Christ-Resume-2025.pdf" target="_blank" rel="noopener" class="link-inline" style="font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-2);">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block;">
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM8 4a.5.5 0 0 1 .5.5v3h2a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h2v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                View Resume (PDF)
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text-section">
+                
+                <div class="about-intro">
                     <p class="about-text">
-                        I'm Ryan Christ, a senior at Duke University double majoring in Mechanical Engineering and Computer Science. Originally from Rochester, NY, I first discovered my passion for engineering while spending time in my dad's shop, where I learned to translate ideas into tangible creations. That early foundation has shaped the way I approach problems today, by breaking down complex, intangible challenges into clear technical requirements and building solutions that make a real impact.
+                        I'm Ryan Christ, a senior at Duke University double majoring in Mechanical Engineering and Computer Science. 
+                        Originally from Rochester, NY, I first discovered my passion for engineering while spending time in my dad's 
+                        shop, where I learned to translate ideas into tangible creations.
                     </p>
+                    
                     <p class="about-text">
-                        Academically, I am happiest at the intersection of mechanics and software. I especially enjoy interdisciplinary projects that draw on both of my skill sets, and I've recently become interested with practical applications of machine learning in mechanical engineering contexts.
-                    </p>
-                    <p class="about-text">
-                        Outside the classroom, I'm an avid drone pilot, runner, and rock climber. I also love reading sci-fi and fantasy (currently I'm reading the Red Rising series) and playing soccer with friends. In my academics, hobbies, or athletics, I am always drawn to challenges that push me to think creatively and learn continuously.
+                        I'm passionate about the intersection of mechanics and software, especially interdisciplinary projects that 
+                        draw on both skill sets. I'm particularly interested in practical applications of machine learning in 
+                        mechanical engineering contexts, autonomous systems, and hands-on prototyping.
                     </p>
                 </div>
+
+                <div class="about-details">
+                    <div class="about-section">
+                        <h2>Education</h2>
+                        <p><strong>Duke University</strong> - Pratt School of Engineering</p>
+                        <p>B.S. Mechanical Engineering & B.S. Computer Science - Double Major (Expected May 2026)</p>
+                        <p>Durham, NC</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h2>Skills & Technologies</h2>
+                        
+                        <!-- Skills Navigation Tabs -->
+                        <div class="skills-tabs">
+                            <button class="skill-tab active" data-category="all">All</button>
+                            <button class="skill-tab" data-category="cad">CAD & Design</button>
+                            <button class="skill-tab" data-category="programming">Programming</button>
+                            <button class="skill-tab" data-category="hardware">Hardware</button>
+                            <button class="skill-tab" data-category="manufacturing">Manufacturing</button>
+                        </div>
+
+                        <!-- All Skills (shown by default) -->
+                        <div class="skills-grid all-skills" data-category="all">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/solidworks.svg" alt="SolidWorks" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNGRjZCMzUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNXPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">SolidWorks</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/autodesk.svg" alt="Fusion 360" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiMwNjk2RDciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkYzNjA8L3RleHQ+PC9zdmc+';">
+                                </div>
+                                <span class="skill-name">Fusion 360</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/autocad.svg" alt="AutoCAD" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNFRDMxRjciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkFDPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">AutoCAD</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/onshape.svg" alt="Onshape">
+                                </div>
+                                <span class="skill-name">Onshape</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python">
+                                </div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++">
+                                </div>
+                                <span class="skill-name">C/C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mathworks.svg" alt="MATLAB" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiMwMDc2QTgiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk1MPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">MATLAB</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/java.svg" alt="Java">
+                                </div>
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript">
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kicad.svg" alt="KiCad">
+                                </div>
+                                <span class="skill-name">KiCad</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ros.svg" alt="ROS">
+                                </div>
+                                <span class="skill-name">ROS2</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg" alt="Arduino">
+                                </div>
+                                <span class="skill-name">Arduino</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/prusa3d.svg" alt="3D Printing">
+                                </div>
+                                <span class="skill-name">3D Printing</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nationalinstruments.svg" alt="LabVIEW" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNGRjZCMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxWPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">LabVIEW</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML">
+                                </div>
+                                <span class="skill-name">HTML/CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#2d2d2d"/>
+                                <circle cx="24" cy="20" r="3" fill="#ffaa00"/>
+                                <path d="M24 23 L24 28 M20 25 L28 25" stroke="#ffaa00" stroke-width="2" stroke-linecap="round"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="8" fill="#ffaa00" text-anchor="middle">Solder</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Soldering</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                <path d="M12 24 L36 24" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="2" fill="#ff0066"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#ff0066" text-anchor="middle">Laser</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Laser Cutting</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#ff6600" text-anchor="middle" dy=".35em">Verilog</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">Verilog</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#0066cc"/>
+                                        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle" dy=".35em">ASM</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">Assembly</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#00d4ff" text-anchor="middle" dy=".35em">PX4</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">PX4</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#00a8ff" text-anchor="middle" dy=".35em">Gazebo</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">Gazebo</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/platformio.svg" alt="PlatformIO">
+                                </div>
+                                <span class="skill-name">PlatformIO</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#2d2d2d"/>
+                                        <rect x="14" y="18" width="20" height="12" rx="1" fill="none" stroke="#00ccff" stroke-width="2"/>
+                                        <circle cx="24" cy="24" r="3" fill="none" stroke="#00ccff" stroke-width="2"/>
+                                        <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#00ccff" text-anchor="middle">CNC</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">Machining</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="48" height="48" rx="4" fill="#8b4513"/>
+                                        <rect x="12" y="20" width="24" height="8" rx="1" fill="#d2691e"/>
+                                        <path d="M16 20 L20 16 M28 20 L32 16" stroke="#654321" stroke-width="1.5" stroke-linecap="round"/>
+                                        <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#fff" text-anchor="middle">Wood</text>
+                                    </svg>
+                                </div>
+                                <span class="skill-name">Woodworking</span>
+                            </div>
+                        </div>
+
+                        <!-- CAD & Design Skills -->
+                        <div class="skills-grid" data-category="cad">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/solidworks.svg" alt="SolidWorks" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNGRjZCMzUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNXPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">SolidWorks</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/autodesk.svg" alt="Fusion 360" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiMwNjk2RDciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkYzNjA8L3RleHQ+PC9zdmc+';">
+                                </div>
+                                <span class="skill-name">Fusion 360</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/autocad.svg" alt="AutoCAD" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNFRDMxRjciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkFDPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">AutoCAD</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/onshape.svg" alt="Onshape">
+                                </div>
+                                <span class="skill-name">Onshape</span>
+                            </div>
+                        </div>
+
+                        <!-- Programming Skills -->
+                        <div class="skills-grid" data-category="programming">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python">
+                                </div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++">
+                                </div>
+                                <span class="skill-name">C/C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mathworks.svg" alt="MATLAB" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiMwMDc2QTgiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk1MPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">MATLAB</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/java.svg" alt="Java">
+                                </div>
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript">
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML">
+                                </div>
+                                <span class="skill-name">HTML/CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#0066cc"/>
+                                <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle" dy=".35em">ASM</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Assembly</span>
+                            </div>
+                        </div>
+
+                        <!-- Hardware Skills -->
+                        <div class="skills-grid" data-category="hardware">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kicad.svg" alt="KiCad">
+                                </div>
+                                <span class="skill-name">KiCad</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ros.svg" alt="ROS">
+                                </div>
+                                <span class="skill-name">ROS2</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/arduino.svg" alt="Arduino">
+                                </div>
+                                <span class="skill-name">Arduino</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nationalinstruments.svg" alt="LabVIEW" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNGRjZCMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxWPC90ZXh0Pjwvc3ZnPg==';">
+                                </div>
+                                <span class="skill-name">LabVIEW</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#ff6600" text-anchor="middle" dy=".35em">Verilog</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Verilog</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#00d4ff" text-anchor="middle" dy=".35em">PX4</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">PX4</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#00a8ff" text-anchor="middle" dy=".35em">Gazebo</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Gazebo</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/platformio.svg" alt="PlatformIO">
+                                </div>
+                                <span class="skill-name">PlatformIO</span>
+                            </div>
+                        </div>
+
+                        <!-- Manufacturing Skills -->
+                        <div class="skills-grid" data-category="manufacturing">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/prusa3d.svg" alt="3D Printing">
+                                </div>
+                                <span class="skill-name">3D Printing</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#2d2d2d"/>
+                                <circle cx="24" cy="20" r="3" fill="#ffaa00"/>
+                                <path d="M24 23 L24 28 M20 25 L28 25" stroke="#ffaa00" stroke-width="2" stroke-linecap="round"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="8" fill="#ffaa00" text-anchor="middle">Solder</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Soldering</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#1a1a1a"/>
+                                <path d="M12 24 L36 24" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="2" fill="#ff0066"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#ff0066" text-anchor="middle">Laser</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Laser Cutting</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#2d2d2d"/>
+                                <rect x="14" y="18" width="20" height="12" rx="1" fill="none" stroke="#00ccff" stroke-width="2"/>
+                                <circle cx="24" cy="24" r="3" fill="none" stroke="#00ccff" stroke-width="2"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#00ccff" text-anchor="middle">CNC</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Machining</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="4" fill="#8b4513"/>
+                                <rect x="12" y="20" width="24" height="8" rx="1" fill="#d2691e"/>
+                                <path d="M16 20 L20 16 M28 20 L32 16" stroke="#654321" stroke-width="1.5" stroke-linecap="round"/>
+                                <text x="50%" y="38" font-family="Arial, sans-serif" font-size="9" fill="#fff" text-anchor="middle">Wood</text>
+                            </svg>
+                                </div>
+                                <span class="skill-name">Woodworking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h2>Interests</h2>
+                        <p>Mechanics, Prototyping, Autonomy, Systems Integration, Embedded Systems, Control Systems</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h2>Outside the Classroom</h2>
+                        <p>Avid drone pilot, runner, and rock climber. I love reading sci-fi and fantasy (currently reading the Red Rising series) and playing soccer with friends.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ryan Christ. All rights reserved.</p>
+    <footer class="page__footer">
+        <div class="footer-meta">
+            <div class="footer-meta__primary">
+                <span>&copy; 2025 Ryan Christ</span>
+            </div>
+            <div class="footer-meta__links">
+                <a href="mailto:ryan.christ@duke.edu">Email</a>
+                <span class="divider">·</span>
+                <a href="https://github.com/ryanjchrist" target="_blank" rel="noopener">GitHub</a>
+                <span class="divider">·</span>
+                <a href="https://www.linkedin.com/in/ryan-christ" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
